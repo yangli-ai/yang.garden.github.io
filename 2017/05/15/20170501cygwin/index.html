@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>通过鼠标右键进入cygwin，并自动打开当前文件夹 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Q:鼠标右键点击某一个文件，或者文件夹背景，选择cygwin，然后自动进入当前文件夹？A:通过修改注册表文件。具体步骤： 1.新建一个文本文件，拷贝下面文字到文件中。并将“D:\System\Linux\”修改成自己的cygwin安装目录。保存文件。 2.然后，修改文件名为cygwin.reg。双击导入注册表。  Windows Registry Editor Version 5.00 [HKEY">
+  <meta name="description" content="Q:鼠标右键点击某一个文件，或者文件夹背景，选择cygwin，然后自动进入当前文件夹？A:通过修改注册表文件。具体步骤： 1.新建一个文本文件，拷贝下面文字到文件中。并将“D:\System\Linux\”修改成自己的cygwin安装目录。保存文件。 2.然后，修改文件名为cygwin.reg。双击导入注册表。">
 <meta name="keywords" content="R与Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过鼠标右键进入cygwin，并自动打开当前文件夹">
 <meta property="og:url" content="http://yoursite.com/2017/05/15/20170501cygwin/index.html">
 <meta property="og:site_name" content="Sci-Forest">
-<meta property="og:description" content="Q:鼠标右键点击某一个文件，或者文件夹背景，选择cygwin，然后自动进入当前文件夹？A:通过修改注册表文件。具体步骤： 1.新建一个文本文件，拷贝下面文字到文件中。并将“D:\System\Linux\”修改成自己的cygwin安装目录。保存文件。 2.然后，修改文件名为cygwin.reg。双击导入注册表。  Windows Registry Editor Version 5.00 [HKEY">
-<meta property="og:updated_time" content="2017-05-15T10:28:28.619Z">
+<meta property="og:description" content="Q:鼠标右键点击某一个文件，或者文件夹背景，选择cygwin，然后自动进入当前文件夹？A:通过修改注册表文件。具体步骤： 1.新建一个文本文件，拷贝下面文字到文件中。并将“D:\System\Linux\”修改成自己的cygwin安装目录。保存文件。 2.然后，修改文件名为cygwin.reg。双击导入注册表。">
+<meta property="og:updated_time" content="2017-10-17T13:07:35.865Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="通过鼠标右键进入cygwin，并自动打开当前文件夹">
-<meta name="twitter:description" content="Q:鼠标右键点击某一个文件，或者文件夹背景，选择cygwin，然后自动进入当前文件夹？A:通过修改注册表文件。具体步骤： 1.新建一个文本文件，拷贝下面文字到文件中。并将“D:\System\Linux\”修改成自己的cygwin安装目录。保存文件。 2.然后，修改文件名为cygwin.reg。双击导入注册表。  Windows Registry Editor Version 5.00 [HKEY">
+<meta name="twitter:description" content="Q:鼠标右键点击某一个文件，或者文件夹背景，选择cygwin，然后自动进入当前文件夹？A:通过修改注册表文件。具体步骤： 1.新建一个文本文件，拷贝下面文字到文件中。并将“D:\System\Linux\”修改成自己的cygwin安装目录。保存文件。 2.然后，修改文件名为cygwin.reg。双击导入注册表。">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -205,8 +205,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Q:鼠标右键点击某一个文件，或者文件夹背景，选择cygwin，然后自动进入当前文件夹？<br>A:通过修改注册表文件。具体步骤：<br> 1.新建一个文本文件，拷贝下面文字到文件中。并将“D:\System\Linux\”修改成自己的cygwin安装目录。保存文件。<br> 2.然后，修改文件名为cygwin.reg。双击导入注册表。</p>
-<hr>
-<p>Windows Registry Editor Version 5.00</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>Windows Registry Editor Version 5.00</p>
 <p>[HKEY_CLASSES_ROOT\Directory\Background\shell\go_cygwin]<br>@=”Go Cygwin”<br>“Icon”=”\”D:\System\Linux\Cygwin.ico\””<br>[HKEY_CLASSES_ROOT\Directory\Background\shell\go_cygwin\command]<br>@=”D:\System\Linux\bin\bash -login -c \”cd ‘%v’; exec bash -rcfile ~/.bashrc\””<br>[HKEY_CLASSES_ROOT\Directory\shell\go_cygwin]<br>@=”Go Cygwin”<br>“Icon”=”\”D:\System\Linux\Cygwin.ico\””<br>[HKEY_CLASSES_ROOT\Directory\shell\go_cygwin\command]<br>@=”D:\System\Linux\bin\bash -login -c \”cd ‘%1’; exec bash -rcfile ~/.bashrc\””</p>
 
       
