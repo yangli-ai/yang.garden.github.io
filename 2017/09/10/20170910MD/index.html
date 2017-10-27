@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Sci-Forest</title>
+  <title>分子动力学模拟时的软件和文件格式 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sci-Forest">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="偶尔看一下这些文件格式，可以回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。">
+<meta name="keywords" content="统计与生信">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分子动力学模拟时的软件和文件格式">
+<meta property="og:url" content="http://yoursite.com/2017/09/10/20170910MD/index.html">
 <meta property="og:site_name" content="Sci-Forest">
+<meta property="og:description" content="偶尔看一下这些文件格式，可以回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。">
+<meta property="og:updated_time" content="2017-10-27T16:02:03.010Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sci-Forest">
+<meta name="twitter:title" content="分子动力学模拟时的软件和文件格式">
+<meta name="twitter:description" content="偶尔看一下这些文件格式，可以回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -179,74 +184,59 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20170910MD" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/13/20171013greatwall/" class="archive-article-date">
-  	<time datetime="2017-10-13T13:13:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/13/20171013greatwall/">20171013greatwall</a>
+    <h1 class="article-title" itemprop="name">
+      分子动力学模拟时的软件和文件格式
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/10/20170910MD/" class="archive-article-date">
+        
+        <a href="/2017/09/10/20170910MD/" class="archive-article-date">
   	<time datetime="2017-09-10T15:44:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/10/20170910MD/">分子动力学模拟时的软件和文件格式</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>偶尔看一下这些文件格式，可以回顾做分子动力学模拟时用到知识点和技巧。<br>包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。<br><a id="more"></a><br>GaussView<br>    1.gif: 默认的，可以用于Gaussian的文件格式。既可以用Cartesian坐标，也可以用Z-matrix坐标。<br>    2.pdb: 大分子的有机物可以用此格式，方便与蛋白一起进行MD模拟。<br>    3.mol2: 原本时SYBYL用于小分子的格式。含有用于描述电荷信息的字段。</p>
+<p>Gaussian<br>    1.gif: 输入文件格式，含有各种命令<br>    2.out: 主要输出文件<br>    3.chk: 输出文件</p>
+<p>Ambertools<br>    antechamber：输入文件可为pdb|gout,mol2(高斯的输出格式)<br>               输出文件为mol2(供antechamber下一步用),gzmat(供Gaussian计算输入)<br>    parmchk:     输入文件为mol2<br>               输出文件为frcmod<br>    sleap:<br>    acpype:<br>    sander|ptraj:amber主程序和轨迹分析工具</p>
+<p>Gromacs<br>    1.top: 输入文件之拓扑文件，含有力场各种参数<br>    2.gro: 输入文件之坐标文件，一种xyz格式文件；可用editconf自由修改<br>    3.mdp: 输入文件之运行参数<br>    4.tpr: mdp，top，gro等文件打包之后的文件；运行模拟的最终输入文件<br>    5.trr/xtc：输出文件之轨迹文件<br>    6.edr:     输出文件之能量文件</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -258,346 +248,113 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/04/20170701epibook/" class="archive-article-date">
-  	<time datetime="2017-07-04T05:04:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/04/20170701epibook/">两本科普读物《遗传的革命》和《垃圾DNA》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">分子生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/01/20170601computationbio/" class="archive-article-date">
-  	<time datetime="2017-06-01T13:03:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/01/20170601computationbio/">“所有的生物学都是计算生物学“</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">统计与生信</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/20170501cygwin/" class="archive-article-date">
-  	<time datetime="2017-05-15T10:19:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/20170501cygwin/">通过鼠标右键进入cygwin，并自动打开当前文件夹</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">R与Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/01/20170101gene/" class="archive-article-date">
-  	<time datetime="2017-01-01T08:59:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/01/20170101gene/">环境基因交互作用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">环境与基因</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/02/07/20160207bedrooms/" class="archive-article-date">
-  	<time datetime="2016-02-07T13:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/07/20160207bedrooms/">梵高的卧室(Van Gogh&#39;s Bedrooms)</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/10/20170910MD/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/11/20151111psiblast/" class="archive-article-date">
-  	<time datetime="2015-11-11T13:56:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-11</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/11/20151111psiblast/">PSI-BLAST寻找同源蛋白</a>
-    </h1>
+    <a href="/2017/10/13/20171013greatwall/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          20171013greatwall
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/07/04/20170701epibook/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">两本科普读物《遗传的革命》和《垃圾DNA》</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">统计与生信</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/05/19/20150519book/" class="archive-article-date">
-  	<time datetime="2015-05-19T12:28:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/19/20150519book/">《追风筝的人》：成年后还要追逐那些美好的东西</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/05/01/20150501SterlingLake/" class="archive-article-date">
-  	<time datetime="2015-05-01T03:16:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-05-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/01/20150501SterlingLake/">Sterling Lake in NY</a>
-    </h1>
-  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -621,8 +378,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
