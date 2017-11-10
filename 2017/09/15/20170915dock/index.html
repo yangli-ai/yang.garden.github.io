@@ -6,21 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>分子动力学模拟时的软件和文件格式 | Sci-Forest</title>
+  <title>蛋白-配体结合:AutoDock Vina对接蛋白和配体 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我学习和使用分子动力学模拟知识，是为了探索环境污染物的毒理学效应机制。偶尔看一下下面罗列的文件格式，可以如同过电影一样回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。">
+  <meta name="description" content="研究蛋白和配体的结合方式，可以通过分子对接(Molecular Docking)实现。然后可以对结合的构象进行聚类，选择特征构象，可以进行下一步的动力学模拟。">
 <meta name="keywords" content="计算生物学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="分子动力学模拟时的软件和文件格式">
-<meta property="og:url" content="http://yoursite.com/2017/09/10/20170910MD/index.html">
+<meta property="og:title" content="蛋白-配体结合:AutoDock Vina对接蛋白和配体">
+<meta property="og:url" content="http://yoursite.com/2017/09/15/20170915dock/index.html">
 <meta property="og:site_name" content="Sci-Forest">
-<meta property="og:description" content="我学习和使用分子动力学模拟知识，是为了探索环境污染物的毒理学效应机制。偶尔看一下下面罗列的文件格式，可以如同过电影一样回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。">
-<meta property="og:image" content="http://yoursite.com/2017/09/10/20170910MD/a.png">
-<meta property="og:updated_time" content="2017-11-01T19:33:11.632Z">
+<meta property="og:description" content="研究蛋白和配体的结合方式，可以通过分子对接(Molecular Docking)实现。然后可以对结合的构象进行聚类，选择特征构象，可以进行下一步的动力学模拟。">
+<meta property="og:updated_time" content="2017-11-10T13:04:02.246Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分子动力学模拟时的软件和文件格式">
-<meta name="twitter:description" content="我学习和使用分子动力学模拟知识，是为了探索环境污染物的毒理学效应机制。偶尔看一下下面罗列的文件格式，可以如同过电影一样回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。">
-<meta name="twitter:image" content="http://yoursite.com/2017/09/10/20170910MD/a.png">
+<meta name="twitter:title" content="蛋白-配体结合:AutoDock Vina对接蛋白和配体">
+<meta name="twitter:description" content="研究蛋白和配体的结合方式，可以通过分子对接(Molecular Docking)实现。然后可以对结合的构象进行聚类，选择特征构象，可以进行下一步的动力学模拟。">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -192,30 +190,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20170910MD" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20170915dock" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      分子动力学模拟时的软件和文件格式
+      蛋白-配体结合:AutoDock Vina对接蛋白和配体
     </h1>
   
 
         
-        <a href="/2017/09/10/20170910MD/" class="archive-article-date">
-  	<time datetime="2017-09-10T15:44:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-10</time>
+        <a href="/2017/09/15/20170915dock/" class="archive-article-date">
+  	<time datetime="2017-09-15T12:57:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我学习和使用分子动力学模拟知识，是为了探索环境污染物的毒理学效应机制。偶尔看一下下面罗列的文件格式，可以如同过电影一样回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。<br><img src="/2017/09/10/20170910MD/a.png" alt=""><br><a id="more"></a><br>GaussView<br>    1.gif: 默认的，可以用于Gaussian的文件格式。既可以用Cartesian坐标，也可以用Z-matrix坐标。<br>    2.pdb: 大分子的有机物可以用此格式，方便与蛋白一起进行MD模拟。<br>    3.mol2: 原本时SYBYL用于小分子的格式。含有用于描述电荷信息的字段。</p>
-<p>Gaussian<br>    1.gif: 输入文件格式，含有各种命令<br>    2.out: 主要输出文件<br>    3.chk: 输出文件</p>
-<p>Ambertools<br>    antechamber：输入文件可为pdb|gout,mol2(高斯的输出格式)<br>               输出文件为mol2(供antechamber下一步用),gzmat(供Gaussian计算输入)<br>    parmchk:     输入文件为mol2<br>               输出文件为frcmod<br>    sleap:<br>    acpype:<br>    sander|ptraj:amber主程序和轨迹分析工具</p>
-<p>Gromacs<br>    1.top: 输入文件之拓扑文件，含有力场各种参数<br>    2.gro: 输入文件之坐标文件，一种xyz格式文件；可用editconf自由修改<br>    3.mdp: 输入文件之运行参数<br>    4.tpr: mdp，top，gro等文件打包之后的文件；运行模拟的最终输入文件<br>    5.trr/xtc：输出文件之轨迹文件<br>    6.edr:     输出文件之能量文件</p>
+        <p>研究蛋白和配体的结合方式，可以通过分子对接(Molecular Docking)实现。然后可以对结合的构象进行聚类，选择特征构象，可以进行下一步的动力学模拟。<br><a id="more"></a><br>分子对接的准备工作很关键，诸如原子完整性、氢(是否需要非极性氢)、电荷等。这些都可以通过工具完成，但每种工具有自己的擅长。</p>
+<p>本次对接的配体是乙酰辅酶A(COA)，可以把 腺嘌呤看为为头，长链为尾。对比晶体结构中的COA和对接后的COA，评价对接的效果。</p>
+<h3 id="1-准备蛋白和配体"><a href="#1-准备蛋白和配体" class="headerlink" title="1.准备蛋白和配体"></a>1.准备蛋白和配体</h3><p>◆ PyMOL|Chimera浏览下载的晶体蛋白结构，以及Notepad++查看蛋白的pdb信息(如关键词missing、HETATM等)，分离蛋白和配体。<br>◆ PyMOL检查蛋白prot ，并必要时修改 (补齐侧链、氢原子等用Swiss-PdbViewer)<br>◆ GaussView检查或重建有机小分子配体lig，并必要时修改 (仔细检查，并手工修改，保存为mol2)<br>◆ GaussView和Chem3d修改lig构象为lig2，为了防止”假构象”，并略微优化，可以在PyMOL中align lig, lig2</p>
+<h3 id="2-准备AutoDock的pdbqt格式"><a href="#2-准备AutoDock的pdbqt格式" class="headerlink" title="2.准备AutoDock的pdbqt格式"></a>2.准备AutoDock的pdbqt格式</h3><p>pdbqt是AutoDock对接专用的文件格式<br>◆ ADT中，处理蛋白，加氢，加电荷，处理为pdbqt，可以指定个别氨基酸有柔性<br>◆ ADT中，处理配体，加氢，加电荷，设置可旋转键(数目!)，处理为pdbqt</p>
+<h3 id="3-对接"><a href="#3-对接" class="headerlink" title="3.对接"></a>3.对接</h3><p>◆ ADT，Grid可视化设置配体在蛋白上大概的位置，box的center和box.<br>autogrid4 -p parameterfile -l logfile<br>autodock4 -p parameterfile -l logfile<br>◆ AutoDock Vina:<br>Vina –receptor prot.pdbqt –flex prot_flex.pdbqt –ligand lig2.pdbqt –center_x –center_y –center_z –size_x –size_y –size_z </p>
+<h4 id="4-评价"><a href="#4-评价" class="headerlink" title="4.评价"></a>4.评价</h4><p>◆ ADT导入Vina结果，将所有构象输出为单独的pdb文件(cfm1.pdb… cfm2.pdb)<br>◆ PyMOL中load蛋白和配体，并load各个构象: 分别设置合适的可视化方式; 依次对比Vina结果和原始配体。这个过程可以通过pml脚本实现。</p>
 
       
 
@@ -306,7 +306,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/10/20170910MD/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/15/20170915dock/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -320,18 +320,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/09/15/20170915dock/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/10/06/20171006docking/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          蛋白-配体结合:AutoDock Vina对接蛋白和配体
+          蛋白-配体结合:联合使用分子对接和分子动力学模拟
         
       </div>
     </a>
   
   
-    <a href="/2017/08/01/20170801toxicology/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我在环境-基因交互作用研究上的关注方向</div>
+    <a href="/2017/09/10/20170910MD/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">分子动力学模拟时的软件和文件格式</div>
       <i class="icon-circle-right"></i>
     </a>
   
