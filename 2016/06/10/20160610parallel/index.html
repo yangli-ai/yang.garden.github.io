@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | Sci-Forest</title>
+  <title>HPC:并行计算(Parallel Computing) | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sci-Forest">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+  <meta name="description" content="计算生物学是重要的科研工具。在大数据时代，计算常辅以并行技术以加快计算速度。我一直认为数据处理最重要的步骤不在分析阶段，而在预分析，也就是数据探索阶段。掌握了并行计算方法，可以更自由地探索大数据。比如，在我们医学领域里，进行探索研究时会不断地形成各种假设，也会突然冒出新的想法，需要一一去探索。没有高效率的计算技术，繁琐的运算会让大部分人中途而止。数据越大，这种瓶颈越明显。">
+<meta name="keywords" content="计算生物学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HPC:并行计算(Parallel Computing)">
+<meta property="og:url" content="http://yoursite.com/2016/06/10/20160610parallel/index.html">
 <meta property="og:site_name" content="Sci-Forest">
+<meta property="og:description" content="计算生物学是重要的科研工具。在大数据时代，计算常辅以并行技术以加快计算速度。我一直认为数据处理最重要的步骤不在分析阶段，而在预分析，也就是数据探索阶段。掌握了并行计算方法，可以更自由地探索大数据。比如，在我们医学领域里，进行探索研究时会不断地形成各种假设，也会突然冒出新的想法，需要一一去探索。没有高效率的计算技术，繁琐的运算会让大部分人中途而止。数据越大，这种瓶颈越明显。">
+<meta property="og:image" content="http://yoursite.com/2016/06/10/20160610parallel/parallel.jpg">
+<meta property="og:updated_time" content="2017-11-21T14:04:11.749Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sci-Forest">
+<meta name="twitter:title" content="HPC:并行计算(Parallel Computing)">
+<meta name="twitter:description" content="计算生物学是重要的科研工具。在大数据时代，计算常辅以并行技术以加快计算速度。我一直认为数据处理最重要的步骤不在分析阶段，而在预分析，也就是数据探索阶段。掌握了并行计算方法，可以更自由地探索大数据。比如，在我们医学领域里，进行探索研究时会不断地形成各种假设，也会突然冒出新的想法，需要一一去探索。没有高效率的计算技术，繁琐的运算会让大部分人中途而止。数据越大，这种瓶颈越明显。">
+<meta name="twitter:image" content="http://yoursite.com/2016/06/10/20160610parallel/parallel.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -185,36 +192,67 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-20160610parallel" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      HPC:并行计算(Parallel Computing)
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/10/20160610parallel/" class="archive-article-date">
+
+        
+        <a href="/2016/06/10/20160610parallel/" class="archive-article-date">
   	<time datetime="2016-06-10T13:49:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/10/20160610parallel/">HPC:并行计算(Parallel Computing)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>计算生物学是重要的科研工具。在大数据时代，计算常辅以并行技术以加快计算速度。我一直认为数据处理最重要的步骤不在分析阶段，而在预分析，也就是数据探索阶段。掌握了并行计算方法，可以更自由地探索大数据。比如，在我们医学领域里，进行探索研究时会不断地形成各种假设，也会突然冒出新的想法，需要一一去探索。没有高效率的计算技术，繁琐的运算会让大部分人中途而止。数据越大，这种瓶颈越明显。<br><img src="/2016/06/10/20160610parallel/parallel.jpg" alt=""><br><a id="more"></a></p>
+<h3 id="1-并行运算"><a href="#1-并行运算" class="headerlink" title="1.并行运算"></a>1.并行运算</h3><p>简单理解，并行运算就是利用多个CPU同时运算，以加快计算速度。结合计算机资源，有两大类场景:<br>    ◆一个node里使用多个CPU，对应OpenMP(Open Multi-processing)<br>    ◆多个node里使用多个CPU，对应MPI(Message Passing Interface)</p>
+<p>一定把握好二者的区别: OpenMP共享内存，实现简单；MPI里不同node的CPU使用各自的内存。对一些耗费不大的计算生物学问题，不见的MPI速度更快，因为数据在不同node间传输的速度拖累了多个CPU带来的好处。</p>
+<p>R语言里通过doParallel包等可以方便地实现并行计算。但MPI难以实现，只能通过脚本方式;<br>MATLAB通过pool可以实现OpenMP和MPI;<br>其它程序，可以通过Linux里PBS的Batch功能，利用脚本实现OpenMP和MPI。</p>
+<p>除了通过CPU实现并行运算外，GPU也可进行并行运算。GPU运算在机器学习领域里很成熟了，但计算生物学(生物信息学)用的不多。想玩玩，可以试试Python里TensorFlow的GPU运算。</p>
+<h3 id="2-Linux里实现并行运算"><a href="#2-Linux里实现并行运算" class="headerlink" title="2.Linux里实现并行运算"></a>2.Linux里实现并行运算</h3><p>大多数计算任务是用多个CPU集中完成一个任务，结束之后再进行下个任务。这既是合理利用计算资源的要求，也更是因为大部分计算生物学(生物信息学)的程序已经在内部实现了OpenMP功能。特别是单个任务就需要耗费大量的计算资源时，如序列比对。<br>当遇见一些较为简单但却杂而多的任务时，可以通过Linux命令或脚本实现并行运算。注意，此时有些任务不需要并行运算，甚至在单机上串行即可。</p>
+<h4 id="2-1-Linux命令"><a href="#2-1-Linux命令" class="headerlink" title="2.1 Linux命令"></a>2.1 Linux命令</h4><p>★ &amp;命令<br>    command1 &amp; command2 &amp; command3 # 本质是利用&amp;的后台功能<br>★ xargs命令<br>    cat list.txt | xargs  command  # 适用于向同一个程序传递不同的参数，-P参数可以控制最大进程数<br>★ parallel命令<br>    用法1: parallel  command1 command2 command3  # 类似&amp;，但可以用-j等参数<br>    用法2: cat file | parallel -j 8 –block 10M –pipe command  #把file每隔10M行拆分，传递给—pipe指定的command; -j job的数量，默认为CPU个数</p>
+<h4 id="2-2-bash脚本"><a href="#2-2-bash脚本" class="headerlink" title="2.2 bash脚本"></a>2.2 bash脚本</h4><p>可任意组合各种生物信息学命令，通过for+&amp;循环启动多个进程。<br>可以通过命名管道FIFO(first in first out)控制进程数</p>
+<h4 id="2-3-R、MATLAB等程序自带OpenMP"><a href="#2-3-R、MATLAB等程序自带OpenMP" class="headerlink" title="2.3 R、MATLAB等程序自带OpenMP"></a>2.3 R、MATLAB等程序自带OpenMP</h4><p>参考R和MATLAB</p>
+<h4 id="2-4-MPI的两种实现方式"><a href="#2-4-MPI的两种实现方式" class="headerlink" title="2.4 MPI的两种实现方式"></a>2.4 MPI的两种实现方式</h4><p>★ Open MPI的mpirun<br>★ MPICH的mpexec </p>
+<h3 id="3-Linux的PBS"><a href="#3-Linux的PBS" class="headerlink" title="3. Linux的PBS"></a>3. Linux的PBS</h3><p>PBS(Portable Batch System)，最初由NASA的Ames研究中心开发，主要为了提供一个能满足异构计算网络需要的软件包，用于灵活的批处理，特别是满足高性能计算的需要。有Interactive mode和Batch mode两种。除非任务量巨大，个人喜欢Interactive方式，可以在正式运算前的调试或探索用，也可以方便利用X-window软件(Xming等)，如同在本地使用远程的集群。</p>
+<p>PBS主要命令为qsub (queue submit)<br>★ Interactive mode: qsub -l nodes=1:ppn=4 -l mem=20G -l walltime=01:00:00   #无法使用MPI<br>★ Batch mode: 将各种命令写入bash，让后通过qsub提交  #一般使用MPI的方法<br>qstat, qdel等各种命令处理job</p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -226,171 +264,114 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/06/10/20160610parallel/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/03/20160501gwas/" class="archive-article-date">
-  	<time datetime="2016-05-03T15:23:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-03</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/03/20160501gwas/">DNA数据处理:GWAS数据处理的核心步骤</a>
-    </h1>
+    <a href="/2017/01/01/20170101gene/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          环境基因交互作用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/03/20160501gwas/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DNA数据处理:GWAS数据处理的核心步骤</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/26/20160426Antinous/" class="archive-article-date">
-  	<time datetime="2016-04-25T16:05:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/26/20160426Antinous/">Antinous的破镜重圆</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">人文与艺术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/21/20160424lakeshorelimited/" class="archive-article-date">
-  	<time datetime="2016-04-21T11:49:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/21/20160424lakeshorelimited/">在驶往纽约的湖滨号上</a>
-    </h1>
-  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/02/07/20160207bedrooms/" class="archive-article-date">
-  	<time datetime="2016-02-07T13:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/07/20160207bedrooms/">梵高的卧室(Van Gogh&#39;s Bedrooms)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">人文与艺术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -413,8 +394,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
