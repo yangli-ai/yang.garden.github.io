@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Sci-Forest">
 <meta property="og:description" content="计算生物学是重要的科研工具。在大数据时代，计算常辅以并行计算技术以加快计算速度。我一直认为数据处理最重要的步骤不在分析阶段，而在预分析，也就是数据探索阶段。掌握了并行计算方法，可以更自由地探索大数据。比如，在我们医学领域里，进行探索研究时会不断地形成各种假设，也会突然冒出新的想法，需要一一去探索。没有高效率的计算能力，繁琐的运算会让大部分人中途而止，研究得不到尽兴。数据越大，这种瓶颈越明显。">
 <meta property="og:image" content="http://yoursite.com/2016/06/15/20160610parallel/parallel.jpg">
-<meta property="og:updated_time" content="2017-11-21T17:08:12.599Z">
+<meta property="og:updated_time" content="2017-11-21T17:18:57.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HPC:并行计算(Parallel Computing)">
 <meta name="twitter:description" content="计算生物学是重要的科研工具。在大数据时代，计算常辅以并行计算技术以加快计算速度。我一直认为数据处理最重要的步骤不在分析阶段，而在预分析，也就是数据探索阶段。掌握了并行计算方法，可以更自由地探索大数据。比如，在我们医学领域里，进行探索研究时会不断地形成各种假设，也会突然冒出新的想法，需要一一去探索。没有高效率的计算能力，繁琐的运算会让大部分人中途而止，研究得不到尽兴。数据越大，这种瓶颈越明显。">
@@ -214,21 +214,31 @@
       
         <p><strong>计算生物学</strong>是重要的科研工具。在大数据时代，计算常辅以<strong>并行计算</strong>技术以加快计算速度。我一直认为数据处理最重要的步骤不在分析阶段，而在预分析，也就是数据探索阶段。掌握了并行计算方法，可以更自由地探索大数据。比如，在我们医学领域里，进行探索研究时会不断地形成各种假设，也会突然冒出新的想法，需要一一去探索。<strong>没有高效率的计算能力，繁琐的运算会让大部分人中途而止，研究得不到尽兴。</strong>数据越大，这种瓶颈越明显。<br><img src="/2016/06/15/20160610parallel/parallel.jpg" alt=""><br><a id="more"></a></p>
 <h3 id="1-并行运算"><a href="#1-并行运算" class="headerlink" title="1.并行运算"></a>1.并行运算</h3><p>简单理解，并行运算就是利用多个CPU同时运算，以加快计算速度。根据可以利用的计算机资源，有两类场景:</p>
-<blockquote>
-<p>◆<strong>一个node</strong>里使用<strong>多个CPU</strong>，对应<strong>OpenMP</strong>(Open Multi-processing)<br>◆<strong>多个node</strong>里使用<strong>多个CPU</strong>，对应<strong>MPI</strong>(Message Passing Interface)</p>
-</blockquote>
+<ul>
+<li><strong>一个node</strong>里使用<strong>多个CPU</strong>，对应<strong>OpenMP</strong>(Open Multi-processing)</li>
+<li><strong>多个node</strong>里使用<strong>多个CPU</strong>，对应<strong>MPI</strong>(Message Passing Interface)</li>
+</ul>
 <p>一定把握好二者的区别: OpenMP共享内存，实现简单；MPI里不同node的CPU使用各自的内存。对一些耗费不大的计算生物学问题，不见的MPI速度更快，因为数据在不同node间传输的速度拖累了多个CPU带来的好处。</p>
 <p>R语言里通过doParallel包等可以方便地实现并行计算。但MPI难以实现，只能通过脚本方式;MATLAB通过pool可以实现OpenMP和MPI;其它程序，可以通过Linux里PBS的Batch功能，利用脚本实现OpenMP和MPI。</p>
 <p>除了通过CPU实现并行运算外，GPU也可进行并行运算。GPU运算在机器学习领域里很成熟了，但计算生物学(生物信息学)用的不多。想玩玩，可以试试Python里TensorFlow的GPU运算。</p>
-<h3 id="2-Linux下实现并行运算"><a href="#2-Linux下实现并行运算" class="headerlink" title="2.Linux下实现并行运算"></a>2.Linux下实现并行运算</h3><p>大多数计算任务是用多个CPU集中完成一个任务，结束之后再进行下个任务。这既是合理利用计算资源的要求，也更是因为大部分计算生物学(生物信息学)的程序已经在内部实现了OpenMP功能。特别是单个任务就需要耗费大量的计算资源时，如序列比对。<br>当遇见一些较为简单但却杂而多的任务时，可以通过Linux命令或脚本实现并行运算。注意，此时有些任务不需要并行运算，甚至在单机上串行即可。</p>
-<h4 id="2-1-Linux命令"><a href="#2-1-Linux命令" class="headerlink" title="2.1 Linux命令"></a>2.1 Linux命令</h4><p>★ <strong>&amp;命令</strong><br>    <code>command1 &amp; command2 &amp; command3</code> # 本质是利用&amp;的后台功能<br>★ <strong>xargs命令</strong><br>    <code>cat list.txt | xargs  command</code>  # 适用于向同一个程序传递不同的参数，-P参数可以控制最大进程数<br>★ <strong>parallel命令</strong><br>    用法1: <code>parallel  command1 command2 command3</code>  # 类似&amp;，但可以用-j等参数<br>    用法2: <code>cat file | parallel -j 8 --block 10M --pipe command</code>  #把file每隔10M行拆分，传递给<code>—pipe</code>指定的command; <code>-j</code> job的数量，默认为CPU个数</p>
-<h4 id="2-2-bash脚本"><a href="#2-2-bash脚本" class="headerlink" title="2.2 bash脚本"></a>2.2 bash脚本</h4><p>可任意组合各种生物信息学命令，通过for+&amp;循环启动多个进程。<br>可以通过命名管道FIFO(first in first out)控制进程数</p>
+<h3 id="2-Linux下实现并行运算"><a href="#2-Linux下实现并行运算" class="headerlink" title="2.Linux下实现并行运算"></a>2.Linux下实现并行运算</h3><p>大多数计算任务是用多个CPU集中完成一个任务，结束之后再进行下个任务。这既是合理利用计算资源的要求，也更是因为大部分计算生物学(生物信息学)的程序已经在内部实现了OpenMP功能。特别是单个任务就需要耗费大量的计算资源时，如序列比对。当遇见一些较为简单但却杂而多的任务时，可以通过Linux命令或脚本实现并行运算。注意，此时有些任务不需要并行运算，甚至在单机上串行即可。</p>
+<h4 id="2-1-Linux命令"><a href="#2-1-Linux命令" class="headerlink" title="2.1 Linux命令"></a>2.1 Linux命令</h4><p>★ <strong>&amp;命令</strong><br>    <code>command1 &amp; command2 &amp; command3</code> # 本质是利用&amp;的后台功能<br>★ <strong>xargs命令</strong><br>    <code>cat list.txt | xargs  command</code>  # 适用于向同一个程序传递不同的参数，-P参数可以控制最大进程数<br>★ <strong>parallel命令</strong></p>
+<ul>
+<li>用法1: <code>parallel  command1 command2 command3</code>  # 类似&amp;，但可以用-j等参数</li>
+<li>用法2: <code>cat file | parallel -j 8 --block 10M --pipe command</code>  #把file每隔10M行拆分，传递给<code>—pipe</code>指定的command; <code>-j</code> job的数量，默认为CPU个数</li>
+</ul>
+<h4 id="2-2-bash脚本"><a href="#2-2-bash脚本" class="headerlink" title="2.2 bash脚本"></a>2.2 bash脚本</h4><p>可任意组合各种生物信息学命令，通过for+&amp;循环启动多个进程。<br>可以通过<strong>命名管道FIFO</strong>(first in first out)控制进程数</p>
 <h4 id="2-3-R、MATLAB等程序自带OpenMP"><a href="#2-3-R、MATLAB等程序自带OpenMP" class="headerlink" title="2.3 R、MATLAB等程序自带OpenMP"></a>2.3 R、MATLAB等程序自带OpenMP</h4><p>参考R和MATLAB</p>
-<h4 id="2-4-MPI的两种实现方式"><a href="#2-4-MPI的两种实现方式" class="headerlink" title="2.4 MPI的两种实现方式"></a>2.4 MPI的两种实现方式</h4><blockquote>
-<p>★ Open MPI的<code>mpirun</code><br>★ MPICH的<code>mpexec</code></p>
-</blockquote>
-<h3 id="3-Linux的PBS"><a href="#3-Linux的PBS" class="headerlink" title="3. Linux的PBS"></a>3. Linux的PBS</h3><p>PBS(Portable Batch System)，最初由NASA的Ames研究中心开发，主要为了提供一个能满足异构计算网络需要的软件包，用于灵活的批处理，特别是满足高性能计算的需要。有<strong>Interactive mode</strong>和<strong>Batch mode</strong>两种。除非任务量巨大，个人喜欢Interactive方式，可以用于正式运算前的调试或自由探索，也可以方便利用X-window软件(Xming等)，运行桌面软件，如同在本地使用。</p>
-<p>PBS主要命令为qsub (queue submit)<br>★ Interactive mode: <code>qsub -I -l nodes=1:ppn=4 -l mem=20G -l walltime=01:00:00</code>   #无法使用MPI<br>★ Batch mode: 将各种命令写入bash，让后通过<code>qsub</code>提交  #一般使用MPI的方法<br><code>qstat</code>, <code>qdel</code>等各种命令处理job</p>
+<h4 id="2-4-MPI的两种实现方式"><a href="#2-4-MPI的两种实现方式" class="headerlink" title="2.4 MPI的两种实现方式"></a>2.4 MPI的两种实现方式</h4><ul>
+<li>Open MPI的<code>mpirun</code></li>
+<li>MPICH的<code>mpexec</code></li>
+</ul>
+<h3 id="3-Linux的PBS"><a href="#3-Linux的PBS" class="headerlink" title="3. Linux的PBS"></a>3. Linux的PBS</h3><p><strong>PBS</strong> (Portable Batch System)，最初由NASA的Ames研究中心开发，主要为了提供一个能满足异构计算网络需要的软件包，用于灵活的批处理，特别是满足高性能计算的需要。有<strong>Interactive mode</strong>和<strong>Batch mode</strong>两种。除非任务量巨大，个人喜欢Interactive方式，可以用于正式运算前的调试或自由探索，也可以方便利用<strong>X-window</strong>软件(Xming等)，运行桌面软件，如同在本地使用。</p>
+<p>PBS主要命令为qsub (queue submit)</p>
+<ul>
+<li><strong>Interactive mode</strong>: <code>qsub -I -l nodes=1:ppn=4 -l mem=20G -l walltime=01:00:00</code>   #无法使用MPI</li>
+<li><strong>Batch mode</strong>: 将各种命令写入bash，让后通过<code>qsub</code>提交  #一般使用MPI的方法<br><code>qstat</code>, <code>qdel</code>等各种命令处理job</li>
+</ul>
 
       
 
