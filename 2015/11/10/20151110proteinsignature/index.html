@@ -6,14 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Sci-Forest</title>
+  <title>蛋白质聚类和特征提取 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sci-Forest">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+  <meta name="description" content="1.蛋白质聚类(Classification):">
+<meta property="og:type" content="article">
+<meta property="og:title" content="蛋白质聚类和特征提取">
+<meta property="og:url" content="http://yoursite.com/2015/11/10/20151110proteinsignature/index.html">
 <meta property="og:site_name" content="Sci-Forest">
+<meta property="og:description" content="1.蛋白质聚类(Classification):">
+<meta property="og:image" content="http://yoursite.com/2015/11/10/20151110proteinsignature/signature.jpg">
+<meta property="og:image" content="http://yoursite.com/2015/11/10/20151110proteinsignature/pattern.jpg">
+<meta property="og:image" content="http://yoursite.com/2015/11/10/20151110proteinsignature/fingerprint.jpg">
+<meta property="og:image" content="http://yoursite.com/2015/11/10/20151110proteinsignature/profile.jpg">
+<meta property="og:image" content="http://yoursite.com/2015/11/10/20151110proteinsignature/hmm.jpg">
+<meta property="og:updated_time" content="2017-11-23T18:20:52.267Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sci-Forest">
+<meta name="twitter:title" content="蛋白质聚类和特征提取">
+<meta name="twitter:description" content="1.蛋白质聚类(Classification):">
+<meta name="twitter:image" content="http://yoursite.com/2015/11/10/20151110proteinsignature/signature.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -185,308 +195,164 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-20140914zhongqiu" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-20151110proteinsignature" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/14/20140914zhongqiu/">科学之奥妙</a>
+    <h1 class="article-title" itemprop="name">
+      蛋白质聚类和特征提取
     </h1>
   
 
         
-        <a href="/2014/09/14/20140914zhongqiu/" class="archive-article-date">
-  	<time datetime="2014-09-14T14:06:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-09-14</time>
+        <a href="/2015/11/10/20151110proteinsignature/" class="archive-article-date">
+  	<time datetime="2015-11-09T18:12:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/2014/09/14/20140914zhongqiu/moon.jpg" alt=""></p>
-<p>遥望宇宙的深处，<br>漆黑，寂静，<br>如万古长夜，<br>我们孤独地生存在汪洋宇宙的孤岛上。<br></p>
-        
-          <a class="article-more-a" href="/2014/09/14/20140914zhongqiu/#more">more >></a>
-        
+        <h5 id="1-蛋白质聚类-Classification"><a href="#1-蛋白质聚类-Classification" class="headerlink" title="1.蛋白质聚类(Classification):"></a>1.蛋白质聚类(Classification):</h5><p><img src="/2015/11/10/20151110proteinsignature/signature.jpg" alt=""><br><a id="more"></a><br>根据蛋白质的序列和结构相似性，把蛋白质进行聚类，分成不同类别。人们提出了家族(family)、结构域(domain)、序列特征(sequence feature)等概念用于蛋白质的聚类。</p>
+<p><strong>Family</strong>: 一组有相同进化起源的蛋白质。它们的序列、结构或功能相似。如著名的G蛋白偶联受体超家族(G-protein coupled receptor family)，它的共同特点是：具有七个跨膜的结构域，并且与胞外信号结合后传递到胞内。从superfamily到family，再到subfamily，蛋白家族可以层层分类。</p>
+<p><strong>Domain</strong>: 蛋白质上的结构或功能单位，负责特定的功能或者蛋白质间相互作用。在不同的生物场景下，可有不同的功能。例如SH3结构域，由50个氨基酸构成，在蛋白质-蛋白质相互作用中有重要功能。一个蛋白质上可有多个结构域，甚至是相同的结构域。</p>
+<p><code>Note: 基于Family和Domain的蛋白质聚类方法并不直观，而且不同的分类时有重叠。因为重叠，一组内的蛋白质可能有不同的功能。</code></p>
+<p><strong>Sequence feature</strong>: 是一组氨基酸序列，通常只有几个氨基酸。通过它可以确定蛋白质的特点，对把握蛋白质整体的功能更重要。如active site、binding site、PTM位点、repeat。</p>
+<h5 id="2-特征-Protein-Signature-提取"><a href="#2-特征-Protein-Signature-提取" class="headerlink" title="2.特征(Protein Signature)提取:"></a>2.特征(Protein Signature)提取:</h5><p>这是一种数学模型。其目的是，在蛋白质进行聚类前，需要对蛋白质进行序列比对(Alignment)、提取特征(Signature)，以便预测Domain、Sequence feature等。通过比较多条序列共有的Signature，发现保守的序列，可以预测Domain等是否存在。</p>
+<p>有多种方法可以提取Signature。常见的有四种signature:</p>
+<p><strong>Pattern</strong>: 许多重要的sequence feature，如酶上的结合位点、激活位点，包括几个蛋白质功能必需的氨基酸。Pattern可以很好地识别这些sequence feature。许多这种Pattern，被描述成正则表达式(regular expression)，被称为motif<br><img src="/2015/11/10/20151110proteinsignature/pattern.jpg" alt=""></p>
+<center>寻找Pattern过程</center>
+
+<p><strong>Fingerprint</strong>: 即指纹。单个motif可以很好地识别sequence feature。但大部分蛋白质分类往往有多个保守区。Fingerprint就是用来发现多个保守的motif。<br><img src="/2015/11/10/20151110proteinsignature/fingerprint.jpg" alt=""></p>
+<center>寻找fingerprint过程</center>
+
+<p><strong>Profile</strong>: 用于描述Family和Domain。把多序列比对的结果转化成<code>Position-specific scoring system(PSSM)</code>。对每个位点上的不同氨基酸进行赋分。在这个过程中，通常会用<code>BLOSUM</code>等substitution matrix进行加权，考虑到进化距离的影响。<br><img src="/2015/11/10/20151110proteinsignature/profile.jpg" alt=""></p>
+<center>寻找profile过程</center>
+
+<p><strong>HMM : Hidden Markov models</strong>，一种<code>概率转移矩阵 (Transition Probability)</code> 。也是一种Position-specific scoring system。它充分考虑了氨基酸的插入和缺失，因此它可以对整个序列对比结果进行建模。非常适合寻找<code>同源序列 (Homologous sequence)</code>。<br><img src="/2015/11/10/20151110proteinsignature/hmm.jpg" alt=""></p>
+<center>寻找HMM过程</center>
+
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/payzhi.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/paywei.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2014/09/14/20140914zhongqiu/">展开全文 >></a>
-        </p>
-      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
 
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/11/10/20151110proteinsignature/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-20140618genome" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/06/18/20140618genome/">基因组:基因组的成分</a>
-    </h1>
+    <a href="/2015/11/11/20151111psiblast/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          PSI-BLAST寻找同源蛋白
+        
+      </div>
+    </a>
   
-
-        
-        <a href="/2014/06/18/20140618genome/" class="archive-article-date">
-  	<time datetime="2014-06-18T13:33:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-06-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>生物信息分析，首先要知道基因组上的序列成分(sequence components)，这是一个直观的概念。<br>About 1.5% of the genome consists of the ~20,000 protein-coding sequences which are interspersed by the non-coding introns, making up about 26%.<br><img src="/2014/06/18/20140618genome/g0.jpg" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2014/06/18/20140618genome/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2014/06/18/20140618genome/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
   
-    <article id="post-20140614duoduo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    <a href="/2015/05/19/20150519book/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">《追风筝的人》：成年后还要追逐那些美好的东西</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/06/14/20140614duoduo/">小树多多</a>
-    </h1>
-  
-
-        
-        <a href="/2014/06/14/20140614duoduo/" class="archive-article-date">
-  	<time datetime="2014-06-14T14:14:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-06-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>多多是小儿的乳名，去年年底来到这个世界，转眼间已七个月了。小家伙在他娘肚子里时就特别嗨皮，出来后让我们都心惊了一跳，脐带都扭转了十三圈。怪不得临产前胎心不稳定，看他多着急出来！从黑夜的子宫来到这个光明的世界，他循着光，睁开了眼看了看我们，又不屑一顾地闭上、呼呼睡觉去了。突然之间，我意识到家族的生命有了延续，生活里多了一份牵挂。<br></p>
-        
-          <a class="article-more-a" href="/2014/06/14/20140614duoduo/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2014/06/14/20140614duoduo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20130831data" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/08/31/20130831data/">为数据分析的自由者而准备：Excel之上的MATLAB, R语言和Python</a>
-    </h1>
-  
-
-        
-        <a href="/2013/08/31/20130831data/" class="archive-article-date">
-  	<time datetime="2013-08-31T14:32:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-08-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>（本文不针对”数据挖掘”的大规模数据。讨论的仍是常见的中通量科研数据的统计分析）<br>数据分析和可视化软件层出不穷，让人眼花缭乱。傻瓜式的菜单操作给了我们便利，但给我们科研者带来的却是，数据越来越陌生。这些软件仿佛是实验外包公司一样，您对过程产生过怀疑么？我们提供数据，按照标准的规程一步步操作，结论自动呈现在懒人的面前。我不怀疑软件的正确性，我只怀疑使用者是否考虑过模型中的参数设置。<br></p>
-        
-          <a class="article-more-a" href="/2013/08/31/20130831data/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2013/08/31/20130831data/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20120710Lingshan" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2012/07/10/20120710Lingshan/">北京灵山</a>
-    </h1>
-  
-
-        
-        <a href="/2012/07/10/20120710Lingshan/" class="archive-article-date">
-  	<time datetime="2012-07-10T09:12:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  灵山位于京西，最高处海拔2303米，名副其实的北京第一高峰。<br>  <img src="/2012/07/10/20120710Lingshan/DSC04118.JPG" alt=""><br>  &#8195;<br>  城里七月流火，此处如同三秋。海拔高不仅使得温度低，还造成山上气候多变。时而天气晴朗，时而大雨倾盆，一天之内多次交替。<br></p>
-        
-          <a class="article-more-a" href="/2012/07/10/20120710Lingshan/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2012/07/10/20120710Lingshan/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+</nav>
 
 
 
@@ -494,9 +360,26 @@
 
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
+  
+
+  
+
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -519,8 +402,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
