@@ -17,7 +17,7 @@
 <meta property="og:description" content="我们常用BLAST（如blastn和blastp）从数据库中寻找某一序列(query)的相似序列(target)，这种方法是pairwise comparison method。本质上讲也是通过计算距离，来衡量两条序列的相似性大小。">
 <meta property="og:image" content="http://yoursite.com/2015/11/11/20151111psiblast/psiblast1.jpg">
 <meta property="og:image" content="http://yoursite.com/2015/11/11/20151111psiblast/psiblast2.jpg">
-<meta property="og:updated_time" content="2017-11-01T08:45:43.893Z">
+<meta property="og:updated_time" content="2017-11-23T16:50:54.526Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PSI-BLAST寻找同源蛋白">
 <meta name="twitter:description" content="我们常用BLAST（如blastn和blastp）从数据库中寻找某一序列(query)的相似序列(target)，这种方法是pairwise comparison method。本质上讲也是通过计算距离，来衡量两条序列的相似性大小。">
@@ -213,7 +213,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我们常用BLAST（如blastn和blastp）从数据库中寻找某一序列(query)的相似序列(target)，这种方法是pairwise comparison method。本质上讲也是通过计算距离，来衡量两条序列的相似性大小。<br><img src="/2015/11/11/20151111psiblast/psiblast1.jpg" alt=""><br><a id="more"></a><br>而PSI-BLAST是基于motif或者profile搜索的方法，来寻找目标序列。PSI-BLAST先从query序列开始，获得一系列相似性序列，看作是同一蛋白家族，然后构建一个motif或profile。这个motif或profile的矩阵化形式，称之为position-specific score matrix (PSSM)。PSI-BLAST用PSSM，而不是初始的query序列，从数据库中搜索目标序列。这样可以比用一条query序列更有效地找出同源蛋白质。特别是寻找distant homologues。<br><img src="/2015/11/11/20151111psiblast/psiblast2.jpg" alt=""><br>PSI-BLAST分为两个重要步骤：1. 通过不断的迭代构建PSSM；2. 利用近似PSSM的一条人工序列搜索数据库。<br>具体步骤可阅读文章Gapped BLAST and PSI-BLAST: a new generation of protein database search program</p>
+        <p>我们常用<strong>BLAST</strong>（如blastn和blastp）从数据库中寻找某一序列(query)的相似序列(target)，这种方法是pairwise comparison method。本质上讲也是通过计算距离，来衡量两条序列的相似性大小。<br><img src="/2015/11/11/20151111psiblast/psiblast1.jpg" alt=""><br><a id="more"></a><br>而<strong>PSI-BLAST</strong>是基于motif或者profile搜索的方法，来寻找目标序列。PSI-BLAST先从query序列开始，获得一系列相似性序列，看作是同一蛋白家族，然后构建一个motif或profile。这个motif或profile的矩阵化形式，称之为position-specific score matrix (PSSM)。PSI-BLAST用PSSM，而不是初始的query序列，从数据库中搜索目标序列。这样可以比用一条query序列更有效地找出同源蛋白质。特别是寻找distant homologues。<br><img src="/2015/11/11/20151111psiblast/psiblast2.jpg" alt=""><br><strong>PSI-BLAST</strong>分为两个重要步骤：1. 通过不断的迭代构建PSSM；2. 利用近似PSSM的一条人工序列搜索数据库。具体步骤可阅读文章Gapped BLAST and PSI-BLAST: a new generation of protein database search program</p>
+<p>总之，多序列比对(Multiple Sequence Alignment)有两种方法，一种是Progressive alignment，如BLAST，另一种是Profile alignment，如PSI-BLAST。</p>
 
       
 
