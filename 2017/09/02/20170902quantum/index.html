@@ -17,7 +17,7 @@
 <meta property="og:description" content="研究小分子和生物学大分子的结合或相互作用，不外乎两种方式：以共价方式结合，以配体-受体方式结合。前者涉及到了化学键的断裂和生成，需要考虑化学知识。量子化学可帮助理解这种结合方式，所以这段时间参加了几次workshop。逐渐建立自己的量子化学知识体系。至于配体-受体结合方式，涉及到氢键、范德华力、库仑力等弱相互作用，多用分子力学知识处理。">
 <meta property="og:image" content="http://yoursite.com/2017/09/02/20170902quantum/quantum.jpg">
 <meta property="og:image" content="http://yoursite.com/2017/09/02/20170902quantum/schro.jpg">
-<meta property="og:updated_time" content="2017-11-25T11:51:38.243Z">
+<meta property="og:updated_time" content="2017-11-25T11:55:50.578Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="研究小分子与生物大分子的结合:量子化学方法">
 <meta name="twitter:description" content="研究小分子和生物学大分子的结合或相互作用，不外乎两种方式：以共价方式结合，以配体-受体方式结合。前者涉及到了化学键的断裂和生成，需要考虑化学知识。量子化学可帮助理解这种结合方式，所以这段时间参加了几次workshop。逐渐建立自己的量子化学知识体系。至于配体-受体结合方式，涉及到氢键、范德华力、库仑力等弱相互作用，多用分子力学知识处理。">
@@ -327,7 +327,7 @@
 <li>NLMO得到LMO: NAO—NBO—LMO。不同于MO，NBO已经不是离域化，而且更轻松得到LMO</li>
 <li>LMO有附加功能: 氧化态计算，LOL，ELF<br><strong>CDA分析和FO</strong><br>一般是原子轨道组合成分子轨道，这儿用片段轨道(Fragment Orbital)组合成分子轨道<br>可以分为donor和back-donation<br><strong>DOS图</strong></li>
 </ul>
-<h6 id="4-3-布居分析population-analysis"><a href="#4-3-布居分析population-analysis" class="headerlink" title="4.3. 布居分析population analysis"></a>4.3. 布居分析population analysis</h6><p>Population analysis用来获得不同基函数、原子轨道、壳层、原子、片段所带有的电子数(布居数)<br>原子电荷=原子核电荷数-原子布居数<br>用途: 亲电试剂和亲核试剂、反应位点、静电势等。<br>计算: DFT理论/6-31G*就可以了<br><strong>电荷计算charge</strong></p>
+<h5 id="4-3-布居分析population-analysis"><a href="#4-3-布居分析population-analysis" class="headerlink" title="4.3. 布居分析population analysis"></a>4.3. 布居分析population analysis</h5><p>Population analysis用来获得不同基函数、原子轨道、壳层、原子、片段所带有的电子数(布居数)<br>原子电荷=原子核电荷数-原子布居数<br>用途: 亲电试剂和亲核试剂、反应位点、静电势等。<br>计算: DFT理论/6-31G*就可以了<br><strong>电荷计算charge</strong></p>
 <ul>
 <li>直接基于波函数方法<br>Mulliken电荷: 快，不随基组增大而收敛，所以没法判断哪个基组下是较为准确的<br>NPA电荷: Natural population analysis被误认为NBO电荷</li>
 <li>拟合静电势方法<br>对静电势(ESP)问题效果最好(用于力场较好)，多用于分子动力学模拟，但可移植性差，依赖构象(不适合柔性构象的分子模拟，所以分子对接用什么电荷???)<br>范德华表面的静电势<br>  MK|Kollman电荷:<br>  CHELPG电荷: 推荐用于刚性分析的MD<br>RESP电荷: Amber力场的标准电荷模型，推荐用于柔性分子的MD。AM1-BCC电荷是快速估计RESP电荷; 类似AM1-BCC的是MMFF96电荷(用于量化算不动的巨大体系)，后两者都对静电势重复性很好。</li>
