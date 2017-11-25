@@ -16,7 +16,8 @@
 <meta property="og:site_name" content="Sci-Forest">
 <meta property="og:description" content="1. 连锁不平衡(Linkage disequilibrium)度量">
 <meta property="og:image" content="http://yoursite.com/2015/05/10/20160510snpld/ld.jpg">
-<meta property="og:updated_time" content="2017-11-25T16:28:21.564Z">
+<meta property="og:image" content="http://yoursite.com/2015/05/10/20160510snpld/block.jpg">
+<meta property="og:updated_time" content="2017-11-25T16:32:39.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SNP连锁不平衡度量和单倍型构建">
 <meta name="twitter:description" content="1. 连锁不平衡(Linkage disequilibrium)度量">
@@ -230,7 +231,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">D’和r2趋势不一致怎么解释？</div><div class="line">D&apos; and r-squared are different (and popular besinde others) approaches to normalise D. D&apos; uses the theorectical maximum of D to do the normalisation, r-squared uses correlation coefficient.</div><div class="line">D&apos; and r2 have a big difference in that a high value of D&apos; does not mean that one locus can predict the other with high accuracy, which in the case of say imputing SNPs could be a major issue. On the other hand, an r2 of 1 implies perfect predictability; if we know the allele at one locus we can predict perfectly the allele at the second locus and vice-versa.</div><div class="line">D’:  A scaled version of D </div><div class="line">Ranges between –1 and +1</div><div class="line">±1 implies at least one of the observed haplotypes was not observed</div><div class="line">If allele frequencies are similar, high D’ means the markers are good surrogates for each other</div><div class="line">D’ estimates inflated in small samples (cons)</div><div class="line">D’ estimates inflated when one allele is rare (cons)</div><div class="line">r2 : Ranges between 0 and 1. It is the measure preferred by population geneticists. 1 when the two  markers provide identical information. 0 when they are in perfect equilibrium</div></pre></td></tr></table></figure>
 <h4 id="2-单倍型构建-Haplotype"><a href="#2-单倍型构建-Haplotype" class="headerlink" title="2. 单倍型构建(Haplotype)"></a>2. 单倍型构建(Haplotype)</h4><p>LD plot, 把D, D’, R2可视化<br><strong>■ 根据D’确定Block，构建单倍域（haplotype block）</strong></p>
 <ul>
-<li>一段区域内95%以上的SNP间D’值的95%CI在(0.7-0.98)之间，在说明该区域几乎没有发生重组。(Gabriel SB, 2002, The structure of haplotype blocks in the human genome)</li>
+<li>一段区域内95%以上的SNP间D’值的95%CI在(0.7-0.98)之间，在说明该区域几乎没有发生重组。(Gabriel SB, 2002, The structure of haplotype blocks in the human genome)<br><img src="/2015/05/10/20160510snpld/block.jpg" alt=""></li>
 </ul>
 <p><strong>■ 根据LOD、r2 对在Block选择tagSNP</strong></p>
 <ol>
