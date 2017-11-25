@@ -6,14 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2015/5 | Sci-Forest</title>
+  <title>SNP连锁不平衡度量和单倍型构建 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sci-Forest">
-<meta property="og:url" content="http://yoursite.com/archives/2015/05/index.html">
+  <meta name="description" content="1. 连锁不平衡(Linkage disequilibrium)度量">
+<meta name="keywords" content="计算生物学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SNP连锁不平衡度量和单倍型构建">
+<meta property="og:url" content="http://yoursite.com/2016/05/10/20160510snpld/index.html">
 <meta property="og:site_name" content="Sci-Forest">
+<meta property="og:description" content="1. 连锁不平衡(Linkage disequilibrium)度量">
+<meta property="og:image" content="http://yoursite.com/2016/05/10/20160510snpld/ld.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/05/10/20160510snpld/block.jpg">
+<meta property="og:updated_time" content="2017-11-25T16:38:15.661Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sci-Forest">
+<meta name="twitter:title" content="SNP连锁不平衡度量和单倍型构建">
+<meta name="twitter:description" content="1. 连锁不平衡(Linkage disequilibrium)度量">
+<meta name="twitter:image" content="http://yoursite.com/2016/05/10/20160510snpld/ld.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -185,98 +193,209 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20160510snpld" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/05/19/20150519book/" class="archive-article-date">
-  	<time datetime="2015-05-19T12:28:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-05-19</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/19/20150519book/">《追风筝的人》：成年后还要追逐那些美好的东西</a>
+    <h1 class="article-title" itemprop="name">
+      SNP连锁不平衡度量和单倍型构建
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2016/05/10/20160510snpld/" class="archive-article-date">
+  	<time datetime="2016-05-10T12:50:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-连锁不平衡-Linkage-disequilibrium-度量"><a href="#1-连锁不平衡-Linkage-disequilibrium-度量" class="headerlink" title="1. 连锁不平衡(Linkage disequilibrium)度量"></a>1. 连锁不平衡(Linkage disequilibrium)度量</h4><p><img src="/2016/05/10/20160510snpld/ld.jpg" alt=""><br><a id="more"></a></p>
+<h5 id="■-D"><a href="#■-D" class="headerlink" title="■ D"></a>■ D</h5><p><strong>Delta</strong>＝P(AB)-P(A)P(B) (PAB is the expectant frequency of AB haplotype, and P(A)*P(B)  is the actual frequency)，可以记为Δ。</p>
+<ul>
+<li>Δ值以1—r的速率递减，直到为零(r为两点之间的重组值)。</li>
+<li>若Δ值为零，则AB完全随机；若Δ值为1，则AB完全关联；若0&lt;Δ&lt;1，则非随机关联，即连锁不平衡。</li>
+<li>基于D，延伸出D’和R2的概念，因为D大小取决于A和B各自的频率，无法比较不同pair间的D, 故需要标准化</li>
+</ul>
+<h5 id="■-D’和r2"><a href="#■-D’和r2" class="headerlink" title="■ D’和r2:"></a>■ D’和r2:</h5><p>*D’= Standardized D; r=pearson coefficient of correlation</p>
+<ul>
+<li>D’=D/Dmax  (Dmax＝min(PAPb，PaPB) </li>
+<li>r2 =D/PA<em>PB</em>Pa*Pb<br>D’和r2值为零时，连锁完全平衡；D’和r2值为1时，连锁完全不平衡<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">__区别D’和r2__：</div><div class="line">1. D’变化于-1，+1之间，反映的是两位点之间有无重组事件的发生；如果样本够大，D’=+1或-1，表示两位点之间无重组事件发生（完全连锁）；D’=0，表示完全随机重组，（不存在连锁不平衡，即处于遗传平衡）；通常情况下，D’接近于1或-1，提示两位点之间存在紧密的连锁关系；D&apos;接近于0，提示两 位点趋向于遗传平衡。</div><div class="line">2. 需要注意的是：D’对基因频率的变化不敏感，当其中一个位点的一个基因频率比较低的时候，r2比 D’要更可靠一些。</div><div class="line">3. r2变化于0到1之间，反映两个位点之间的“correlation coefficient”；r2=1，提示两位点将产生完全相同的信息（所以,选择tagSNP时会参考r2）；r2=0，提示遗传平衡；同样r2在0到1之间变化与可反映连锁不平衡的程度。</div><div class="line">4. D’=0.452，如果样本够大，两位点中基因频率没有特别低的话，可根据D’，判断存在连锁关系；</div><div class="line">5. r2=0.001，如果某一个位点的一个基因频率特别低的话，则依据r2值，判断两位点接近连锁平衡。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">D’和r2趋势不一致怎么解释？</div><div class="line">D&apos; and r-squared are different (and popular besinde others) approaches to normalise D. D&apos; uses the theorectical maximum of D to do the normalisation, r-squared uses correlation coefficient.</div><div class="line">D&apos; and r2 have a big difference in that a high value of D&apos; does not mean that one locus can predict the other with high accuracy, which in the case of say imputing SNPs could be a major issue. On the other hand, an r2 of 1 implies perfect predictability; if we know the allele at one locus we can predict perfectly the allele at the second locus and vice-versa.</div><div class="line">D’:  A scaled version of D </div><div class="line">Ranges between –1 and +1</div><div class="line">±1 implies at least one of the observed haplotypes was not observed</div><div class="line">If allele frequencies are similar, high D’ means the markers are good surrogates for each other</div><div class="line">D’ estimates inflated in small samples (cons)</div><div class="line">D’ estimates inflated when one allele is rare (cons)</div><div class="line">r2 : Ranges between 0 and 1. It is the measure preferred by population geneticists. 1 when the two  markers provide identical information. 0 when they are in perfect equilibrium</div></pre></td></tr></table></figure>
+<p><br></p>
+<h4 id="2-单倍型构建-Haplotype"><a href="#2-单倍型构建-Haplotype" class="headerlink" title="2. 单倍型构建(Haplotype)"></a>2. 单倍型构建(Haplotype)</h4><p>LD plot, 把D, D’, R2可视化</p>
+<h5 id="■-根据D’确定Block，构建单倍域（haplotype-block）"><a href="#■-根据D’确定Block，构建单倍域（haplotype-block）" class="headerlink" title="■ 根据D’确定Block，构建单倍域（haplotype block）__"></a>■ 根据D’确定Block，构建单倍域（haplotype block）__</h5><ul>
+<li>一段区域内95%以上的SNP间D’值的95%CI在(0.7-0.98)之间，在说明该区域几乎没有发生重组。(Gabriel SB, 2002, The structure of haplotype blocks in the human genome)<br><img src="/2016/05/10/20160510snpld/block.jpg" alt=""></li>
+</ul>
+<h5 id="■-根据LOD、r2-对在Block选择tagSNP"><a href="#■-根据LOD、r2-对在Block选择tagSNP" class="headerlink" title="■ 根据LOD、r2 对在Block选择tagSNP__"></a>■ 根据LOD、r2 对在Block选择tagSNP__</h5><ol>
+<li>LOD(log odds score method): 遗传连锁的一种计算，定义为连锁基因的可能性数据与非连锁基因的可能性数据之比率的log10。通常判定连锁关系是以Lod值大小为依据。</li>
+<li>Lod值为0，意味着连锁假设与不连锁假设的可能性相等；Lod值为正值，有利于连锁；Lod值为负值，表示有一定重组率的连锁。</li>
+<li>显著的域值是＋3和－2。当Lod&gt;+1时,表示存在连锁; Lod&gt;+3时(即odd=1000:1),表示肯定连锁, 连锁的概率为95%; Lod&lt;-2时,表示否定连锁.</li>
+<li>通过LD数据比对，挑选出每个block中r2&gt;0.8，且LOD&gt;3的SNPs，选取平均值最大的一个SNP作为该单倍域标签SNP。有时在同一个单倍域中，SNPs连锁不平衡程度低，不能相互替代，因此全选出作为tagSNP</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/payzhi.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/paywei.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/05/10/20160510snpld/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/05/01/20150501SterlingLake/" class="archive-article-date">
-  	<time datetime="2015-05-01T03:16:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-05-01</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/01/20150501SterlingLake/">Sterling Lake in New York</a>
-    </h1>
+    <a href="/2016/05/15/20160515annotation/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          基因注释数据库和突变注释
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/03/20160501gwas/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">GWAS数据处理的核心步骤</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  
 
 
           </div>
@@ -299,8 +418,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
