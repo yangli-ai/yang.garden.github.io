@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Sci-Forest</title>
+  <title>Python编程及数据处理 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sci-Forest">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="Python，不同于MATLAB和R，本身是一种很灵活的脚本语言。它的编程风格极为自由，也是处理文本很好工具，很适合大数据处理。不断有人给它添加了数据处理的模块，numpy，scipy，pandas，statsmodels等，更使它如虎添翼。sklearn，tensorflow，keras等机器学习模块，让它远远同时超越同类的编程工具和数据处理工具。即便绘图功能也不在话下，如同MATLAB一样简练">
+<meta name="keywords" content="计算生物学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python编程及数据处理">
+<meta property="og:url" content="http://yoursite.com/2017/11/26/20131010pythontutorail/index.html">
 <meta property="og:site_name" content="Sci-Forest">
+<meta property="og:description" content="Python，不同于MATLAB和R，本身是一种很灵活的脚本语言。它的编程风格极为自由，也是处理文本很好工具，很适合大数据处理。不断有人给它添加了数据处理的模块，numpy，scipy，pandas，statsmodels等，更使它如虎添翼。sklearn，tensorflow，keras等机器学习模块，让它远远同时超越同类的编程工具和数据处理工具。即便绘图功能也不在话下，如同MATLAB一样简练">
+<meta property="og:image" content="http://yoursite.com/2017/11/26/20131010pythontutorail/python.jpg">
+<meta property="og:updated_time" content="2017-11-25T17:55:14.514Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sci-Forest">
+<meta name="twitter:title" content="Python编程及数据处理">
+<meta name="twitter:description" content="Python，不同于MATLAB和R，本身是一种很灵活的脚本语言。它的编程风格极为自由，也是处理文本很好工具，很适合大数据处理。不断有人给它添加了数据处理的模块，numpy，scipy，pandas，statsmodels等，更使它如虎添翼。sklearn，tensorflow，keras等机器学习模块，让它远远同时超越同类的编程工具和数据处理工具。即便绘图功能也不在话下，如同MATLAB一样简练">
+<meta name="twitter:image" content="http://yoursite.com/2017/11/26/20131010pythontutorail/python.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -185,36 +192,240 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20131010pythontutorail" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python编程及数据处理
+    </h1>
+  
+
+        
+        <a href="/2017/11/26/20131010pythontutorail/" class="archive-article-date">
+  	<time datetime="2017-11-25T16:47:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-26</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Python，不同于MATLAB和R，本身是一种很灵活的脚本语言。它的编程风格极为自由，也是处理文本很好工具，很适合大数据处理。不断有人给它添加了数据处理的模块，numpy，scipy，pandas，statsmodels等，更使它如虎添翼。sklearn，tensorflow，keras等机器学习模块，让它远远同时超越同类的编程工具和数据处理工具。即便绘图功能也不在话下，如同MATLAB一样简练，超出了我们对脚本语言的认知。<br><strong>用它的各种统计和机器学习模块处理数据，同时有专业编程功能的神助攻，畅快淋漓！痛快！如此重量级的科研工具，怎能不掌握？</strong><br><img src="/2017/11/26/20131010pythontutorail/python.jpg" alt=""><br><a id="more"></a><br>本文是本人学习过程中的总结，删除了细节，仅保持了整体的风貌。管窥兼具编程和数据处理的快感。</p>
+<h4 id="1-编程语言要素"><a href="#1-编程语言要素" class="headerlink" title="1.    编程语言要素"></a>1.    编程语言要素</h4><ul>
+<li><p>变量类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">int,float, string, list, tuple, dict, set</div></pre></td></tr></table></figure>
+</li>
+<li><p>Console I/O</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">input( )</div><div class="line">print( )</div></pre></td></tr></table></figure>
+</li>
+<li><p>File I/O</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">handle=open(‘abcd.txt’,’w|a’)</div><div class="line">handle.close()</div><div class="line">handle.read( )   handle.readline( )  handle.readlines( )</div><div class="line">handle.write( )</div></pre></td></tr></table></figure>
+</li>
+<li><p>控制语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># 靠缩进控制语句块</div><div class="line">if   condition:</div><div class="line">          statement</div><div class="line">elif  condition:</div><div class="line">      statement</div><div class="line">else:</div><div class="line">      statement</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">while True:</div><div class="line">   statement</div><div class="line">try:</div><div class="line">	block1</div><div class="line">except:</div><div class="line">	block2</div><div class="line">else:</div><div class="line">	block3</div><div class="line">finally:</div><div class="line">	block4</div></pre></td></tr></table></figure>
+<ul>
+<li><p>函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def name( ):</div><div class="line">   statements</div><div class="line">   return()</div></pre></td></tr></table></figure>
+</li>
+<li><p>类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class person:</div><div class="line">   def _init_(self):</div><div class="line">       self.name=’liyang’</div><div class="line">       self.gender=’male’</div><div class="line">   def say(self)</div><div class="line">       print(“may name is %s”, self.name)</div><div class="line"># 使用类:</div><div class="line">   one=person( )</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="2-Python特色"><a href="#2-Python特色" class="headerlink" title="2.    Python特色"></a>2.    Python特色</h4><ul>
+<li><p>Expression</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[(i,j) for i in x for j in y]</div></pre></td></tr></table></figure>
+</li>
+<li><p>Decoration</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def func1()</div><div class="line">自定义func2和func3，调用func1</div><div class="line">可以写一个装饰器函数，调用func1</div></pre></td></tr></table></figure>
+</li>
+<li><p>Context manager</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">with open(‘in.txt’) as source, open(‘out.txt’) as target:</div><div class="line">	target.write(source.read())</div><div class="line">with open(‘in.txt’) as source:</div><div class="line">	for line in source:    OR source.read()</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="3-Numpy-and-Scipy"><a href="#3-Numpy-and-Scipy" class="headerlink" title="3.    Numpy and Scipy"></a>3.    Numpy and Scipy</h4><p>函数繁多，此处略去。</p>
+<h4 id="4-Matplotlib-Plot"><a href="#4-Matplotlib-Plot" class="headerlink" title="4.    Matplotlib::Plot"></a>4.    Matplotlib::Plot</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">imshow()</div><div class="line">colorbar()</div><div class="line">gca().set_xticklabels(‘’, rotation=90); plt.xticks(rotation=90)</div><div class="line">ax.xaxis.tick_top()</div><div class="line">ax.invert_xaxis()</div><div class="line">ax.set_frame_on(False)  # box</div><div class="line"></div><div class="line">from matplotlib.pyplot as plt</div><div class="line">from matplotlib.animation as animation</div><div class="line"></div><div class="line">from mpl_toolkits.mplot3d import Axes3D</div><div class="line">ax=gca(projection=’3d’)</div><div class="line">as.plot(x, y, z)</div></pre></td></tr></table></figure>
+<p><strong>函数式绘图</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">plt</div><div class="line">gcf()</div><div class="line">ax=gca(), axis([1,2,3,4])</div><div class="line">	ax.set_xlim() ax.set_ylim() set_xticklabels( ) set_yticklabels( )</div><div class="line">scatter(x,y)</div><div class="line">line, =plot(x,y)</div><div class="line">	line.set_data(); line.set_xdata(); line.set_ydata()</div><div class="line">imshow(z)</div><div class="line">contour(X,Y,Z)</div><div class="line">axvline(); axhline()</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">import matplotlib.pyplot as plt</div><div class="line">import time</div><div class="line">import random </div><div class="line">ysample = random.sample(xrange(-50, 50), 100)</div><div class="line">xdata = []</div><div class="line">ydata = [] </div><div class="line">plt.show() </div><div class="line">axes = plt.gca()</div><div class="line">axes.set_xlim(0, 100)</div><div class="line">axes.set_ylim(-50, +50)</div><div class="line">line, = axes.plot(xdata, ydata, &apos;r-&apos;)</div><div class="line"> </div><div class="line">for i in range(100):</div><div class="line">  xdata.append(i)</div><div class="line">  ydata.append(ysample[i])</div><div class="line">  line.set_xdata(xdata)</div><div class="line">  line.set_ydata(ydata)</div><div class="line">  plt.draw()</div><div class="line">  plt.pause(1e-17)</div><div class="line">  time.sleep(0.1)</div><div class="line"> </div><div class="line">  # add this if you don&apos;t want the </div><div class="line">  # window to disappear at the end</div><div class="line">plt.show()</div><div class="line">``` </div><div class="line">&lt;br&gt;&lt;br&gt;</div><div class="line">#### 5.	Pandas</div><div class="line">##### 5.1 Pandas-Series</div><div class="line">Series和DataFrame切片有四种方式：前三种与R相同，后一种是pandas的重要功能</div><div class="line">1.	str(index或columns的str):</div><div class="line">2.	number:</div><div class="line">3.	Bool: True or False</div><div class="line">4.	time(当DatetimeIndex时): time有timestamp(即timepoint)和period(即interval)</div><div class="line">Series,比list,array等有一个最重要的功能，它在算数运算中会自动对齐不同的index。同理在DataFrame和Series之间。</div></pre></td></tr></table></figure>
+<p>x=Series()<br>x.values<br>x.index<br>x[1],x[‘a’],x[x&gt;0]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">时间序列的切片操作：</div></pre></td></tr></table></figure></p>
+<p>x[datetime(2017,7,9)]<br>x[‘1/6/2017’:’6/8/2017’]<br>x[pd.data_range(start=’4/21/2017’,periods=20)]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">##### 5.2. Pandas-Series之MultiIndex</div></pre></td></tr></table></figure></p>
+<p>pd.DataFrame(x, index=[[],[]])<br>pd.set_index(x, ‘var1’); pd.reset_index()<br>pd.sort_index( )<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">##### 5.3. Pandas-Series之Time series</div><div class="line">__Timeseries的index__: 时间序列关键在于__index__!!!!</div><div class="line">Index是：</div><div class="line">1.	datetime/Timestamp(datetime类型&lt;date和time子类型&gt;和Timestamp&lt;DatetimeIndex中的一个元素&gt;)</div><div class="line">2.	timedelta</div><div class="line">3.	Period(timedelta类型)</div><div class="line"></div><div class="line">这两种time类型都有__freq参数__: A|A-JAN|5A   M|MS|5M  W|W-MON|4W D|5D  H|5H  1H30MIN</div><div class="line">* __DatetimeIndex__: datetime可以from timeseries import datetime或者pd.datetime|pd.date_range()或者pd.Timestamp</div></pre></td></tr></table></figure></p>
+<p>pd.datetime(2011,1,1)<br>pd.datetime.strptime(‘2011-01-01’,’%Y-%m-%d’)<br>datetime.now().year|month|day|hour|minute|second<br>pd.Timestamp(‘1/1/2010’|’2010-1-1’)</p>
+<h1 id="产生datetime的序列；-其中每个元素值是Timestamp对象"><a href="#产生datetime的序列；-其中每个元素值是Timestamp对象" class="headerlink" title="产生datetime的序列； 其中每个元素值是Timestamp对象"></a>产生datetime的序列； 其中每个元素值是Timestamp对象</h1><p>[strptime(i) for i in x] = pd.to_datetime(x)<br>pd.date_range(‘2010-1-1|1/1/2010’,freq=’D|4H’,periods=10)<br>datetime操作：delta=dt1-dt2; delta.days; dt.asfreq(method=’’)</p>
+<p>#两个datetime相减为timedelta对象，所以有TimedeltaIndex;<br>    datetime和timedelta可以加减运算<br>timedelta.to_datetime()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* __PeriodIndex__:  如2017年1月，或者2017全年</div></pre></td></tr></table></figure></p>
+<p>pd.Period(‘1/2010|2010-1’)<br>pd.period_range(‘1/2010’,’3/2010’,freq=’A|A-JAN|M|W|W-SUN|D’)<br>period操作: p+1;  p.asfreq(‘M’,how=’start|end’)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">* 各种Index可以互换</div><div class="line"></div><div class="line">__Time series操作：__</div><div class="line">*</div></pre></td></tr></table></figure></p>
+<p>x.resample(‘A|AS|A-JAN|M|MS|3M|D|10D|H|12H|W-MON|W-TUE’,how=’mean’) </p>
+<h1 id="缺失的时间用NaN补齐，使DatetimeIndex连续"><a href="#缺失的时间用NaN补齐，使DatetimeIndex连续" class="headerlink" title="缺失的时间用NaN补齐，使DatetimeIndex连续"></a>缺失的时间用NaN补齐，使DatetimeIndex连续</h1><p>x.shift(N,freq=’D’)<br>pd.rolling_mean|rolling_cor(ts).plot()<br>时间序列有关的函数和图像：<br>ts.diff() ts.cumsum()<br>pd.plotting.lag_plot(ts)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">##### 5.4. Pandas-DataFrame</div></pre></td></tr></table></figure></p>
+<p>df=pd.read_csv|read_table|read_clipboard<br>(‘file’,<br>skiprows, skipfooter, nrows,skipinitialspace, skip_blank_lines    #skip系列<br>sep=’\s+’, deliminiter=, delim_whitespace=True, lineterminator,  #sep系列<br>header, index_col=1,parse_date=True,date_parse=func, names<br>na_value=)<br>pd.ExcelFile()<br>df[‘a’]  # 单参数模式，a可以时index的某一个level，也可以时columns名字！！<br>del df[‘columns’]<br>df.loc[] #index可num可str，columns必须str<br>df.iloc[] #index可num可str，columns必须num<br>df.ix[]  #a flexible way<br>df[df&gt;0]<br>df[timeseries]  # if index are datetime, df[‘2016’], df[‘1/2016’:’12/2017’]</p>
+<p>df.sort_index()<br>df.sort_values(‘columns’)<br>df.merge()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Tip: 金融数据下载: Python中tushare和R中quantmod</div><div class="line">##### 5.5. Pandas-Panel</div><div class="line">略</div><div class="line">##### 5.6. Pandas-Reshaping</div></pre></td></tr></table></figure></p>
+<p>df.stack()|unstack()<br>df.pivot() = pd.crosstab(df.var1, df.var2)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">##### 5.7. Pandas-Computation</div></pre></td></tr></table></figure></p>
+<p>df.mean|sum|min|describe|<br>df.apply(func)<br>df.rolling(window=5)<br>df.expanding()<br>df.ewm(span=5)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">##### 5.8. Pandas-Plot</div></pre></td></tr></table></figure></p>
+<p>pd.plot()<br>kind=’line|area|bar|barh|kde|pie|box|hexbin’, (stacked=True!!), yerr=<br>style=’-.r’  # matlab style<br>color|colormap, alpha<br>secondary_y=[‘var1’,’var2’]  #var1和var2用右侧y<br>subplots=True, layout=(2,4), (sort_columns=) , sharex=False, sharey<br>ax=subplots(2,4,1) # equals to subplot(2,4,1)<br>e.g.# x.div(x.sum(1),axis=0).plot(kind=’bar’,stacked=True)</p>
+<pre><code># (ts+sd).plot(kind=’area’)
+</code></pre><p>series.plot()|hist()<br>xlabel() ylabel() titile()  set|get(gca(),’xticks’) legend() colorbar() for imshow()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;br&gt;&lt;br&gt;</div><div class="line">#### 6.Statsmodels</div><div class="line">##### 6.1. Statsmodels-regression/fit/predict</div></pre></td></tr></table></figure></p>
+<p>import statsmodels.api as sm<br>import statsmodels.formula.api as smf<br>sm.categorical(x1)<br>ols=sm.OLS(y,X).fit()  # X is DataFrame, including intercept<br>ans=ols.fit() OR ans=sm.OLS(y,X).fit()<br>ans.summary|aic|rsquared|params|fittedvalue|resid<br>ans.predict(x2)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">##### 6.2. Statsmodels-time series/fit/forecast</div></pre></td></tr></table></figure></p>
+<p>import statsmodels.tsa.api as sts<br>import statsmodels.graphic.api as sg<br>sg.tsa.plot_acf(ts, lags=)<br>sg.tsa.plot_pacf()<br>sts.ARIMA()<br>sg.qqplot(ans.resid, line=’q’)</p>
+<p>ans.predict<br>ans.forecast<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">##### 6.3.	Sklearn-Estimator/fit/transform</div></pre></td></tr></table></figure></p>
+<p>estimator<br>estimator.fit()<br>estimator.transform()<br>•    从功能来分：<br>o    classification<br>o    Regression<br>o    Clustering<br>o    Dimensionality reduction<br>o    Model selection<br>o    Preprocessing<br>•    从API模块来分：<br>o    sklearn.base: Base classes and utility function<br>o    sklearn.cluster: Clustering<br>o    sklearn.cluster.bicluster: Biclustering<br>o    sklearn.covariance: Covariance Estimators<br>o    sklearn.model_selection: Model Selection<br>o    sklearn.datasets: Datasets<br>o    sklearn.decomposition: Matrix Decomposition<br>o    sklearn.dummy: Dummy estimators<br>o    sklearn.ensemble: Ensemble Methods<br>o    sklearn.exceptions: Exceptions and warnings<br>o    sklearn.feature_extraction: Feature Extraction<br>o    sklearn.feature_selection: Feature Selection<br>o    sklearn.gaussian_process: Gaussian Processes<br>o    sklearn.isotonic: Isotonic regression<br>o    sklearn.kernel_approximation: Kernel Approximation<br>o    sklearn.kernel_ridge: Kernel Ridge Regression<br>o    sklearn.discriminant_analysis: Discriminant Analysis<br>o    sklearn.linear_model: Generalized Linear Models<br>o    sklearn.manifold: Manifold Learning<br>o    sklearn.metrics: Metrics<br>o    sklearn.mixture: Gaussian Mixture Models<br>o    sklearn.multiclass: Multiclass and multilabel classification<br>o    sklearn.multioutput: Multioutput regression and classification<br>o    sklearn.naive_bayes: Naive Bayes<br>o    sklearn.neighbors: Nearest Neighbors<br>o    sklearn.neural_network: Neural network models<br>o    sklearn.calibration: Probability Calibration<br>o    sklearn.cross_decomposition: Cross decomposition<br>o    sklearn.pipeline: Pipeline<br>o    sklearn.preprocessing: Preprocessing and Normalization<br>o    sklearn.random_projection: Random projection<br>o    sklearn.semi_supervised: Semi-Supervised Learning<br>o    sklearn.svm: Support Vector Machines<br>o    sklearn.tree: Decision Tree<br>o    sklearn.utils: Utilities</p>
+<p>sklearn.metrics.pair_distance(x, metric=’euclidean’, ‘l2’, ‘l1’, ‘manhattan’, ‘cityblock’, ‘braycurtis’, ‘canberra’, ‘chebyshev’, ‘correlation’, ‘cosine’, ‘dice’, ‘hamming’, ‘jaccard’, ‘kulsinski’, ‘mahalanobis’, ‘matching’, ‘minkowski’, ‘rogerstanimoto’, ‘russellrao’, ‘seuclidean’, ‘sokalmichener’, ‘sokalsneath’, ‘sqeuclidean’, ‘yule’, ‘wminkowski’])<br>dist = DistanceMetric.get_metric(‘euclidean’); dist.pairwise(x)<br>sklearn.cluster.AgglomerativeClustering(n_clusters=3,linkage=’complete’,affinity=’euclidean’).fit(x3)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">![](20131010pythontutorail/sklearn.jpg)</div><div class="line">__通用方法：fit, predict, fit_transform!__ </div><div class="line">__sklearn.datasets__</div><div class="line">__sklearn.preprocessing__</div></pre></td></tr></table></figure></p>
+<pre><code>Imputer(missing_value=&apos;NaN&apos;, strategy=&apos;mean&apos;,axis=0)
+LabelEncoder  # change labels into num, not change into categorical variable
+normalize() | Normalizer()
+scale() | StandardScaler()
+minmax_scale() | MinMaxScaler()        
+Binarizer(threshold=)  =  binarize()
+OneHotEncoder().fit_transform(m*n array).toarray()  #dummy_ranks = 
+    =pd.get_dummies(df[&apos;prestige&apos;], prefix=&apos;prestige&apos;)
+PolynomialFeatures(degree=, include_bias=True, interaction_only=True)   
+</code></pre><h1 id="fit-amp-transform-equals-to-fit-transform"><a href="#fit-amp-transform-equals-to-fit-transform" class="headerlink" title="fit() &amp; transform() equals to fit_transform()"></a>fit() &amp; transform() equals to fit_transform()</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.decomposition__</div></pre></td></tr></table></figure>
+<pre><code>PCA 
+    pca.fit(X)    
+    pca.explained_variance_
+    pca.explained_variance_ratio_
+    pca.n_components = 2
+    X_reduced = pca.fit_transform(X)
+    kernelPCA(kernel=&apos;polynomial、rbf、sigmoid、cosine、precomputed&apos;,n_components=).fit_transform()
+</code></pre><p>#先利用核技巧把数据投射到高维空间，然后利用PCA进行降维。这种方法对非线性数据进行降维。<br>    ICA<br>        truncatedSVD() #可以用在稀疏矩阵而PCA不能。<br>        FactorAnalysis().fit_transform()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.feature_extraction__</div></pre></td></tr></table></figure></p>
+<pre><code>DictVectorizer().fit_transfrom(dict).toarray()
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.feature_selection__</div></pre></td></tr></table></figure>
+<pre><code>VarianceThreshold(threshold)  #low variance principle
+SelectKBest()  # univariate feature selection
+from sklearn.ensemble import ExtraTreesClassifier
+model = ExtraTreesClassifier()
+model.fit(X, y)
+    # display the relative importance of each attribute
+print(model.feature_importances_)
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.linear_model__  # alpha for Ridge and Lasso.</div></pre></td></tr></table></figure>
+<pre><code>LinearRegression  # colinear problem, so use [shrinkage]
+LogisticRegression(C=,penalty=)  
+</code></pre><h1 id="large-C-for-less-regularization-penalty-’l2’-for-shrinkage-penalty-’l1’-for-sparsity"><a href="#large-C-for-less-regularization-penalty-’l2’-for-shrinkage-penalty-’l1’-for-sparsity" class="headerlink" title="large C for less regularization; penalty=’l2’ for shrinkage, penalty=’l1’ for sparsity"></a>large C for less regularization; penalty=’l2’ for shrinkage, penalty=’l1’ for sparsity</h1><p>Ridge(alpha=.1)  # regularization is a good method to deal with overfitting. decrease contribution of some features, but not set them to zero. large alpha for higher bias and lower variance ;岭α参数越大，偏差（bias)越大，方差（variance）越小<br>    RidgeCV  #Cross-validated estimators<br>    Lasso  # least absolute shrinkage and selection operator<br>    LassoCV  #lasso.alpha_<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.neigbors__</div></pre></td></tr></table></figure></p>
+<pre><code>NearestNeighbors
+NearestCentroid
+KNeighborsClassifier | KNeighborsRegressor  # choose points within K neighbors  # 高维灾难
+RadiusNeighborsClassifier | RadiusNeighborsRegressor  # choose points within Radius
+
+KernelDensity
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.naive_bayes__</div></pre></td></tr></table></figure>
+<pre><code>GaussianNB
+BernoulliNB  #在文本分类中，就是一个特征有没有在一个文档中出现
+MultinomialNB   #该模型常用于文本分类，特征是单词，值是单词的出现次数。
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.svm__   # C parameter for regularization</div></pre></td></tr></table></figure>
+<pre><code>SVC  # kernel=&quot;linear|poly|rbf&quot;  degree for poly kernel
+SVR
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.tree__</div></pre></td></tr></table></figure>
+<pre><code>DecisionTreeClassifier
+DecisionTreeRegressor
+ExtraTreesClassifier
+ExtraTreesRegressor
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.neural_network__</div></pre></td></tr></table></figure>
+<pre><code>BernoulliRBM
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.cluster__</div></pre></td></tr></table></figure>
+<pre><code>KMeans(n_clusters=3)
+DBSCAN(eps=, min_samples=)  # density
+AgglomerativeClustering(n_clusters)
+SpectralClustering(n_clusters=)
+AffinityPropagation()
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">__sklearn.random_projection__</div><div class="line">	</div><div class="line">__sklearn.ensemble__      # return estimator using base-estimator</div></pre></td></tr></table></figure>
+<pre><code>AdaBoosting () # base-estimator is DecisionTree
+BaggingClassifier(base-estimator)
+RandomForestClassifier(n_estimators=)   
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.pipeline__</div></pre></td></tr></table></figure>
+<pre><code>Pipeline(steps=[(&apos;pca&apos;, pca), (&apos;logistic&apos;, logistic)]) #return estimator
+        .fit_transform()
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.cross_validation__ #cross_validation generator</div></pre></td></tr></table></figure>
+<pre><code>train_test_split(X,y,test_size)  # X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.33)
+KFold(n=, n_folds) #return kfold iterator for train_indices, test_indices
+cross_val_score(estimator,X,y,cv=kfold,n_jobs=-1) # kfold is created by KFold
+cross_val_predict
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">__sklearn.grid_search__ </div><div class="line">grid_search estimator; choose best parameters to maximize cross_validation score for a certain estimator</div></pre></td></tr></table></figure>
+<pre><code>GridSearchCV   # return estimator
+from sklearn.grid_search import GridSearchCV
+Cs = np.logspace(-6, -1, 10)
+clf = GridSearchCV(estimator=svc, param_grid=dict(C=Cs),n_jobs=-1)
+        clf.fit(X_digits[:1000], y_digits[:1000])        
+        clf.best_score_                                  
+        clf.best_estimator_.C  
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.Combine__ cross_validation|grid_search</div></pre></td></tr></table></figure>
+<pre><code>cross_validation.cross_val_score(clf,X,y)
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.metrics__</div></pre></td></tr></table></figure>
+<pre><code>accuracy_score(y_true,y_pred)
+precision_score(y_true, y_pred)
+auc(y_true, y_pred)
+roc_curve()
+homogeneity_score(label_true, label_pred)
+
+r2_score()
+explained_variance_score()
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">__sklearn.externals__</div></pre></td></tr></table></figure>
+<pre><code>joblib  # pickle model
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">http://scikit-learn.org/stable/modules/classes.html</div><div class="line">__supervised estimator objects:__</div></pre></td></tr></table></figure>
+<pre><code>set_params
+param1
+fit
+transform|predict|score
+labels_
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;br&gt;&lt;br&gt;</div><div class="line">#### 7.	Tensorflow-graph</div><div class="line">* 使用张量(tensor)表示数据.</div><div class="line">* 使用图(graph)来表示计算任务.</div><div class="line">* 在被称之为会话(Session)的上下文 (context)中执行图.</div><div class="line">* 通过变量 (Variable)维护状态.</div><div class="line">* 使用feed和fetch可以为任意的操作(arbitrary operation)赋值或者从其中获取数据.</div></pre></td></tr></table></figure>
+<pre><code>import tensorflow as tf
+tf.device(“/cpu:0”)
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">__graph:__</div><div class="line">由节点node构成，constant, variable, algebra都可以作为节点，每个节点都有输入和输出(通过session进行); 每一个节点的微分都很清楚。</div><div class="line">每一个节点都有name属性。</div><div class="line">■ 训练数据numpy:</div></pre></td></tr></table></figure>
+<p>x=linspace(0,10,100)[np.newaxis,:]  #必需是二维array，linspace(0,10,100)不是！！！<br>y=x**2<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">■ constant tensor:</div></pre></td></tr></table></figure></p>
+<p>a=tf.constant(5.0)<br>c=a*5<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">■ placeholder: 供输入数据用</div></pre></td></tr></table></figure></p>
+<p>a = tf.placeholder(tf.float32, shape=[None,1], name=)     # Create a symbolic variable ‘a’<br>b = tf.placeholder(tf.float32, shape=[None,1], name=)     # Create a symbolic variable ‘b’<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">■ variable tensor: 必须初始化，而且tensorflow会对这些变量更新</div></pre></td></tr></table></figure></p>
+<p>W1=tf.Variable(tf.random_normal((2, 2)), name=”random_weights”)<br>b1=<br>tf.assign(W,value)<br>sess.run(tf.initialize_all_variables()  or  tf.global_variables_initializer())<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">■ python2tensor:</div></pre></td></tr></table></figure></p>
+<p>tf.convert_to_tensor( )<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">■ operation:</div></pre></td></tr></table></figure></p>
+<p>tf.add()<br>tf.mul()<br>tf.square()<br>tf.reduce_sum()<br>其它各种函数，包括激活函数，卷积等<br><a href="https://www.tensorflow.org/versions/r0.10/api_docs/python/nn/#relu" target="_blank" rel="external">https://www.tensorflow.org/versions/r0.10/api_docs/python/nn/#relu</a><br>tf.nn.relu()<br>tf.nn.sigmoid()<br>tf.nn.tanh()<br>tf.nn.dropout(a)  # dropout防止过拟合，采用一种正则化（regularization）技术<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">■ tf.optimizer and tf.train: #可以自己构建各种统计模型，或者使用ANN模型tf.nn.relu(Wx+b)</div></pre></td></tr></table></figure></p>
+<p>optimizer = tf.train.GradientDescentOptimizer(0.5) # parameter is learning rate<br>train = optimizer.minimize(loss)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">■ tf.contrib.learn</div></pre></td></tr></table></figure></p>
+<p>tf.contrib.learn<br>tf.contrib.learn.Estimator<br>tf.contrib.learn.LinearRegressor<br>tf.contrib.learn.DNNClassifier<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">session: 运行graph</div><div class="line">■ session:</div></pre></td></tr></table></figure></p>
+<p>sess=tf.Session( )<br>sess.close( )<br>sess.run(node1)                # run one node<br>sess.run([node1, node2])        # run a list of node<br>sess.run(train,feed_dict={a:1})    # run variable with feeding values<br>with tf.Session( ) as sess:<br>    ans=sess.run(c)<br>    print(ans)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">■ InteractiveSession()</div></pre></td></tr></table></figure></p>
+<pre><code>a.eval( )        #不必通过sess.run( )来获得的返回值
+b.eval( )
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">■ feed and fetch:</div></pre></td></tr></table></figure>
+<p>通过feed和fetch输入输出数据，而不是tensor<br>feed: run中feed_dict={ }传递参数<br>fetch: run的结果就是fetch<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">    saver = tf.train.Saver()</div><div class="line">    saver.save(sess, &quot;/tmp/model.ckpt&quot;)</div><div class="line">    saver.restore(sess, &quot;/tmp/model.ckpt&quot;)</div></pre></td></tr></table></figure></p>
+<p><br><br></p>
+<h4 id="8-Keras-Sequential-fit-predict"><a href="#8-Keras-Sequential-fit-predict" class="headerlink" title="8.    Keras-Sequential/fit/predict"></a>8.    Keras-Sequential/fit/predict</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">from keras.model import Sequential</div><div class="line">from keras.layers import Dense, Dropout, Activation, Merge  # 这些都是model.add( )</div><div class="line"># Dense(units=, input_dim=)表示Bp层</div><div class="line"># Activation(‘relu|softmax|tanh|sigmoid’)</div><div class="line"># Merget(model1,model2, mode=’concat’)</div><div class="line"></div><div class="line">model=Sequential</div><div class="line">model.add(Dense)</div><div class="line">model.compile(loss=’mse|binary_crossentropy|categorical_crossentropy’, </div><div class="line">optimizer=’rmsprop|sgd’, </div><div class="line">metrics=[‘accuracy’])</div><div class="line">model.fit([seq1,seq2], Y, epochs=, batch_size=) OR</div><div class="line">for i in :</div><div class="line">model.train_on_batch(X_batch, Y_batch)</div><div class="line">model.predict(x_test)|model.predict_classes(x_test)|model.predict_prob(x_test)</div><div class="line">model.evaluate(x_test,y_test)</div><div class="line">model.layers[0].get_weigths()</div></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/payzhi.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/paywei.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/01/20170601computationbio/" class="archive-article-date">
-  	<time datetime="2017-06-01T13:03:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/01/20170601computationbio/">“所有的生物学都是计算生物学“</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -226,374 +437,104 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/20170501cygwin/" class="archive-article-date">
-  	<time datetime="2017-05-15T10:19:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/20170501cygwin/">通过鼠标右键进入cygwin，并自动打开当前文件夹</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/01/20170101gene/" class="archive-article-date">
-  	<time datetime="2017-01-01T08:59:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/01/20170101gene/">环境基因交互作用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">环境与基因</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/15/20160610parallel/" class="archive-article-date">
-  	<time datetime="2016-06-15T13:52:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/15/20160610parallel/">HPC:并行计算(Parallel Computing)</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/26/20131010pythontutorail/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/15/20160515annotation/" class="archive-article-date">
-  	<time datetime="2016-05-14T17:57:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-15</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/15/20160515annotation/">基因注释数据库和突变注释</a>
-    </h1>
+  
+    <a href="/2017/10/13/20171013greatwall/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">20171013greatwall</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/10/20160510snpld/" class="archive-article-date">
-  	<time datetime="2016-05-10T12:50:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/10/20160510snpld/">SNP连锁不平衡度量和单倍型构建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/03/20160501gwas/" class="archive-article-date">
-  	<time datetime="2016-05-03T15:23:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/03/20160501gwas/">GWAS数据处理的核心步骤</a>
-    </h1>
-  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/26/20160426Antinous/" class="archive-article-date">
-  	<time datetime="2016-04-25T16:05:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/26/20160426Antinous/">Antinous的破镜重圆</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">人文与艺术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/21/20160424lakeshorelimited/" class="archive-article-date">
-  	<time datetime="2016-04-21T11:49:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/21/20160424lakeshorelimited/">在驶往纽约的湖滨号上</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/02/07/20160207bedrooms/" class="archive-article-date">
-  	<time datetime="2016-02-07T13:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/07/20160207bedrooms/">梵高的卧室(Van Gogh&#39;s Bedrooms)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">人文与艺术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -617,8 +558,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
