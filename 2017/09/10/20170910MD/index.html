@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Sci-Forest">
 <meta property="og:description" content="我学习和使用分子动力学模拟知识，是为了探索环境污染物的毒理学效应机制。偶尔看一下下面罗列的文件格式，可以如同过电影一样回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。">
 <meta property="og:image" content="http://yoursite.com/2017/09/10/20170910MD/a.png">
-<meta property="og:updated_time" content="2017-11-01T19:33:11.632Z">
+<meta property="og:updated_time" content="2017-11-25T11:36:37.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="分子动力学模拟时的软件和文件格式">
 <meta name="twitter:description" content="我学习和使用分子动力学模拟知识，是为了探索环境污染物的毒理学效应机制。偶尔看一下下面罗列的文件格式，可以如同过电影一样回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。">
@@ -212,11 +212,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我学习和使用分子动力学模拟知识，是为了探索环境污染物的毒理学效应机制。偶尔看一下下面罗列的文件格式，可以如同过电影一样回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。<br><img src="/2017/09/10/20170910MD/a.png" alt=""><br><a id="more"></a><br>GaussView<br>    1.gif: 默认的，可以用于Gaussian的文件格式。既可以用Cartesian坐标，也可以用Z-matrix坐标。<br>    2.pdb: 大分子的有机物可以用此格式，方便与蛋白一起进行MD模拟。<br>    3.mol2: 原本时SYBYL用于小分子的格式。含有用于描述电荷信息的字段。</p>
-<p>Gaussian<br>    1.gif: 输入文件格式，含有各种命令<br>    2.out: 主要输出文件<br>    3.chk: 输出文件</p>
-<p>Ambertools<br>    antechamber：输入文件可为pdb|gout,mol2(高斯的输出格式)<br>               输出文件为mol2(供antechamber下一步用),gzmat(供Gaussian计算输入)<br>    parmchk:     输入文件为mol2<br>               输出文件为frcmod<br>    sleap:<br>    acpype:<br>    sander|ptraj:amber主程序和轨迹分析工具</p>
-<p>Gromacs<br>    1.top: 输入文件之拓扑文件，含有力场各种参数<br>    2.gro: 输入文件之坐标文件，一种xyz格式文件；可用editconf自由修改<br>    3.mdp: 输入文件之运行参数<br>    4.tpr: mdp，top，gro等文件打包之后的文件；运行模拟的最终输入文件<br>    5.trr/xtc：输出文件之轨迹文件<br>    6.edr:     输出文件之能量文件</p>
-
+        <p>我学习和使用分子动力学模拟知识，是为了探索环境污染物的毒理学效应机制。偶尔看一下下面罗列的文件格式，可以如同过电影一样回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。<br><img src="/2017/09/10/20170910MD/a.png" alt=""><br><a id="more"></a><br><strong>分子动力学模拟</strong>中，利用力场计算分子性能，其最重要的功能是计算各种构象(conformation)的势能，势能最低的构象为最稳定的构象。寻找势能最低点的过程为能量最小化(energy minimization)，所得到的构象称为几何优化构象(geometry optimized configuration)</p>
+<h5 id="GaussView"><a href="#GaussView" class="headerlink" title="GaussView"></a>GaussView</h5><pre><code>1.gif: 默认的，可以用于Gaussian的文件格式。既可以用Cartesian坐标，也可以用Z-matrix坐标。
+2.pdb: 大分子的有机物可以用此格式，方便与蛋白一起进行MD模拟。
+3.mol2: 原本时SYBYL用于小分子的格式。含有用于描述电荷信息的字段。
+</code></pre><h5 id="Gaussian"><a href="#Gaussian" class="headerlink" title="Gaussian"></a>Gaussian</h5><pre><code>1.gif: 输入文件格式，含有各种命令
+2.out: 主要输出文件
+3.chk: 输出文件
+</code></pre><h5 id="Ambertools"><a href="#Ambertools" class="headerlink" title="Ambertools"></a>Ambertools</h5><pre><code>antechamber：输入文件可为pdb|gout,mol2(高斯的输出格式)
+           输出文件为mol2(供antechamber下一步用),gzmat(供Gaussian计算输入)
+parmchk:     输入文件为mol2
+           输出文件为frcmod
+sleap:
+acpype:
+sander|ptraj:amber主程序和轨迹分析工具
+</code></pre><h5 id="Gromacs"><a href="#Gromacs" class="headerlink" title="Gromacs"></a>Gromacs</h5><pre><code>1.top: 输入文件之拓扑文件，含有力场各种参数
+2.gro: 输入文件之坐标文件，一种xyz格式文件；可用editconf自由修改
+3.mdp: 输入文件之运行参数
+4.tpr: mdp，top，gro等文件打包之后的文件；运行模拟的最终输入文件
+5.trr/xtc：输出文件之轨迹文件
+6.edr:     输出文件之能量文件
+</code></pre>
       
 
       
