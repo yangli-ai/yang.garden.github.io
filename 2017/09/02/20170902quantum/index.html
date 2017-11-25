@@ -17,7 +17,7 @@
 <meta property="og:description" content="研究小分子和生物学大分子的结合或相互作用，不外乎两种方式：以共价方式结合，以配体-受体方式结合。前者涉及到了化学键的断裂和生成，需要考虑化学知识。量子化学可帮助理解这种结合方式，所以这段时间参加了几次workshop。逐渐建立自己的量子化学知识体系。至于配体-受体结合方式，涉及到氢键、范德华力、库仑力等弱相互作用，多用分子力学知识处理。">
 <meta property="og:image" content="http://yoursite.com/2017/09/02/20170902quantum/quantum.jpg">
 <meta property="og:image" content="http://yoursite.com/2017/09/02/20170902quantum/schro.jpg">
-<meta property="og:updated_time" content="2017-11-25T11:43:45.801Z">
+<meta property="og:updated_time" content="2017-11-25T11:51:38.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="研究小分子与生物大分子的结合:量子化学方法">
 <meta name="twitter:description" content="研究小分子和生物学大分子的结合或相互作用，不外乎两种方式：以共价方式结合，以配体-受体方式结合。前者涉及到了化学键的断裂和生成，需要考虑化学知识。量子化学可帮助理解这种结合方式，所以这段时间参加了几次workshop。逐渐建立自己的量子化学知识体系。至于配体-受体结合方式，涉及到氢键、范德华力、库仑力等弱相互作用，多用分子力学知识处理。">
@@ -214,7 +214,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>研究小分子和生物学大分子的结合或相互作用，不外乎两种方式：以共价方式结合，以配体-受体方式结合。前者涉及到了化学键的断裂和生成，需要考虑化学知识。量子化学可帮助理解这种结合方式，所以这段时间参加了几次workshop。逐渐建立自己的量子化学知识体系。至于配体-受体结合方式，涉及到氢键、范德华力、库仑力等弱相互作用，多用分子力学知识处理。<br><img src="/2017/09/02/20170902quantum/quantum.jpg" alt=""><br><a id="more"></a></p>
-<h5 id="1-量子化学基础知识"><a href="#1-量子化学基础知识" class="headerlink" title="1.量子化学基础知识"></a>1.量子化学基础知识</h5><p><strong>薛定谔方程(Schrodinger)</strong> (仅适用于速度不太大的非相对论粒子)与<strong>波函数</strong></p>
+<h4 id="1-量子化学基础知识"><a href="#1-量子化学基础知识" class="headerlink" title="1.量子化学基础知识"></a>1.量子化学基础知识</h4><p><strong>薛定谔方程(Schrodinger)</strong> (仅适用于速度不太大的非相对论粒子)与<strong>波函数</strong></p>
 <blockquote>
 <ol>
 <li>设描述微观粒子状态的波函数为Ψ(r,t)，质量为m的微观粒子在势场V(r,t)中运动的薛定谔方程。在给定初始条件和边界条件以及波函数所满足的单值、有限、连续的条件下，可解出波函数Ψ(r,t)。</li>
@@ -237,9 +237,9 @@
 </ul>
 </li>
 </ul>
-<p><strong>常见单位</strong><br><code>1 a.u. = 1 Bohr = 0.529 A   1 nm = 10 A</code><br><code>1 a.u. = 1 Hartree = 627.51 kcal/mol = 2625.5 kJ/mol (1 kcal=4.184 kJ)</code></p>
-<h5 id="2-量化计算基础知识"><a href="#2-量化计算基础知识" class="headerlink" title="2.量化计算基础知识"></a>2.量化计算基础知识</h5><p><center><strong>量子化学计算的关键在于理论方法和基组这两个部分</strong></center></p>
-<h6 id="2-1-理论theory"><a href="#2-1-理论theory" class="headerlink" title="2.1.理论theory"></a>2.1.理论theory</h6><ul>
+<p><strong>常见单位</strong><br><code>1 a.u. = 1 Bohr = 0.529 A   1 nm = 10 A</code><br><code>1 a.u. = 1 Hartree = 627.51 kcal/mol = 2625.5 kJ/mol (1 kcal=4.184 kJ)</code><br><br><br><br></p>
+<h4 id="2-量化计算基础知识"><a href="#2-量化计算基础知识" class="headerlink" title="2.量化计算基础知识"></a>2.量化计算基础知识</h4><p><center><strong>量子化学计算的关键在于理论方法和基组这两个部分</strong></center></p>
+<h5 id="2-1-理论theory"><a href="#2-1-理论theory" class="headerlink" title="2.1.理论theory"></a>2.1.理论theory</h5><ul>
 <li>Semi-empirical:是HF方法的近似，e.g. Huckel分子轨道法, ZINDO, PM6D3, PM7；除了此法，剩下的是ab initio/第一性原理计算</li>
 <li>Hartree-Fock(HF): 仅具有理论意义，实际不用</li>
 <li>DFT (density functional theory): 计算花费和HF一样，但精度达到Post-HF，是主流. e.g. B3LYP, M06-2X(M062X), B2PLYP, PWPB95<ul>
@@ -252,7 +252,7 @@
 <blockquote>
 <p>总结：高精度用CCSD(T), 较高精度用双杂化泛函，一般精度用普通泛函，低精度用半经验<br>计算Tips: 单个结构能量：几个十几个用CCSD(T); 几十等原子体系用DFT；几百几千原子体系用半经验方法，如与分子动力学模拟结合等；动力学模拟时：十几个原子用DFT；然后用全原子力场(AA force filed)；更多的用粗粒化方法</p>
 </blockquote>
-<h6 id="2-2-基组basis-set"><a href="#2-2-基组basis-set" class="headerlink" title="2.2.基组basis set"></a>2.2.基组basis set</h6><p>基函数: 每个基函数由多个高斯型函数(Gauss Type Function)组成(也会用到Contracted GTF)<br>弥散函数: 延伸到非常广的空间,对色散作用主导的弱相互作用等。不需要时绝对不能加!!!<br>极化函数: 6-31G<em>, 6-31G*<em>*</em></em> 使得原子价轨道在空间取向上更“柔软”，使之容易成键<br>扩展基: 2-zeta, 3-zeta, n-zeta: 每个价层原子轨道由n个基函数描述<br><br><strong>基组类型</strong>:</p>
+<h5 id="2-2-基组basis-set"><a href="#2-2-基组basis-set" class="headerlink" title="2.2.基组basis set"></a>2.2.基组basis set</h5><p>基函数: 每个基函数由多个高斯型函数(Gauss Type Function)组成(也会用到Contracted GTF)<br>弥散函数: 延伸到非常广的空间,对色散作用主导的弱相互作用等。不需要时绝对不能加!!!<br>极化函数: 6-31G<em>, 6-31G*<em>*</em></em> 使得原子价轨道在空间取向上更“柔软”，使之容易成键<br>扩展基: 2-zeta, 3-zeta, n-zeta: 每个价层原子轨道由n个基函数描述<br><br><strong>基组类型</strong>:</p>
 <ul>
 <li>Pople系列: 6-31G<em>;  是所有计算的底限; 6-31G<em>*, 6-311G</em></em>，通用各种理论方法</li>
 <li>def/def2系列: def2-TZVP  def2-QZVP，适合DFT，当然post-HF也可以</li>
@@ -261,18 +261,18 @@
 <li>混合基组：如3-21G; 有机大分子，不重要的部分可以用此，并做位置限制</li>
 </ul>
 <p>弥散函数，极化函数，相对论效应(内层电子)<br>不同基组下计算的能量没有可比性！！！</p>
-<h6 id="2-3-特殊效应"><a href="#2-3-特殊效应" class="headerlink" title="2.3.特殊效应"></a>2.3.特殊效应</h6><p>相对论效应, 溶剂效应, 周期性</p>
-<h5 id="3-Gaussian计算"><a href="#3-Gaussian计算" class="headerlink" title="3.Gaussian计算"></a>3.Gaussian计算</h5><p>量子化学计算只能设定单个体系总的电荷和自旋多重度<br>输入文件格式:<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">%nproc=2</div><div class="line">%mem=1400MB</div><div class="line">%chk=C:\x.chk</div><div class="line">%rwf=C:\x.rwf</div><div class="line"># B3LYP/6-31G* geom=check guess=read out=wfn</div><div class="line">  </div><div class="line">Title</div><div class="line"></div><div class="line">0   1</div><div class="line">O                 -0.64410480    0.28384279    0.00000000</div><div class="line">H                  0.31589520    0.28384279    0.00000000</div><div class="line">H                 -0.96455939    1.18877862    0.00000000</div></pre></td></tr></table></figure></p>
+<h5 id="2-3-特殊效应"><a href="#2-3-特殊效应" class="headerlink" title="2.3.特殊效应"></a>2.3.特殊效应</h5><p>相对论效应, 溶剂效应, 周期性<br><br><br><br></p>
+<h4 id="3-Gaussian计算"><a href="#3-Gaussian计算" class="headerlink" title="3.Gaussian计算"></a>3.Gaussian计算</h4><p>量子化学计算只能设定单个体系总的电荷和自旋多重度<br>输入文件格式:<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">%nproc=2</div><div class="line">%mem=1400MB</div><div class="line">%chk=C:\x.chk</div><div class="line">%rwf=C:\x.rwf</div><div class="line"># B3LYP/6-31G* geom=check guess=read out=wfn</div><div class="line">  </div><div class="line">Title</div><div class="line"></div><div class="line">0   1</div><div class="line">O                 -0.64410480    0.28384279    0.00000000</div><div class="line">H                  0.31589520    0.28384279    0.00000000</div><div class="line">H                 -0.96455939    1.18877862    0.00000000</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>Note:<br>geom=allcheck 输入结构从chk中读取(%chk指定的)<br>guess=read   从chk文件中读入波函数为初猜<br>out=wfn: 输出wfn文件<br>Post-HF输出时，需要额外写density<br>高斯输出文件:    fch(Gaussian私有格式)、wfn、out、chk文件和rwf文件</p>
 </blockquote>
 <p>可以通过linux命令监控log文件:<br><code>tail -f x.out</code><br><code>tail -f x.out | grep -E ‘keyword1|keyword2’ -A 2 -B 2 -C 4</code><br><code>tail -f x.out | grep -e ‘keyword1\|keyword2’ -A 2 -B 2 -C 4</code></p>
-<h6 id="3-1-能量相关计算"><a href="#3-1-能量相关计算" class="headerlink" title="3.1. 能量相关计算"></a>3.1. 能量相关计算</h6><ul>
+<h5 id="3-1-能量相关计算"><a href="#3-1-能量相关计算" class="headerlink" title="3.1. 能量相关计算"></a>3.1. 能量相关计算</h5><ul>
 <li>单点能single point: 是指电子的能量，不包括电子动能、电子间互斥能、电子与原子核的吸引能、核间互斥能。，与自由能不同，</li>
 <li>势能面potential energy surface: 可进行势能面扫描</li>
 </ul>
-<h6 id="3-2-过渡态TS、IRC等"><a href="#3-2-过渡态TS、IRC等" class="headerlink" title="3.2.过渡态TS、IRC等"></a>3.2.过渡态TS、IRC等</h6><p>IRC是连接势能面上两个能量极小点的最低能量路径。而TS是其能量最高点。</p>
-<h6 id="3-3-结构相关计算"><a href="#3-3-结构相关计算" class="headerlink" title="3.3.结构相关计算"></a>3.3.结构相关计算</h6><p><strong>几何优化geometric optimization</strong>: opt(tight|loose, maxcyc=n)命令</p>
+<h5 id="3-2-过渡态TS、IRC等"><a href="#3-2-过渡态TS、IRC等" class="headerlink" title="3.2.过渡态TS、IRC等"></a>3.2.过渡态TS、IRC等</h5><p>IRC是连接势能面上两个能量极小点的最低能量路径。而TS是其能量最高点。</p>
+<h5 id="3-3-结构相关计算"><a href="#3-3-结构相关计算" class="headerlink" title="3.3.结构相关计算"></a>3.3.结构相关计算</h5><p><strong>几何优化geometric optimization</strong>: opt(tight|loose, maxcyc=n)命令</p>
 <blockquote>
 <p>有两个条件：1. 各原子受力皆接近0；2. 振动分析时没有虚频</p>
 <ol>
@@ -284,7 +284,7 @@
 </ol>
 </blockquote>
 <p><strong>振动分析freq</strong>: 可以用geom=check, guess=read从chk文件读取初始几何构象和波函数外</p>
-<h6 id="3-4-分子性质计算"><a href="#3-4-分子性质计算" class="headerlink" title="3.4.分子性质计算"></a>3.4.分子性质计算</h6><p><strong>热力学量</strong><br>opt freq  计算热力学量默认的条件是temperature=293K pressure=1atm; 较大的分子可以采取预优化+正式优化的策略!<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">内能(U):   Utotal=Utrans+Urot+Uvib+Uele; 即体系的平动、转动、振动、电子</div><div class="line">焓(H):     H=U+PV</div><div class="line">熵(S): </div><div class="line">吉布斯自由能(G): G=H-TS</div></pre></td></tr></table></figure></p>
+<h5 id="3-4-分子性质计算"><a href="#3-4-分子性质计算" class="headerlink" title="3.4.分子性质计算"></a>3.4.分子性质计算</h5><p><strong>热力学量</strong><br>opt freq  计算热力学量默认的条件是temperature=293K pressure=1atm; 较大的分子可以采取预优化+正式优化的策略!<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">内能(U):   Utotal=Utrans+Urot+Uvib+Uele; 即体系的平动、转动、振动、电子</div><div class="line">焓(H):     H=U+PV</div><div class="line">熵(S): </div><div class="line">吉布斯自由能(G): G=H-TS</div></pre></td></tr></table></figure></p>
 <ul>
 <li><p>方法一：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">0K时:存在电子基态能量(单点能)、ZPE(零点振动能)</div><div class="line">      U(0)=εele+ZPE</div><div class="line">      H(0)=G(0)=U(0)</div><div class="line">&gt;0K时:U(0)|H(0)|G(0)加上温度(298.15K、1atm)对其各自的贡献</div><div class="line">	  U(T)= εele+ZPE+ΔU0→r</div><div class="line">      H(T)= εele+ZPE+ΔH0→r</div><div class="line">      G(T)= εele+ZPE+ΔG0→r</div><div class="line">后两者成为热力学校正能量，在B3LYP/6-31G*下就可以；单点能在高级别条件下计算。二者相加即为所求。</div></pre></td></tr></table></figure>
@@ -292,14 +292,14 @@
 <li><p>方法二：热力学组合方法，以CCSD(T)/CBS为目标，耗时长;有Gn系列和CBS系列</p>
 </li>
 </ul>
-<h6 id="3-5-光谱计算"><a href="#3-5-光谱计算" class="headerlink" title="3.5.光谱计算"></a>3.5.光谱计算</h6><p>红外光谱与拉曼光谱, 电子光谱, NMR</p>
-<h5 id="4-波函数分析与Multiwfn"><a href="#4-波函数分析与Multiwfn" class="headerlink" title="4. 波函数分析与Multiwfn"></a>4. 波函数分析与Multiwfn</h5><p>首先通过Gaussian获得波函数: 用Post-HF法时，Gauss中写上density关键词，才能输出波函数信息。<br>波函数分析=分析方法+分析程序+实际问题</p>
-<h6 id="4-1-分析理论"><a href="#4-1-分析理论" class="headerlink" title="4.1. 分析理论"></a>4.1. 分析理论</h6><ul>
+<h5 id="3-5-光谱计算"><a href="#3-5-光谱计算" class="headerlink" title="3.5.光谱计算"></a>3.5.光谱计算</h5><p>红外光谱与拉曼光谱, 电子光谱, NMR<br><br><br><br></p>
+<h4 id="4-波函数分析与Multiwfn"><a href="#4-波函数分析与Multiwfn" class="headerlink" title="4. 波函数分析与Multiwfn"></a>4. 波函数分析与Multiwfn</h4><p>首先通过Gaussian获得波函数: 用Post-HF法时，Gauss中写上density关键词，才能输出波函数信息。<br>波函数分析=分析方法+分析程序+实际问题</p>
+<h5 id="4-1-分析理论"><a href="#4-1-分析理论" class="headerlink" title="4.1. 分析理论"></a>4.1. 分析理论</h5><ul>
 <li>AIM理论: Atoms in molecules。电子密度、拉普拉斯函数、动能|势能|能量密度、拓扑分析、盆分析、定域化|离域化指数、范德华表面</li>
 <li>概念密度泛函理论: 涵盖前线轨道FMO理论，电负性、软硬度、Fukui函数、双描述符、亲电|亲核指数、反应活性位点</li>
 <li>NBO理论: Natural Bond Orbital，定义了很多轨道</li>
 </ul>
-<h6 id="4-2-轨道分析orbital-analysis"><a href="#4-2-轨道分析orbital-analysis" class="headerlink" title="4.2. 轨道分析orbital analysis"></a>4.2. 轨道分析orbital analysis</h6><ul>
+<h5 id="4-2-轨道分析orbital-analysis"><a href="#4-2-轨道分析orbital-analysis" class="headerlink" title="4.2. 轨道分析orbital analysis"></a>4.2. 轨道分析orbital analysis</h5><ul>
 <li>薛定谔方程与Born-Oppenheimer近似</li>
 <li>波函数(wave function)和密度矩阵(对体系波函数的一种紧凑描述)</li>
 <li>电子密度: ρ(r), 直接衍生于波函数(模的平方)</li>
@@ -334,9 +334,9 @@
 <li>基于实空间下电子密度的方法<br>  AIM电荷:<br>  Hirshfeld电荷: 预测反应位点、反应活性较好，但对静电势重复很差，所以在MD中很差<br>ADCH电荷: Hirshfeld的改进，有其各种优点，同时静电势很好重现<br>  Becke电荷:      </li>
 <li>基于电负均衡电荷<br>  Gasteiger电荷: </li>
 </ul>
-<h6 id="4-4-键级分析bond-order"><a href="#4-4-键级分析bond-order" class="headerlink" title="4.4. 键级分析bond order"></a>4.4. 键级分析bond order</h6><p>衡量原子间相互作用特征的最简单、最明确的指标；反映原子间共享电子对数或作用强度<br>Mayer键级(MBO): 最普世的键级计算方法<br>Laplacian键级(LBO):<br>多中心键级:</p>
-<h6 id="4-5-属性分解分析"><a href="#4-5-属性分解分析" class="headerlink" title="4.5. 属性分解分析"></a>4.5. 属性分解分析</h6><p>如能量分解、电荷转移分解，轨道成分分解</p>
-<h6 id="4-6-实空间函数及可视化"><a href="#4-6-实空间函数及可视化" class="headerlink" title="4.6. 实空间函数及可视化"></a>4.6. 实空间函数及可视化</h6><p>各种实空间函数都是基于轨道的(可以计算各个轨道对实空间函数的贡献)<br>轨道波函数、电子密度(以及电子密度径向分布函数)、自旋密度、电子拉普拉斯函数(Laplacian of density)、电子定域化函数(ELF)、定域化轨道指示函数(LOL)、静电势(ESP)、价层电子密度(Valence density)、约化密度梯度(RDG)<br><strong>◎实空间函数: 轨道波函数</strong><br><strong>◎实空间函数: 电子密度与定域性</strong><br>电子密度: 与价层电子密度()<br>电子定域性: 拉普拉斯值函数、ELF函数、LOL函数 (通常用于分析强相互作用;成键、孤对电子、原子壳层结构) </p>
+<h5 id="4-4-键级分析bond-order"><a href="#4-4-键级分析bond-order" class="headerlink" title="4.4. 键级分析bond order"></a>4.4. 键级分析bond order</h5><p>衡量原子间相互作用特征的最简单、最明确的指标；反映原子间共享电子对数或作用强度<br>Mayer键级(MBO): 最普世的键级计算方法<br>Laplacian键级(LBO):<br>多中心键级:</p>
+<h5 id="4-5-属性分解分析"><a href="#4-5-属性分解分析" class="headerlink" title="4.5. 属性分解分析"></a>4.5. 属性分解分析</h5><p>如能量分解、电荷转移分解，轨道成分分解</p>
+<h5 id="4-6-实空间函数及可视化"><a href="#4-6-实空间函数及可视化" class="headerlink" title="4.6. 实空间函数及可视化"></a>4.6. 实空间函数及可视化</h5><p>各种实空间函数都是基于轨道的(可以计算各个轨道对实空间函数的贡献)<br>轨道波函数、电子密度(以及电子密度径向分布函数)、自旋密度、电子拉普拉斯函数(Laplacian of density)、电子定域化函数(ELF)、定域化轨道指示函数(LOL)、静电势(ESP)、价层电子密度(Valence density)、约化密度梯度(RDG)<br><strong>◎实空间函数: 轨道波函数</strong><br><strong>◎实空间函数: 电子密度与定域性</strong><br>电子密度: 与价层电子密度()<br>电子定域性: 拉普拉斯值函数、ELF函数、LOL函数 (通常用于分析强相互作用;成键、孤对电子、原子壳层结构) </p>
 <ul>
 <li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">“化学键、孤对电子、sigma/pi/delta键、轨道杂化、lewis结构、VSEPR这些经典理论诞生于大半个世纪前，属于“概念化学”范畴。这些模型化的表述从当今量子化学角度看似乎缺乏根据，是一些很粗俗的观点，但实际上它们并非是完全人为臆断的，它们从量子化学的角度是可以找到充分依据的，定域化分析正是力图通过波函数或其衍生信息还原这些信息。”</div><div class="line">“使用实空间坐标为变量的函数来描述电子定域性特征，这不需要明确地计算定域化轨道，因而避免了上述问题。这些函数将复杂的3N维波函数所携带的关键信息约化、抽象成三维函数，从这些函数在分子附近空间中各点的数值可以分析分子各个位置定域性特征的强弱，使化学键、孤对电子、原子壳层这样电子定域性强的区域充分凸现出来。”</div></pre></td></tr></table></figure>
 </li>
@@ -368,7 +368,8 @@
 <li>拓扑分析: 电子密度及其拉普拉斯函数的拓扑分析是AIM分析中的核心，而ELF、LOL的拓扑分析在分析成键方式、芳香性等问题上也有重要应用<br>电子密度拓扑分析(即AIM拓扑分析): </li>
 <li>盆分析: 最早在AIM理论中对电子密度进行的，可以划分原子空间，还可以对ELF等其它各种实函数进行盆分析。可以产生零通量面(zero-flux surface)|盆间面(inter-basin surface)和吸引子(attractor)。获得AIM盆后，可以(1)对盆里面的实函数进行积分，如积分电子密度就得到盆里面的电子布居数;(2)计算盆内的电多极矩;(3)计算盆内的定域化指数和盆间的离域化指数;</li>
 </ul>
-<h6 id="4-7-专题-定量分子表面分析-预测结合方向、活性位点等"><a href="#4-7-专题-定量分子表面分析-预测结合方向、活性位点等" class="headerlink" title="4.7. 专题: 定量分子表面分析(预测结合方向、活性位点等)"></a>4.7. 专题: 定量分子表面分析(预测结合方向、活性位点等)</h6><p>定量分子表面分析对于预测反应位点、预测分子间结合模式、预测分子热力学性质有重要意义。</p>
+<hr>
+<h5 id="4-7-专题-定量分子表面分析-预测结合方向、活性位点等"><a href="#4-7-专题-定量分子表面分析-预测结合方向、活性位点等" class="headerlink" title="4.7. 专题: 定量分子表面分析(预测结合方向、活性位点等)"></a>4.7. 专题: 定量分子表面分析(预测结合方向、活性位点等)</h5><p>定量分子表面分析对于预测反应位点、预测分子间结合模式、预测分子热力学性质有重要意义。</p>
 <ul>
 <li>主要是ESP和ALIE在分子范德华表面的分布。分子范德华表面的定义非常多，最常用的是Bader的定义，也就是对于气相分子，使用电子密度为0.001 e/bohr^3的等值面作为分子范德华表面。</li>
 <li>此外指标还有福井函数、双描述符，与ALIE一样，在亲核反应|亲电反应中起作用。</li>
@@ -385,7 +386,8 @@
 <p><strong>平均局部离子化能(ALIE)</strong>:  Averaged Localized Ionizing Energy.数值越低, 表明此处的电子被束缚得越弱, 因此活性越高, 越容易参与亲电或自由基反应.  若某原子处在数值越小的极小点附近, 则该原子的反应活性越高. 若原子附近的分子表面上没有极小点出现,则表明此原子参与反应的可能性很小.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">在ALIE的诸多应用中，最为重要的就是它预测反应位点的能力。在分子表面上，ALIE越小处，由于电子束缚得越弱，或者说电子活性越强，就越容易发生亲电及自由基反应。通过定量分子表面分析算法，找出分子表面上ALIE最小的几个点，看这几个点离哪些原子比较近，就能判断哪些原子最可能是反应活性位点。ALIE的极小点容易出现在pi电子、孤对电子附近，因为这些区域的电子被束缚得较弱。可以认为ALIE越小处，局部极化率越大，这与密度泛函理论中的局部软度/硬度概念也是密切相关的。</div></pre></td></tr></table></figure></p>
 <p><strong>通过静电势和ALIE在预测反应位点上是互补的</strong>(引用卢天老师博文):<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">单靠静电势很多情况都不能正确预测反应位点；而单靠ALIE，在一些情况下也是失败的（而且ALIE也不能用于预测亲核位点），此时必须将静电势综合考虑。这是因为，两个分子相互反应的完整过程分为以下两个步骤。注意这两个步骤没有明确界限，是平滑过渡的。</div><div class="line">1. (弱相互作用主导时)两个分子从相距很远逐渐接近：这个过程中分子的电子分布并不发生明显改变，顶多是稍微被另一个分子的电场所极化。长程静电相互作用在这个过程中是关键，通过分析分子表面的静电势，可以很好地估计反应物容易被拉到哪里。也因此，光靠分析ALIE来预测反应位点往往不行，因为即便靠ALIE预测出某些原子容易发生反应，但是若反应物不容易靠静电作用被拉到这里，则在这里发生反应的几率还是不大。</div><div class="line">2. (强相互作用时)范德华表面快要接触的两个分子进一步靠近，通过成键、断键这样的电子结构重排过程完成化学反应：这一步在哪里容易进行，关键看哪个原子附近电子活性大，用ALIE最适合研究这个问题。这也表现出单纯靠静电势预测反应位点的不可靠性，因为比如某原子附近静电势越负，只能说明亲核试剂越容易被拉到这原子附近，却不代表这原子附近的电子越活泼因而越容易参与反应。再者，当分子间接近到快要反应时，分子的实际电子分布与它在孤立时的电子分布已有很大差异，前面介绍静电势时提到的“对分子的电荷分布不产生任何影响”的前提条件已经不能满足，所以用分子孤立状态的静电势已经不能很好说明问题。</div><div class="line">3. 综上所述，由于分子间反应涉及到了两个步骤，而两个步骤本质不同，分别适合用静电势和ALIE来分析，因此需要将它们在分子表面上的分布综合考虑以判断反应位点。通常可以先用ALIE判断，如果遇到困难，比如好几个原子都有对应的ALIE极小点（而且数值和最小点数值差不多），或者极小点介于两个原子之间，那么可以再考察静电势的分布，看看反应物更容易被拉到哪个原子附近。另外，有时需要根据分子三维结构，将位阻效应对试剂接近过程的影响考虑进去。</div></pre></td></tr></table></figure></p>
 <p><strong>福井函数、双描述符、相对软度</strong>, 实际上和ALIE一样，着眼的也是反应过程的第二步.因此用它们分析活性位点时其实也应该将静电势考虑进去。此外，<strong>Hirshfeld电荷</strong>等也可以用于预测活性反应位点。<br><strong>HOMO|LOMO的原子成分分析</strong>, 体系的最高占据轨道(HOMO)和亲电反应有关, 体系的最低空轨道(LUMO)和亲核反应有关. 根据HOMO或LUMO 的轨道成分多少可以判断发生亲电反应或亲核反应的位点. 分析 HOMO(LUMO)的轨道成分等同于考察这个轨道(设为第i个轨道)的电子密度在各原子附近分布的总量. 有多种方法都可以计算分子轨道中原子的成分, 例如Mulliken方法、AOIM方法、自然原子轨道法(NAOMO, 但不适合分析LUMO)<br>参考:《Multiwfn的定量分子表面分析功能预测反应位点等》<a href="http://blog.sciencenet.cn/blog-482864-599667.html" target="_blank" rel="external">http://blog.sciencenet.cn/blog-482864-599667.html</a></p>
-<h6 id="4-8-专题-弱相互作用分析"><a href="#4-8-专题-弱相互作用分析" class="headerlink" title="4.8. 专题: 弱相互作用分析"></a>4.8. 专题: 弱相互作用分析</h6><ul>
+<hr>
+<h5 id="4-8-专题-弱相互作用分析"><a href="#4-8-专题-弱相互作用分析" class="headerlink" title="4.8. 专题: 弱相互作用分析"></a>4.8. 专题: 弱相互作用分析</h5><ul>
 <li>强相互作用的化学键(&gt;200KJ/mol)&gt;静电主导的弱相互作用(氢键、卤键)&gt;色散主导的弱相互作用(π-π堆积、VDW)</li>
 <li>本质都是电磁力，或称为静电力。强弱相互作用，相对于kT而言(k为玻尔兹曼常数，T为温度)</li>
 <li>可以用来分析分子间作用力，大分子的机构，受体-配体的特异性识别等。</li>
