@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Sci-Forest">
 <meta property="og:description" content="1.基因注释数据库(Gene Annotation Database)基因注释数据库是描述基因组上gene、transcript、exon、intron等结构的染色体序号、正负链、起止位置、标准名称等信息的数据库。有三大注释库: RefSeq(refGene), UCSC(knownGene), Ensembl(ensGene)。另外，常用的GENCODE Annotation结合了Havana">
 <meta property="og:image" content="http://yoursite.com/2016/05/15/20160515annotation/annotation.jpg">
-<meta property="og:updated_time" content="2017-11-24T18:13:19.203Z">
+<meta property="og:updated_time" content="2017-11-25T07:26:13.801Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基因注释数据库和突变注释">
 <meta name="twitter:description" content="1.基因注释数据库(Gene Annotation Database)基因注释数据库是描述基因组上gene、transcript、exon、intron等结构的染色体序号、正负链、起止位置、标准名称等信息的数据库。有三大注释库: RefSeq(refGene), UCSC(knownGene), Ensembl(ensGene)。另外，常用的GENCODE Annotation结合了Havana">
@@ -219,12 +219,14 @@
 </blockquote>
 <p><strong>GENCODE注释库</strong>有趋势成为”金标准”。它引用了Ensembl的ID。其ID以”ENS”为头，加上类型标志(“G” for gene, “T” for transcript, “E” for exon, “P” for translation),再加11位数字。</p>
 <h4 id="2-突变注释-Mutation-Annotation"><a href="#2-突变注释-Mutation-Annotation" class="headerlink" title="2.突变注释(Mutation Annotation)"></a>2.突变注释(Mutation Annotation)</h4><p>彻底掌握突变注释方法，不在于对软件的了解，而在于精通数据库。如果不是批量处理数据，结合可视化软件、进行手工注释更直观、更准确。有多个软件可以对SNP和InDel进行注释(Annotation)。注释时需要两个重要文件：<strong>vcf输入文件和注释数据库</strong>。</p>
-<p>#####■ Annovar</p>
-<p>######1.Install application and set environment variables<br>    alias annotate_variation=’E:/path/annotate_variation.pl’<br>    alias table_annovar=’E:/path/table_annovar.pl’<br>    vi annotate_variation.pl,then change defaunlt seeting $buildver=’hg18’ into hg38<br>    annotatedb=’E:/path/humandb/‘</p>
-<p>######2.Prepare annotation database<br>    annotate_variation -downdb -buildver hg38 -webfrom annovar refGene $annotatedb<br>    refGene is the name of annotation file humandb/ is the folder to put $annotation</p>
-<p>######3.Prepare vcf input file<br>    convert2annovar -format vcf4old example.vcf &gt; example.avinput # convert vcf to tap-separated file</p>
-<p>######4.Perform genomic annotation</p>
-<pre><code># gene-based annotation  keyword: -geneanno
+<h5 id="■-Annovar"><a href="#■-Annovar" class="headerlink" title="■ Annovar"></a>■ Annovar</h5><h6 id="1-Install-application-and-set-environment-variables"><a href="#1-Install-application-and-set-environment-variables" class="headerlink" title="1.Install application and set environment variables"></a>1.Install application and set environment variables</h6><pre><code>alias annotate_variation=&apos;E:/path/annotate_variation.pl&apos;
+alias table_annovar=&apos;E:/path/table_annovar.pl&apos;
+vi annotate_variation.pl,then change defaunlt seeting $buildver=&apos;hg18&apos; into hg38
+annotatedb=&apos;E:/path/humandb/&apos;
+</code></pre><h6 id="2-Prepare-annotation-database"><a href="#2-Prepare-annotation-database" class="headerlink" title="2.Prepare annotation database"></a>2.Prepare annotation database</h6><pre><code>annotate_variation -downdb -buildver hg38 -webfrom annovar refGene $annotatedb  
+refGene is the name of annotation file humandb/ is the folder to put $annotation
+</code></pre><h6 id="3-Prepare-vcf-input-file"><a href="#3-Prepare-vcf-input-file" class="headerlink" title="3.Prepare vcf input file"></a>3.Prepare vcf input file</h6><pre><code>convert2annovar -format vcf4old example.vcf &gt; example.avinput # convert vcf to tap-separated file
+</code></pre><h6 id="4-Perform-genomic-annotation"><a href="#4-Perform-genomic-annotation" class="headerlink" title="4.Perform genomic annotation"></a>4.Perform genomic annotation</h6><pre><code># gene-based annotation  keyword: -geneanno
 annotate_variation -buildver hg38 -geneanno example.avinput $annotatedb  # by default, geneanno is ON
 # region-based annotation keyword: -regionanno
 annotate_variation -buildver hg38 -regionanno -dbtype cytoBand example.avinput $annotatedb
@@ -235,19 +237,18 @@ annotate_variation -buildver hg38 -filter -dbtype snp138 example.avinput $annota
 annotate_variation -buildver hg38 -filter -dbtype dbnsfp30a -otherinfo example.avinput $annotatedb
 # perform the aboving three types of annotation together
 table_annovar
-</code></pre><p>######5.Perform protein annotation<br>    coding_change </p>
-<p>######6.Other tool: retrieve_seq_from_fasta</p>
-<p>#####■ SnpEff</p>
-<p>######1. Install application and set environment variables<br>    snpeff=’E:/path/snpEff.jar’</p>
-<p>######2. Prepare annotation database<br>    java -Xmx4g -jar $snpeff databases | less<br>    java -Xmx4g -jar $snpeff download GRCh38.86</p>
-<p>######3. Prepare vcf input file<br>    no  special requirement on input files</p>
-<p>######4. Perform  genomic annotation<br>    java -Xmx4g -jar $snpeff -i vcf -o vcf GRCh38.86 example.vcf &gt; example_snpeff.vcf</p>
-<p>#####■ Oncotator<br>可以输出为VCF文件或者MAF(Mutation Annotation Format)</p>
-<p>######1. Install application and set environment variables<br>    基于python，oncotator可以直接执行</p>
-<p>######2. Prepare annotation database<br>    oncotatordb=’/path/to/oncotator_v1_ds_April052016’</p>
-<p>######3. Prepare input file<br>    vcf OR tsv(a.k.a MAFLITE)</p>
-<p>######4. Perform genomic annotion<br>    oncotator –db-dir $oncotatordb exmple.vcf exampleOutput.tsv hg38</p>
-<p>#####■ Visualization<br>无论结果如何，必需在基因组浏览器中，连同序列比对文件一起可视化，手工核查重点结果。由于大量转录本的存在，有时软件注释并不准确,而且不同软件对同一个突变描述不同(若干博客都提到了这个问题)。</p>
+</code></pre><h6 id="5-Perform-protein-annotation"><a href="#5-Perform-protein-annotation" class="headerlink" title="5.Perform protein annotation"></a>5.Perform protein annotation</h6><pre><code>coding_change 
+</code></pre><h6 id="6-Other-tool-retrieve-seq-from-fasta"><a href="#6-Other-tool-retrieve-seq-from-fasta" class="headerlink" title="6.Other tool: retrieve_seq_from_fasta"></a>6.Other tool: retrieve_seq_from_fasta</h6><h5 id="■-SnpEff"><a href="#■-SnpEff" class="headerlink" title="■ SnpEff"></a>■ SnpEff</h5><h6 id="1-Install-application-and-set-environment-variables-1"><a href="#1-Install-application-and-set-environment-variables-1" class="headerlink" title="1. Install application and set environment variables"></a>1. Install application and set environment variables</h6><pre><code>snpeff=&apos;E:/path/snpEff.jar&apos;
+</code></pre><h6 id="2-Prepare-annotation-database-1"><a href="#2-Prepare-annotation-database-1" class="headerlink" title="2. Prepare annotation database"></a>2. Prepare annotation database</h6><pre><code>java -Xmx4g -jar $snpeff databases | less
+java -Xmx4g -jar $snpeff download GRCh38.86
+</code></pre><h6 id="3-Prepare-vcf-input-file-1"><a href="#3-Prepare-vcf-input-file-1" class="headerlink" title="3. Prepare vcf input file"></a>3. Prepare vcf input file</h6><pre><code>no  special requirement on input files
+</code></pre><h6 id="4-Perform-genomic-annotation-1"><a href="#4-Perform-genomic-annotation-1" class="headerlink" title="4. Perform  genomic annotation"></a>4. Perform  genomic annotation</h6><pre><code>java -Xmx4g -jar $snpeff -i vcf -o vcf GRCh38.86 example.vcf &gt; example_snpeff.vcf
+</code></pre><h5 id="■-Oncotator"><a href="#■-Oncotator" class="headerlink" title="■ Oncotator"></a>■ Oncotator</h5><p>可以输出为VCF文件或者MAF(Mutation Annotation Format)</p>
+<h6 id="1-Install-application-and-set-environment-variables-2"><a href="#1-Install-application-and-set-environment-variables-2" class="headerlink" title="1. Install application and set environment variables"></a>1. Install application and set environment variables</h6><pre><code>基于python，oncotator可以直接执行
+</code></pre><h6 id="2-Prepare-annotation-database-2"><a href="#2-Prepare-annotation-database-2" class="headerlink" title="2. Prepare annotation database"></a>2. Prepare annotation database</h6><pre><code>oncotatordb=&apos;/path/to/oncotator_v1_ds_April052016&apos;
+</code></pre><h6 id="3-Prepare-input-file"><a href="#3-Prepare-input-file" class="headerlink" title="3. Prepare input file"></a>3. Prepare input file</h6><pre><code>vcf OR tsv(a.k.a MAFLITE)
+</code></pre><h6 id="4-Perform-genomic-annotion"><a href="#4-Perform-genomic-annotion" class="headerlink" title="4. Perform genomic annotion"></a>4. Perform genomic annotion</h6><pre><code>oncotator --db-dir $oncotatordb exmple.vcf exampleOutput.tsv hg38
+</code></pre><h5 id="■-Visualization"><a href="#■-Visualization" class="headerlink" title="■ Visualization"></a>■ Visualization</h5><p>无论结果如何，必需在基因组浏览器中，连同序列比对文件一起可视化，手工核查重点结果。由于大量转录本的存在，有时软件注释并不准确,而且不同软件对同一个突变描述不同(若干博客都提到了这个问题)。</p>
 
       
 
