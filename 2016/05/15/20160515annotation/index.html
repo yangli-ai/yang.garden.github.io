@@ -15,12 +15,12 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/15/20160515annotation/index.html">
 <meta property="og:site_name" content="Sci-Forest">
 <meta property="og:description" content="1.基因注释数据库(Gene Annotation Database)基因注释数据库是描述基因组上gene、transcript、exon、intron等结构的染色体序号、正负链、起止位置、标准名称等信息的数据库。有三大注释库: RefSeq(refGene), UCSC(knownGene), Ensembl(ensGene)。另外，常用的GENCODE Annotation结合了Havana">
-<meta property="og:image" content="http://yoursite.com/2016/05/15/20160515annotation/annotation.jpg">
-<meta property="og:updated_time" content="2017-11-30T15:15:48.371Z">
+<meta property="og:image" content="http://yoursite.com/2016/05/15/20160515annotation/an.jpg">
+<meta property="og:updated_time" content="2017-11-30T16:00:40.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基因注释数据库和突变注释">
 <meta name="twitter:description" content="1.基因注释数据库(Gene Annotation Database)基因注释数据库是描述基因组上gene、transcript、exon、intron等结构的染色体序号、正负链、起止位置、标准名称等信息的数据库。有三大注释库: RefSeq(refGene), UCSC(knownGene), Ensembl(ensGene)。另外，常用的GENCODE Annotation结合了Havana">
-<meta name="twitter:image" content="http://yoursite.com/2016/05/15/20160515annotation/annotation.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2016/05/15/20160515annotation/an.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -212,11 +212,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-基因注释数据库-Gene-Annotation-Database"><a href="#1-基因注释数据库-Gene-Annotation-Database" class="headerlink" title="1.基因注释数据库(Gene Annotation Database)"></a>1.基因注释数据库(Gene Annotation Database)</h4><p>基因注释数据库是描述基因组上gene、transcript、exon、intron等结构的染色体序号、正负链、起止位置、标准名称等信息的数据库。有三大注释库: <strong>RefSeq</strong>(refGene), <strong>UCSC</strong>(knownGene), <strong>Ensembl</strong>(ensGene)。另外，常用的<strong>GENCODE</strong> Annotation结合了Havana manual gene annotation和Ensembl automated gene annotation。Ensembl浏览器显示即是GENCODE Annotation，二者等同)。<br><img src="/2016/05/15/20160515annotation/annotation.jpg" alt=""><br><a id="more"></a></p>
+        <h4 id="1-基因注释数据库-Gene-Annotation-Database"><a href="#1-基因注释数据库-Gene-Annotation-Database" class="headerlink" title="1.基因注释数据库(Gene Annotation Database)"></a>1.基因注释数据库(Gene Annotation Database)</h4><p>基因注释数据库是描述基因组上gene、transcript、exon、intron等结构的染色体序号、正负链、起止位置、标准名称等信息的数据库。有三大注释库: <strong>RefSeq</strong>(refGene), <strong>UCSC</strong>(knownGene), <strong>Ensembl</strong>(ensGene)。另外，常用的<strong>GENCODE</strong> Annotation结合了Havana manual gene annotation和Ensembl automated gene annotation。Ensembl浏览器显示即是GENCODE Annotation，二者等同)。<br><img src="/2016/05/15/20160515annotation/an.jpg" alt=""><br><a id="more"></a></p>
 <blockquote>
 <p>1.Annotation是一种数据库。其文本格式表现为GTF文件、GFF文件等。<br><br>2.有些Annotation还有basic版本，它从多个transcript中只选用了最长的那个。按官方解释为 a subset of representative transcripts for each gene. This subset prioritises full-length protein coding transcripts over partial or non-protein coding transcripts within the same gene, and intends to highlight those transcripts that will be useful to the majority of users.</p>
 </blockquote>
-<p><strong>GENCODE注释库</strong>有趋势成为”金标准”。它引用了Ensembl的ID。其ID以”ENS”为头，加上类型标志(“G” for gene, “T” for transcript, “E” for exon, “P” for translation),再加11位数字。</p>
+<p><strong>refGene</strong><br><strong>GENCODE注释库</strong>有趋势成为”金标准”。它引用了Ensembl的ID。其ID以”ENS”为头，加上类型标志(“G” for gene, “T” for transcript, “E” for exon, “P” for translation),再加11位数字。</p>
 <h4 id="2-突变注释-Mutation-Annotation"><a href="#2-突变注释-Mutation-Annotation" class="headerlink" title="2.突变注释(Mutation Annotation)"></a>2.突变注释(Mutation Annotation)</h4><p>彻底掌握突变注释方法，不在于对软件的了解，而在于精通数据库。如果不是批量处理数据，结合可视化软件、进行手工注释更直观、更准确。有多个软件可以对SNP和InDel进行注释(Annotation)。注释时需要两个重要文件：<strong>vcf输入文件和注释数据库</strong>。</p>
 <h5 id="■-Annovar"><a href="#■-Annovar" class="headerlink" title="■ Annovar"></a>■ Annovar</h5><h6 id="1-Install-application-and-set-environment-variables"><a href="#1-Install-application-and-set-environment-variables" class="headerlink" title="1.Install application and set environment variables"></a>1.Install application and set environment variables</h6><pre><code>alias annotate_variation=&apos;E:/path/annotate_variation.pl&apos;
 alias table_annovar=&apos;E:/path/table_annovar.pl&apos;
