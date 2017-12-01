@@ -6,19 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>环境基因交互作用 | Sci-Forest</title>
+  <title>CRISPR/Cas9学习小结 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="目前，科学家们一致地用“环境基因交互作用”这一框架，来理解疾病的发生，而且通过这一框架指导自己的科研实践。疾病，要么是环境诱导的，要么是遗传的。这看起来似乎很简单，但想要真正理解比较困难，因为他们属于不同的学科，不完全都在医学领域里。需要亲自去向各个学科学习。对于那些非自己专业的学科，尽量去感同身受地体验它们学科的思维方式。由于大部分疾病都多病因的，所以环境因素和遗传因素，孰轻孰重，或者二者怎样交">
-<meta name="keywords" content="环境与基因">
+  <meta name="description" content="当前，有两只手撑起了当代”时髦”的分子生物学研究。这是两种前端的技术，高通量测序技术和基因编辑技术。它们一个对基因组进行“读”，一个进行“写”。一个是dry lab的焦点，一个是wet lab的必需。一读一写间，基因组这部生命之书被科学家放于手掌里，翻来翻去、勾勾画画，书页上字里行间的密码逐渐被揭秘。">
+<meta name="keywords" content="分子生物学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="环境基因交互作用">
-<meta property="og:url" content="http://yoursite.com/2017/01/01/20170101gene/index.html">
+<meta property="og:title" content="CRISPR&#x2F;Cas9学习小结">
+<meta property="og:url" content="http://yoursite.com/2017/03/01/20170301crispr/index.html">
 <meta property="og:site_name" content="Sci-Forest">
-<meta property="og:description" content="目前，科学家们一致地用“环境基因交互作用”这一框架，来理解疾病的发生，而且通过这一框架指导自己的科研实践。疾病，要么是环境诱导的，要么是遗传的。这看起来似乎很简单，但想要真正理解比较困难，因为他们属于不同的学科，不完全都在医学领域里。需要亲自去向各个学科学习。对于那些非自己专业的学科，尽量去感同身受地体验它们学科的思维方式。由于大部分疾病都多病因的，所以环境因素和遗传因素，孰轻孰重，或者二者怎样交">
-<meta property="og:updated_time" content="2017-05-16T09:07:11.967Z">
+<meta property="og:description" content="当前，有两只手撑起了当代”时髦”的分子生物学研究。这是两种前端的技术，高通量测序技术和基因编辑技术。它们一个对基因组进行“读”，一个进行“写”。一个是dry lab的焦点，一个是wet lab的必需。一读一写间，基因组这部生命之书被科学家放于手掌里，翻来翻去、勾勾画画，书页上字里行间的密码逐渐被揭秘。">
+<meta property="og:image" content="http://yoursite.com/2017/03/01/20170301crispr/cas9.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/03/01/20170301crispr/system.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/03/01/20170301crispr/crispr.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/03/01/20170301crispr/indel.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/03/01/20170301crispr/sgrna.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/03/01/20170301crispr/sgrna2.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/03/01/20170301crispr/vector.jpg">
+<meta property="og:updated_time" content="2017-12-01T16:16:40.460Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="环境基因交互作用">
-<meta name="twitter:description" content="目前，科学家们一致地用“环境基因交互作用”这一框架，来理解疾病的发生，而且通过这一框架指导自己的科研实践。疾病，要么是环境诱导的，要么是遗传的。这看起来似乎很简单，但想要真正理解比较困难，因为他们属于不同的学科，不完全都在医学领域里。需要亲自去向各个学科学习。对于那些非自己专业的学科，尽量去感同身受地体验它们学科的思维方式。由于大部分疾病都多病因的，所以环境因素和遗传因素，孰轻孰重，或者二者怎样交">
+<meta name="twitter:title" content="CRISPR&#x2F;Cas9学习小结">
+<meta name="twitter:description" content="当前，有两只手撑起了当代”时髦”的分子生物学研究。这是两种前端的技术，高通量测序技术和基因编辑技术。它们一个对基因组进行“读”，一个进行“写”。一个是dry lab的焦点，一个是wet lab的必需。一读一写间，基因组这部生命之书被科学家放于手掌里，翻来翻去、勾勾画画，书页上字里行间的密码逐渐被揭秘。">
+<meta name="twitter:image" content="http://yoursite.com/2017/03/01/20170301crispr/cas9.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -190,27 +198,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20170101gene" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20170301crispr" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      环境基因交互作用
+      CRISPR/Cas9学习小结
     </h1>
   
 
         
-        <a href="/2017/01/01/20170101gene/" class="archive-article-date">
-  	<time datetime="2017-01-01T08:59:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-01</time>
+        <a href="/2017/03/01/20170301crispr/" class="archive-article-date">
+  	<time datetime="2017-03-01T05:01:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>目前，科学家们一致地用“环境基因交互作用”这一框架，来理解疾病的发生，而且通过这一框架指导自己的科研实践。疾病，要么是环境诱导的，要么是遗传的。这看起来似乎很简单，但想要真正理解比较困难，因为他们属于不同的学科，不完全都在医学领域里。需要亲自去向各个学科学习。对于那些非自己专业的学科，尽量去感同身受地体验它们学科的思维方式。由于大部分疾病都多病因的，所以环境因素和遗传因素，孰轻孰重，或者二者怎样交互作用的，难以去把握。两种因素交织在一起，千种疾病，有千种模式。<br><a id="more"></a><br>个人觉得，理解“环境基因交互作用”的最好方式是，去两个“极端”里都走一走。一个极端是医学里的环境健康学科。这门学科讲述了外源的各种化学、物理和生物因子如何对人体造成损伤。尤其喜欢其中的《毒理学》。我曾经如此评价它：<br>&#8195;<br>“毒理学既是一门科学，又是一门艺术”。我的感受是，毒理学的科学性体现在，同其它医学学科一样：研究中的严谨性和紧跟生物医学发展的前沿步伐，随时结合新的理论解释毒效应的机制。其艺术性表现在逻辑上的美感和对决策的指导意义。从毒物的吸收、分布、代谢，到细胞内引发的各种靶向机制通路，到机体响应，再到毒物的排出，这些线性的东西相互交织在一起，构成一幅波澜壮阔的网状画面，逻辑的美感即在其中；即便有些逻辑是教条的，也让人忍不住去遵守。此外每一个科学的研究结果总能被决策者所参考，由其在风险-效益间做出艺术性的决策。这环境健康问题研究中得到了充分的体现。<br>&#8195;<br>另一个”极端“便是遗传学。在本科教育时，学过医学遗传学，所以默认为这就是遗传学的全部。后来渐渐意识到，遗传学与其说是医学的分支，不如说是生物学的分支。遗传学可以上接大开脑洞的进化论，下接实用的医学。尤其分子遗传学，更像一门生物学科，它首先关注的是生理条件下，基因是如何运转的。其次才是，病理条件下如何异常的。在若干大学里，遗传学往往是一个独立的机构。<br>&#8195;<br>曾经花费了好长的业余时间去体会遗传学的思维方式。在遗传学的世界里，基因不再是静止，而是一个寄生在人体内的，如同外源的化学物，独立个体。它对人体的作用，不能看作是被动地从父母那儿继承的，而是它选择了你，然后在你的体内发挥着不同的作用，可让你健康，也可让你得病。过去从一些专业的和科普的书籍，还有Nature Genetics杂志的文章，渐渐地从这个“极端”里理解疾病。比如：<br>&#8195;<br>专业的如《Bioinformatics for Geneticists》，科普的如《The Autobiography of A Species in 23 Chapters》《The Selfish Gene》《The Language of Life》。Nature Genetics里的文章更是不错，可以去揣摩科研思路，可以做模拟，更好地理解这门学科。<br>&#8195;<br>估计我这辈子的科研工作都被框在这个“环境基因交互作用”里，会一直琢磨环境因子和基因两个精灵是如何纠缠在一起的，并把他们解开。有些人喜欢用“基因环境交互作用”，作为Public Health出身的人，我更喜欢前者。</p>
+        <p>当前，有两只手撑起了当代”时髦”的分子生物学研究。这是两种前端的技术，高通量测序技术和基因编辑技术。它们一个对基因组进行“读”，一个进行“写”。一个是dry lab的焦点，一个是wet lab的必需。一读一写间，基因组这部生命之书被科学家放于手掌里，翻来翻去、勾勾画画，书页上字里行间的密码逐渐被揭秘。<br><img src="/2017/03/01/20170301crispr/cas9.jpg" alt=""><br><a id="more"></a><br>已经了解了高通量测序的方方面面，却忍不住好奇，想窥视一下到底怎样“写”基因组的。前段时间，自己参加了一个基因编辑的workshop。有过一些分子克隆的经历，所以能容易地学习CRISPR/Cas9。这种一种新颖的方法，但若只利用它的基本功能，其具体的分子生物学实验操作，与一般分子克隆别无二样。将学习所得写下来，供它日回顾这次学习经历。</p>
+<h5 id="1-目的"><a href="#1-目的" class="headerlink" title="1. 目的"></a>1. 目的</h5><p>CRISPR/Cas9有多种用途，更多奇思妙想的应用也不断出来。但它最常见的用途是用来实现特定基因的knock-out。当然也可以实现knock-in、site mutation、遗传筛选、治疗等，但更为复杂。</p>
+<p>分子生物学实验中，为了实现Loss of function的目标，可以knock-out或knock-down目的基因。在knock-out技术里，CRISPR/Cas9比ZFN、TALENT等操作更容易、脱靶率也更低；与RNAi等knock-down相比，CRISPR/Cas9更为彻底。</p>
+<h5 id="2-原理"><a href="#2-原理" class="headerlink" title="2. 原理"></a>2. 原理</h5><p>CRISPR/Cas9技术基于两个生物学现象：细菌的CRISPR/Cas免疫和真核细胞的DNA修复。先破坏DNA，后修复DNA。在修复的过程，实现InDel、large deletion、insertion等。<br><img src="/2017/03/01/20170301crispr/system.jpg" alt=""><br>CRISPR/Cas9实验操作过程中，CRISPR作为guide RNA精确引导Cas9蛋白攻击靶点DNA，造成DNA双键断裂(DSB)，从而启动细胞内部的DNA修复过程。这个DNA修复过程完全依赖于真核细胞固有的修复系统，主要是负责DSB修复的非同源末端连接(NHEJ)和同源重组修复(HR)。CRISPR/Cas9实现knockout靶基因时，与NHEJ的非精确修复有关。<br><img src="/2017/03/01/20170301crispr/crispr.jpg" alt=""><br>NHEJ的非精确修复，可以引起各种InDel突变。若InDel造成移码突变(frameshift)，就实现了knock-out的目的。在提供donor时，以其为模板，可以通过HR进行精确的knock-in和point mutation (SNV, InDel)将Cas9修改成其它的酶，可以实现DNA序列修改之外的其它功能。<br><img src="/2017/03/01/20170301crispr/indel.jpg" alt=""></p>
+<h5 id="3-knock-out流程"><a href="#3-knock-out流程" class="headerlink" title="3. knock-out流程"></a>3. knock-out流程</h5><h6 id="3-1-sgRNA-design-and-oligo-DNA-synthesis"><a href="#3-1-sgRNA-design-and-oligo-DNA-synthesis" class="headerlink" title="3.1. sgRNA design and oligo DNA synthesis"></a>3.1. sgRNA design and oligo DNA synthesis</h6><p>设计时两个基本原则是high efficiency和low off-target<br><img src="/2017/03/01/20170301crispr/sgrna.jpg" alt=""></p>
+<p><center><strong>guide RNA = matching genomic sequence + PAM (NGG)</strong></center><br><img src="/2017/03/01/20170301crispr/sgrna2.jpg" alt=""><br>在线设计工具:CRISPR RGEN tools</p>
+<h6 id="3-2-sgRNA-vector-construction-Golden-gate-cloning"><a href="#3-2-sgRNA-vector-construction-Golden-gate-cloning" class="headerlink" title="3.2. sgRNA vector construction (Golden gate cloning)"></a>3.2. sgRNA vector construction (Golden gate cloning)</h6><p>实现多个DNA fragment的连接。依赖于type IIS restriction enzyme (BsaI, BsmBI, BbsI)和T4 DNA ligase。BsmBI等酶识别位点和切割位点是分离的，因此产生不同的non-palindromic末端。这类酶最大的优势在于可以自由设计黏性末端，并且切除识别区域保证连接之后不会再被识别。所以可以同时加入多个片段，并且酶切和连接同时进行。<br><img src="/2017/03/01/20170301crispr/vector.jpg" alt=""><br>(以下其它步骤同一般分子克隆)</p>
+<h6 id="3-3-Cas9-vector"><a href="#3-3-Cas9-vector" class="headerlink" title="3.3. Cas9 vector"></a>3.3. Cas9 vector</h6><h6 id="3-4-Transfection"><a href="#3-4-Transfection" class="headerlink" title="3.4. Transfection"></a>3.4. Transfection</h6><p>lipofection or electroporation</p>
+<h6 id="3-5-Pick-up-single-clone-and-identification"><a href="#3-5-Pick-up-single-clone-and-identification" class="headerlink" title="3.5. Pick up single clone and identification"></a>3.5. Pick up single clone and identification</h6><p>FACS — Genome DNA extraction — PCR — T7E1 assay | TA clone sequencing</p>
 
       
 
@@ -255,7 +271,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">环境与基因</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">分子生物学</a>
         		</li>
       		
 		</ul>
@@ -311,7 +327,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/01/01/20170101gene/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/03/01/20170301crispr/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -325,18 +341,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/01/20170301crispr/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/15/20170501cygwin/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CRISPR/Cas9学习小结
+          通过鼠标右键进入cygwin，并自动打开当前文件夹
         
       </div>
     </a>
   
   
-    <a href="/2016/06/15/20160610parallel/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HPC:并行计算(Parallel Computing)</div>
+    <a href="/2017/01/01/20170101gene/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">环境基因交互作用</div>
       <i class="icon-circle-right"></i>
     </a>
   
