@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Sci-Forest">
 <meta property="og:description" content="打分矩阵(Scoring Matrix)用于计算序列相似性(Similarity)，其数学本质是统计权重，可以处理序列不确定性的问题。">
 <meta property="og:image" content="http://yoursite.com/2014/10/10/20141010scoringmatrix/sm.jpg">
-<meta property="og:updated_time" content="2017-11-25T15:41:58.241Z">
+<meta property="og:updated_time" content="2017-12-02T01:31:29.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="打分矩阵(Scoring Matrix)">
 <meta name="twitter:description" content="打分矩阵(Scoring Matrix)用于计算序列相似性(Similarity)，其数学本质是统计权重，可以处理序列不确定性的问题。">
@@ -213,7 +213,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>打分矩阵(Scoring Matrix)</strong>用于计算<strong>序列相似性(Similarity)</strong>，其数学本质是统计权重，可以处理序列不确定性的问题。<br><img src="/2014/10/10/20141010scoringmatrix/sm.jpg" alt=""><br><a id="more"></a><br>给不同的序列匹配定义的一系列相似性分值，用来计算两条序列间的相似性。计算similarity时，DNA考虑了序列保守性突变，蛋白质考虑了氨基酸的相似性，这要比<strong>一致性(Identity)</strong>这一个指标更具有生物学意义。</p>
-<h5 id="1-单一打分矩阵"><a href="#1-单一打分矩阵" class="headerlink" title="1. 单一打分矩阵"></a>1. 单一打分矩阵</h5><p>相同为1，不相同为0。这正矩阵计算的结果即为identity</p>
+<h5 id="1-单一打分矩阵"><a href="#1-单一打分矩阵" class="headerlink" title="1. 单一打分矩阵"></a>1. 单一打分矩阵</h5><p>相同为1，不相同为0。这种矩阵计算的结果即为identity</p>
 <h5 id="2-遗传密码子打分矩阵"><a href="#2-遗传密码子打分矩阵" class="headerlink" title="2. 遗传密码子打分矩阵"></a>2. 遗传密码子打分矩阵</h5><p>根据导致密码子改变所需改变核苷酸的数量来定义两个氨基酸之间的距离</p>
 <h5 id="3-PAM矩阵-Point-Accepted-Mutation"><a href="#3-PAM矩阵-Point-Accepted-Mutation" class="headerlink" title="3. PAM矩阵(Point Accepted Mutation)"></a>3. PAM矩阵(Point Accepted Mutation)</h5><p>Margarette Dayhoff通过总结同源序列的氨基酸替换概率，总结出PAM1突变概率矩阵(数值为%)，对其对数转换，为PAM1打分矩阵(数值为正或负整数分值)。在此基础上，产生了其它的PAM矩阵。简言之，<em>PAM1突变概率矩阵自乘N次，为PAM(N)突变概率矩阵，取对数即为打分矩阵</em>。</p>
 <p>人和黑猩猩同源蛋白比对时，属近缘关系，选择PAM1；人和酵母菌蛋白比对时，属远缘关系，可选择PAM250。</p>
@@ -221,7 +221,7 @@
 <h5 id="3-BLOSUM矩阵-Block-Substitution-Matrix"><a href="#3-BLOSUM矩阵-Block-Substitution-Matrix" class="headerlink" title="3. BLOSUM矩阵(Block Substitution Matrix)"></a>3. BLOSUM矩阵(Block Substitution Matrix)</h5><p>PAM矩阵从1到250PAM两极距离太远，可能引起不准确；而Blosum直接从最同源的序列的区间排比获取匹配率，不考虑进化距。因此Blosum矩阵的优点是符合实际观测结果，不足之处是它不能提供进化信息。Blosum矩阵的突变数据来源于未加gaps的序列区间排比，相当于蛋白序列的保守区。大量试验表明，Blosum矩阵总体比PAM矩阵更适合于生物学关系的分析和局部相似性搜索。</p>
 <p>BLOSUM62来自于序列相似度&gt;=62%的序列比对<br>BLOSUM80来自于序列相似度&gt;=80%的序列比对</p>
 <p>Note: PAM和BLOSUM后面序号的趋势正好相反</p>
-<p><strong>Question</strong>: <strong>Similarity</strong>, <strong>Identity</strong>, <strong>Homologous</strong>区别和联系</p>
+<p><strong>Question</strong>: <strong>Similarity</strong>, <strong>Identity</strong>, <strong>Homology</strong>区别和联系</p>
 
       
 

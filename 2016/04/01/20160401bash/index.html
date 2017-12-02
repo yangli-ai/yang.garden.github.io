@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>经典生物信息数据库 | Sci-Forest</title>
+  <title>Bash编程 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="命名基本信息:HGNC: HUGO Gene Nomenclature Committee&amp;emsp;&amp;emsp;&amp;emsp;Gene familyGENECARD: Human Gene Database&amp;emsp;&amp;emsp;&amp;emsp;GIFtS: GeneCards inferred functionality score&amp;emsp;&amp;emsp;&amp;emsp;Alias, Genomics,">
+  <meta name="description" content="虽然可以用python、R写脚本，但喜欢上bash不拘小节的风格。可以将各种命令行的程序看作bash内置的命令，黏合在一起，真正做到pipeline。而且bash本身的一些命令工具，如wc、grep、awk、sed等，小巧、方便，是python等无法达到的。总之，bash很适合大数据处理。">
 <meta name="keywords" content="计算生物学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="经典生物信息数据库">
-<meta property="og:url" content="http://yoursite.com/2015/06/18/20150618biodatabase/index.html">
+<meta property="og:title" content="Bash编程">
+<meta property="og:url" content="http://yoursite.com/2016/04/01/20160401bash/index.html">
 <meta property="og:site_name" content="Sci-Forest">
-<meta property="og:description" content="命名基本信息:HGNC: HUGO Gene Nomenclature Committee&amp;emsp;&amp;emsp;&amp;emsp;Gene familyGENECARD: Human Gene Database&amp;emsp;&amp;emsp;&amp;emsp;GIFtS: GeneCards inferred functionality score&amp;emsp;&amp;emsp;&amp;emsp;Alias, Genomics,">
-<meta property="og:updated_time" content="2017-12-02T01:30:54.329Z">
+<meta property="og:description" content="虽然可以用python、R写脚本，但喜欢上bash不拘小节的风格。可以将各种命令行的程序看作bash内置的命令，黏合在一起，真正做到pipeline。而且bash本身的一些命令工具，如wc、grep、awk、sed等，小巧、方便，是python等无法达到的。总之，bash很适合大数据处理。">
+<meta property="og:image" content="http://yoursite.com/2016/04/01/20160401bash/bash.jpg">
+<meta property="og:updated_time" content="2017-12-02T03:17:49.525Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="经典生物信息数据库">
-<meta name="twitter:description" content="命名基本信息:HGNC: HUGO Gene Nomenclature Committee&amp;emsp;&amp;emsp;&amp;emsp;Gene familyGENECARD: Human Gene Database&amp;emsp;&amp;emsp;&amp;emsp;GIFtS: GeneCards inferred functionality score&amp;emsp;&amp;emsp;&amp;emsp;Alias, Genomics,">
+<meta name="twitter:title" content="Bash编程">
+<meta name="twitter:description" content="虽然可以用python、R写脚本，但喜欢上bash不拘小节的风格。可以将各种命令行的程序看作bash内置的命令，黏合在一起，真正做到pipeline。而且bash本身的一些命令工具，如wc、grep、awk、sed等，小巧、方便，是python等无法达到的。总之，bash很适合大数据处理。">
+<meta name="twitter:image" content="http://yoursite.com/2016/04/01/20160401bash/bash.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -190,37 +192,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20150618biodatabase" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20160401bash" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      经典生物信息数据库
+      Bash编程
     </h1>
   
 
         
-        <a href="/2015/06/18/20150618biodatabase/" class="archive-article-date">
-  	<time datetime="2015-06-18T12:31:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-18</time>
+        <a href="/2016/04/01/20160401bash/" class="archive-article-date">
+  	<time datetime="2016-04-01T02:07:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="命名基本信息"><a href="#命名基本信息" class="headerlink" title="命名基本信息:"></a>命名基本信息:</h5><p><strong>HGNC</strong>: HUGO Gene Nomenclature Committee<br>&emsp;&emsp;&emsp;Gene family<br><strong>GENECARD</strong>: Human Gene Database<br>&emsp;&emsp;&emsp;GIFtS: GeneCards inferred functionality score<br>&emsp;&emsp;&emsp;Alias, Genomics, Proteins, Variants, Transcripts,<br>&emsp;&emsp;&emsp;Orthologs, Paralogs, Domains &amp; Families, Function,<br>&emsp;&emsp;&emsp;Localization, Pathways &amp; Interactions,<br>&emsp;&emsp;&emsp;Drugs &amp; Compounds, Disorders<br><a id="more"></a></p>
-<hr>
-<h5 id="基因组注释"><a href="#基因组注释" class="headerlink" title="基因组注释:"></a>基因组注释:</h5><p><strong>RefSeq/GENCODE</strong>: Annotation database<br><strong>NCBI(refGene)/UCSC(knownGene)/Ensembl(ensGene)</strong>: Ensembl已融入GENCODE； UCSC也有意反映GENCODE；所以最终还是RefSeq和GENCODE两大派。<br><strong>CCDS</strong>: Consensus Coding Sequence database<br><strong>ExAC</strong>: Exon Aggregation Consortium</p>
-<hr>
-<h5 id="DNA变异"><a href="#DNA变异" class="headerlink" title="DNA变异:"></a>DNA变异:</h5><p><strong>1KGP</strong>: 1000 Genome Project<br><strong>HGVS</strong>: Human Genome Variant Society<br><strong>HGMD</strong>: Human Gene Mutation Database<br><strong>ClinVar</strong>:<br><strong>OMIM</strong>: Online Mendelian Inheritance in Man</p>
-<hr>
-<h5 id="Regulation-element"><a href="#Regulation-element" class="headerlink" title="Regulation element:"></a>Regulation element:</h5><p><strong>ENCODE</strong>:<br><strong>Roadmap</strong>:<br><strong>MethDB</strong>:<br><strong>miRbase</strong>:<br><strong>lncRNAdb</strong>:</p>
-<hr>
-<h5 id="蛋白质"><a href="#蛋白质" class="headerlink" title="蛋白质:"></a>蛋白质:</h5><p><strong>Pfam</strong>: Protein family<br><strong>UniProtKB</strong>:  Universal Protein Knowledgebase<br><strong>RCSB PDB</strong>: Protein Data Bank</p>
-<hr>
-<h5 id="功能注释"><a href="#功能注释" class="headerlink" title="功能注释:"></a>功能注释:</h5><p><strong>GO</strong>: Gene Oncology<br><strong>KEGG/Rectome</strong>: pathway database<br><strong>STRING</strong>: Protein-protein interaction</p>
+        <p>虽然可以用python、R写脚本，但喜欢上bash不拘小节的风格。可以将各种命令行的程序看作bash内置的命令，黏合在一起，真正做到pipeline。而且bash本身的一些命令工具，如wc、grep、awk、sed等，小巧、方便，是python等无法达到的。总之，bash很适合大数据处理。<br><img src="/2016/04/01/20160401bash/bash.jpg" alt=""><br><a id="more"></a></p>
+<h5 id="1-系统配置"><a href="#1-系统配置" class="headerlink" title="1. 系统配置"></a>1. 系统配置</h5><p>.bashrc<br>.bash_profile  # R语言中是.Rprofile</p>
+<h5 id="2-X11-X-window"><a href="#2-X11-X-window" class="headerlink" title="2. X11 (X-window)"></a>2. X11 (X-window)</h5><p>Shell<br>#!/bin/bash<br>X11:     xming, Cygwin/xwin<br>VNC:     fastx</p>
+<h5 id="3-文件管理系统"><a href="#3-文件管理系统" class="headerlink" title="3. 文件管理系统"></a>3. 文件管理系统</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/   root</div><div class="line">~/  home</div><div class="line">./  current directory</div><div class="line">../ last directory</div></pre></td></tr></table></figure>
+<h5 id="4-输入输出"><a href="#4-输入输出" class="headerlink" title="4. 输入输出"></a>4. 输入输出</h5><p><strong>read</strong> a                        #赋值给a<br><strong>echo</strong> $a                        #显示a<br>a=`command` OR <strong>$(</strong>command<strong>)</strong>    #把命令结果赋值给a<br><strong>/dev/clipboard</strong>                #cat /dev/clipboard  echo $a &gt; /dev/clipboard</p>
+<h5 id="5-重定向与管道命令"><a href="#5-重定向与管道命令" class="headerlink" title="5. 重定向与管道命令"></a>5. 重定向与管道命令</h5><p><strong>>/&gt;&gt;</strong>: 输出到文件<br><strong>|</strong>: 输出到控制台(下一个命令)<br><strong>tee</strong>: 既输出到控制台，又输出到文件。 tee test.txt</p>
+<h5 id="6-Command-substitution"><a href="#6-Command-substitution" class="headerlink" title="6. $() ${}Command substitution"></a>6. $() ${}Command substitution</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(command) = \`command\` # 命令取代, `a=$(head -10 a.txt)`</div><div class="line">$&#123;a&#125; $&#123;#a&#125; $&#123;a[*]&#125;       # 变量取代</div><div class="line">$((1*2))                 # 算数运算取代</div></pre></td></tr></table></figure>
+<h5 id="7-变量-与数组"><a href="#7-变量-与数组" class="headerlink" title="7. 变量$与数组()"></a>7. 变量$与数组()</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">a=(1 2 3 4 5 6)</div><div class="line">a=&#123;1..10&#125;  OR  &#123;a..z&#125;  OR &#123;a..c&#125;&#123;1..3&#125;</div><div class="line">a=(`seq 1 1 10`) # a=`seq 1 1 10` doesn&apos;t work! seq is used to create strings; ( ) is for array!</div><div class="line">$&#123;a[0]&#125;		# get the first element of a</div><div class="line">$&#123;a[*]&#125;		# get the whole elements in a; \* can be replaced by @.</div><div class="line">$&#123;a[*]:1:6&#125;	# get the elements from 2nd to 6th</div><div class="line">$&#123;#a[*]&#125;	# get the length of a</div></pre></td></tr></table></figure>
+<h5 id="8-字符串"><a href="#8-字符串" class="headerlink" title="8. 字符串"></a>8. 字符串</h5><p>字符串被看成一种特殊数组，所有字符串的处理都通过<strong>${}</strong>进行($’\n’是换行符)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">str=ATGCTAGCTAGCACGTAGCTACGTACGTACGTACGTAGCTAGTA</div><div class="line">$&#123;#str&#125;</div><div class="line">$&#123;str:1:2&#125;</div><div class="line">$&#123;str/substring/replacement&#125; or $&#123;str//substring/replacement&#125;  # substring can be a regulation expression</div><div class="line">example count a leter: a=$&#123;str//[^a]&#125;; echo $&#123;#a&#125;</div><div class="line">$&#123;str^^&#125;  $&#123;str,,&#125;  #大小写转换</div><div class="line">tr set1 set2  		# set1 set2中元素是一一对应的，可以用POSIX字符：</div><div class="line">[:alpha:]  [:digit:]  [:alnum:]  [:blank:]  [:lower:]  [:upper:]</div></pre></td></tr></table></figure></p>
+<h5 id="9-函数"><a href="#9-函数" class="headerlink" title="9. 函数"></a>9. 函数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#定义</div><div class="line">#在函数体内，通过 $n 获取参数值，$#为参数个数，$@为所有的参数($\*将$@作为整个字符串输出)</div><div class="line">function foo() &#123;</div><div class="line">statements</div><div class="line">return</div><div class="line">&#125;</div><div class="line">#调用</div><div class="line">foo</div></pre></td></tr></table></figure>
+<h5 id="10-控制语句"><a href="#10-控制语句" class="headerlink" title="10. 控制语句"></a>10. 控制语句</h5><p>分支:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if [condition]</div><div class="line">   then ...</div><div class="line">else if [condition]</div><div class="line">   then...</div><div class="line">else</div><div class="line">   then...</div><div class="line">fi</div></pre></td></tr></table></figure></p>
+<p>循环:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">for i in $(seq 10)</div><div class="line">do</div><div class="line">    commands</div><div class="line">done</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">for((i=0;i&lt;=10;i++)) </div><div class="line">do</div><div class="line">    commands</div><div class="line">done</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">while condition</div><div class="line">do</div><div class="line">    command</div><div class="line">done</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">while read line</div><div class="line">do</div><div class="line">    echo $line</div><div class="line">done &lt; file.txt</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">while : #开启无限循环</div><div class="line">do</div><div class="line">    echo -n &quot;输入 1 到 5 之间的数字:&quot;</div><div class="line">    read aNum</div><div class="line">case $aNum in </div><div class="line">1|2|3|4|5) </div><div class="line">echo &quot;你输入的数字为 $aNum!&quot;</div><div class="line">\*) </div><div class="line">echo &quot;你输入的数字不是 1 到 5 之间的! 游戏结束&quot;</div><div class="line">    esac</div><div class="line">done</div></pre></td></tr></table></figure>
+<h5 id="11-查看文本head-tail-cat-more-less-hexdump"><a href="#11-查看文本head-tail-cat-more-less-hexdump" class="headerlink" title="11. 查看文本head/tail, cat/more/less, hexdump"></a>11. 查看文本head/tail, cat/more/less, hexdump</h5><p><strong>head/tail</strong>:<br><strong>cat</strong>: 一次读入文件到内存 cat -n<br><strong>more</strong>: 一次读入文件到内存；交互式操作(如=输出当前行号)<br><strong>less</strong>: 分次读入文件到内存；交互式操作(如?查找) less -S -N<br><strong>hexdump</strong>: 查看二进制文件</p>
+<h5 id="12-处理文本grep-sed-awk"><a href="#12-处理文本grep-sed-awk" class="headerlink" title="12. 处理文本grep/sed/awk"></a>12. 处理文本grep/sed/awk</h5><p><strong>grep</strong>: 可以正则表达式,grep -c grep -o 显示多个<br><strong>egrep</strong>:<br><strong>sed</strong>: stream editor   sed ‘s/y/Y/g’ file1.txt &gt; file2.txt<br><strong>awk</strong>: awk ‘BEGIN{} condition{loop} END{}’ file.txt</p>
+<h5 id="13-多线程-并行-amp-xargs-parallel"><a href="#13-多线程-并行-amp-xargs-parallel" class="headerlink" title="13. 多线程/并行&amp;, xargs, parallel"></a>13. 多线程/并行&amp;, xargs, parallel</h5><p><strong>&amp;</strong>并行, <strong>&amp;&amp;</strong>串行<br><strong>xargs</strong>：<br><strong>parallel</strong>：The default is to run one job per CPU<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">|或者:::从前面或后面传递参数</div><div class="line">parallel command ::: file.txt</div><div class="line">cat file.txt | parallel --pipe -j 10 commands    #--pipe split stdin (standard input) to multiple jobs； </div><div class="line">-j the number of jobs</div><div class="line">cat file.txt | parallel --block 10M --pipe commands</div></pre></td></tr></table></figure></p>
 
       
 
@@ -321,7 +331,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/06/18/20150618biodatabase/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/04/01/20160401bash/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -335,18 +345,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2015/11/10/20151110proteinsignature/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/04/21/20160424lakeshorelimited/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          蛋白质聚类和特征提取
+          在驶往纽约的湖滨号上
         
       </div>
     </a>
   
   
-    <a href="/2015/05/19/20150519book/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">《追风筝的人》：成年后还要追逐那些美好的东西</div>
+    <a href="/2016/02/07/20160207bedrooms/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">梵高的卧室(Van Gogh&#39;s Bedrooms)</div>
       <i class="icon-circle-right"></i>
     </a>
   
