@@ -17,7 +17,11 @@
 <meta property="og:description" content="我们常用BLAST（如blastn和blastp）从数据库中寻找某一序列(query)的相似序列(target)，这种方法是pairwise comparison method。本质上讲也是通过计算距离，来衡量两条序列的相似性大小。">
 <meta property="og:image" content="http://yoursite.com/2015/11/11/20151111psiblast/psiblast1.jpg">
 <meta property="og:image" content="http://yoursite.com/2015/11/11/20151111psiblast/psiblast2.jpg">
-<meta property="og:updated_time" content="2017-11-23T17:05:30.985Z">
+<meta property="og:image" content="http://yoursite.com/2015/11/11/20151111psiblast/align1.jpg">
+<meta property="og:image" content="http://yoursite.com/2015/11/11/20151111psiblast/p1.png">
+<meta property="og:image" content="http://yoursite.com/2015/11/11/20151111psiblast/p0.png">
+<meta property="og:image" content="http://yoursite.com/2015/11/11/20151111psiblast/align2.jpg">
+<meta property="og:updated_time" content="2017-12-06T07:11:00.949Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PSI-BLAST寻找同源蛋白">
 <meta name="twitter:description" content="我们常用BLAST（如blastn和blastp）从数据库中寻找某一序列(query)的相似序列(target)，这种方法是pairwise comparison method。本质上讲也是通过计算距离，来衡量两条序列的相似性大小。">
@@ -213,7 +217,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我们常用<strong>BLAST</strong>（如blastn和blastp）从数据库中寻找某一序列(query)的相似序列(target)，这种方法是pairwise comparison method。本质上讲也是通过计算距离，来衡量两条序列的相似性大小。<br><img src="/2015/11/11/20151111psiblast/psiblast1.jpg" alt=""><br><a id="more"></a><br>而<strong>PSI-BLAST</strong>是基于motif或者profile搜索的方法，来寻找目标序列。PSI-BLAST先从query序列开始，获得一系列相似性序列，看作是同一蛋白家族，然后构建一个motif或profile。这个motif或profile的矩阵化形式，称之为position-specific score matrix (PSSM)。PSI-BLAST用PSSM，而不是初始的query序列，从数据库中搜索目标序列。这样可以比用一条query序列更有效地找出同源蛋白质。特别是寻找distant homologues。<br><img src="/2015/11/11/20151111psiblast/psiblast2.jpg" alt=""><br><strong>PSI-BLAST</strong>分为两个重要步骤：1. 通过不断的迭代构建PSSM；2. 利用近似PSSM的一条人工序列搜索数据库。具体步骤可阅读文章Gapped BLAST and PSI-BLAST: a new generation of protein database search program</p>
+        <p>我们常用<strong>BLAST</strong>（如blastn和blastp）从数据库中寻找某一序列(query)的相似序列(target)，这种方法是pairwise comparison method。本质上讲也是通过计算距离，来衡量两条序列的相似性大小。<br><img src="/2015/11/11/20151111psiblast/psiblast1.jpg" alt=""><br><a id="more"></a><br>而<strong>PSI-BLAST</strong>(Positive-specific Interative Basic Local Alignment Search Tools)是基于profile搜索的方法，来寻找目标序列。PSI-BLAST先从query序列开始，获得一系列相似性序列，看作是同一蛋白家族，然后构建一个profile。这个profile的矩阵化形式，称之为position-specific score matrix (PSSM)。PSI-BLAST用PSSM，而不是初始的query序列，从数据库中搜索目标序列。<br><img src="/2015/11/11/20151111psiblast/psiblast2.jpg" alt=""><br>PSSM的特点是：highly conserved positions receive high score and weakly conserved positions receive scores near zero. PSI-BLAST重在发现有relationship的序列，例如有些蛋白质序列间相似性较低，但3D结构非常类似。它比BLAST用一条query序列更有效地找出同源蛋白质。特别是寻找distant homologues，这显然是BLAST实现不了的。</p>
+<p><strong>PSI-BLAST</strong>分为几个重要步骤：</p>
+<ol>
+<li>用初始的一条蛋白质序列作为query，去blast蛋白质数据库，获得初始结果</li>
+<li>对初始的结果进行多序列比对，构建初始profile，即PSSM</li>
+<li>用PSSM作为query，搜索数据库，发现较远的相似性序列，并给出E-value</li>
+<li>构建新的PSSM，重复步骤3。这个过程不断迭代，直到没有符合要求(E-value threshold,比如0.005,有时可放宽至0.01)的新序列</li>
+</ol>
+<p>具体步骤可阅读文章Gapped BLAST and PSI-BLAST: a new generation of protein database search program</p>
+<p>NCBI的一篇<a href="https://www.ncbi.nlm.nih.gov/books/NBK2590/" target="_blank" rel="external">PSI-BLAST tutorial </a>中列举了几个实际应用的例子:</p>
+<p><strong>例1: 大肠杆菌DNA聚合酶III的β亚基和真核细胞里的PCNA</strong></p>
+<p>β亚基是一个二聚体，每个单体上有三个同源的domain；PCNA是三聚体，每个单体上有两个同源的domain。这些domain都是同源的，包括两个α-螺旋和八个β折叠(PCNA里有九个)。两种蛋白质3D结构极其相似。但以因为进化距离远，BLAST发现不了二者间的相似性。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Enter Query Sequence: NP_002583(PCNA的ID)</div><div class="line">Choose Search Set: nr数据库</div><div class="line">Program Selection: PSI-BLAST</div><div class="line">General Parameters：Max target sequences=1000; Expect threshold=10</div><div class="line">PSI/PHI/DELTA BLAST：PSI-BLAST Threshold=0.005</div></pre></td></tr></table></figure></p>
+<p>点击BLAST，运行。搜索结果类似BLAST，罗列了Sequences producing significant alignments with E-value BETTER than threshold，还有它们的E value等信息。每条序列后有复选框，选择是否以该序列构建PSSM。同时还有其它信息：Taxonomy reports (每条序列的物种信息), Distance tree of results, 和MSA viewer (Multiple Alignment图)</p>
+<p>我们需要继续进行PSI-BLAST，所以点击Run PSI-Blast iteration。查看结果，并留意Taxonomy report。</p>
+<p>不断迭代，在第5次迭代时，搜索出β亚基(Sbjct序列，NP_418156.1)。<br><img src="/2015/11/11/20151111psiblast/align1.jpg" alt=""><br>保守的的疏水性残基分布在domain上的疏水性内核里，并通过疏水作用维持稳定结构。极性残基分布在分子表面，暴露于水中或者蛋白-配体结合处。那些带正电荷的残基分布在与DNA结合的ring结构内部，而带负电荷的残基分布在ring的外部。</p>
+<p>NP_002583对应的PDB:5YCO, NP_418156.1对应的PDB:5M1S。它们结构比对结果如下(灰色为β亚基上没有比对上的残基)：<br><img src="/2015/11/11/20151111psiblast/p1.png" alt=""><br><img src="/2015/11/11/20151111psiblast/p0.png" alt=""><br>两种蛋白质序列相似性很低，BLAST发现不了，但PSI-BLAST能捕捉到它们的结构相似关系。</p>
+<p><strong>例2: 搜索BAE56987蛋白的结构模板</strong></p>
+<p>搜索步骤同上。在第三轮迭代中发现1VHS蛋白(e~10^−3^)。二者在一个loop上有共同的Q/RxxGxG/A motif。这个motif出现在GNAT蛋白家族里，是结合Coenzyme A的位点。 1VHS通过这个motif与CoA结合，并把它转移到氨基上。因此推断该蛋白可能是一种CoA-dependent amino-group acetyltransferase enzyme。<br><img src="/2015/11/11/20151111psiblast/align2.jpg" alt=""></p>
 
       
 
