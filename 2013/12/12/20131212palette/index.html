@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://yoursite.com/2013/12/12/20131212palette/plt6.jpg">
 <meta property="og:image" content="http://yoursite.com/2013/12/12/20131212palette/plt7.jpg">
 <meta property="og:image" content="http://yoursite.com/2013/12/12/20131212palette/plt4.jpg">
-<meta property="og:updated_time" content="2017-12-06T12:44:49.502Z">
+<meta property="og:updated_time" content="2017-12-06T12:52:02.178Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="作图的Palette">
 <meta name="twitter:description" content="在绘图时，最影响美观的是颜色。有时亮丽的色彩适合表达鲜明的主题思想；有时暗淡一点或者简单对比的色彩更让人舒服。颜色样式繁多复杂，反映出图的风格，如人的个性。同作画一样，MATLAB、Python和R自由地绘图时，心中先需要”调制”一个调色板(palette)。">
@@ -219,12 +219,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在绘图时，最影响美观的是颜色。有时亮丽的色彩适合表达鲜明的主题思想；有时暗淡一点或者简单对比的色彩更让人舒服。颜色样式繁多复杂，反映出图的风格，如人的个性。同作画一样，MATLAB、Python和R自由地绘图时，心中先需要”调制”一个调色板(palette)。<br><img src="/2013/12/12/20131212palette/plt1.jpg" alt=""><br><a id="more"></a><br>MATLAB的palette可以可视化，方便选择。而R中的palette较为虚拟，而且可选择的种类极其繁多。现把R中可用的palette总结如下，包括R预定的palette和RColorBrewer提供的palette。</p>
-<h5 id="1-系统自带的颜色"><a href="#1-系统自带的颜色" class="headerlink" title="1.系统自带的颜色"></a>1.系统自带的颜色</h5><p><strong>palette(‘default’)</strong><br>“black”   “red”     “green3”  “blue”    “cyan”    “magenta” “yellow”  “gray”<br><strong>palette(rainbow(10))</strong><br><img src="/2013/12/12/20131212palette/plt2.jpg" alt=""><br><strong>Index of colors</strong>: R的若干函数有color参数，既可以接受颜色的名字，也可以接受index<br><img src="/2013/12/12/20131212palette/plt3.jpg" alt=""></p>
+<h5 id="1-系统自带的颜色"><a href="#1-系统自带的颜色" class="headerlink" title="1.系统自带的颜色"></a>1.系统自带的颜色</h5><p><strong>palette(‘default’)</strong><br>“black”   “red”     “green3”  “blue”    “cyan”    “magenta” “yellow”  “gray”<br><strong>palette(rainbow(10))</strong><br>基于各种函数，如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">gray (0:10/10)</div><div class="line">rgb(red=(0:10)/10, green=0, blue=0)</div><div class="line">rainbow(n, s = 1, v = 1, start = 0, end = max(1,n - 1)/n, alpha = 1)</div><div class="line">heat.colors(n, alpha = 1)</div><div class="line">terrain.colors(n, alpha = 1)</div><div class="line">topo.colors(n, alpha = 1)</div><div class="line">cm.colors(n, alpha = 1)</div></pre></td></tr></table></figure></p>
+<p><img src="/2013/12/12/20131212palette/plt2.jpg" alt=""><br><strong>Index of colors</strong>: R的若干函数有color参数，既可以接受颜色的名字，也可以接受index<br><img src="/2013/12/12/20131212palette/plt3.jpg" alt=""></p>
 <h5 id="2-RColorBrewer"><a href="#2-RColorBrewer" class="headerlink" title="2.RColorBrewer"></a>2.RColorBrewer</h5><p><strong>预定义的三种palette:</strong></p>
 <h6 id="1-Qualitative-palettes"><a href="#1-Qualitative-palettes" class="headerlink" title="1.Qualitative palettes"></a>1.Qualitative palettes</h6><p><img src="/2013/12/12/20131212palette/plt5.jpg" alt=""></p>
 <h6 id="2-Diverging-palettes"><a href="#2-Diverging-palettes" class="headerlink" title="2.Diverging palettes"></a>2.Diverging palettes</h6><p><img src="/2013/12/12/20131212palette/plt6.jpg" alt=""></p>
 <h6 id="3-Sequential-palettes"><a href="#3-Sequential-palettes" class="headerlink" title="3.Sequential palettes"></a>3.Sequential palettes</h6><p><img src="/2013/12/12/20131212palette/plt7.jpg" alt=""></p>
-<p><strong>自定义colormap:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">colorRampPalette(brewer.pal(9,”Blues”))(100) </div><div class="line"># generate 100 colours based on the 9 from the ‘Blues’ palette. See image below for a contrast.</div></pre></td></tr></table></figure></p>
+<p><strong>自定义colormap:</strong>最棒的函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">colorRampPalette(brewer.pal(9,”Blues”))(100)</div><div class="line"># generate 100 colours based on the 9 from the ‘Blues’ palette</div><div class="line">colorRampPalette(c(‘blue’,’yellow’,’red’))(n)</div><div class="line"># c( )中可以放很多参数</div></pre></td></tr></table></figure></p>
 <p>例如蓝色colormap<br><img src="/2013/12/12/20131212palette/plt4.jpg" alt=""></p>
 
       
