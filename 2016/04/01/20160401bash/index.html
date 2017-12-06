@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Sci-Forest">
 <meta property="og:description" content="虽然可以用python、R写脚本，但喜欢上bash不拘小节的风格。可以将各种命令行的程序看作bash内置的命令，黏合在一起，真正做到pipeline。而且bash本身的一些命令工具，如wc、grep、awk、sed等，小巧、方便，是python等无法达到的。总之，bash很适合大数据处理。">
 <meta property="og:image" content="http://yoursite.com/2016/04/01/20160401bash/bash.jpg">
-<meta property="og:updated_time" content="2017-12-02T03:23:42.722Z">
+<meta property="og:updated_time" content="2017-12-06T11:49:01.761Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bash编程">
 <meta name="twitter:description" content="虽然可以用python、R写脚本，但喜欢上bash不拘小节的风格。可以将各种命令行的程序看作bash内置的命令，黏合在一起，真正做到pipeline。而且bash本身的一些命令工具，如wc、grep、awk、sed等，小巧、方便，是python等无法达到的。总之，bash很适合大数据处理。">
@@ -73,9 +73,11 @@
 	        
 				<li><a href="/tags/计算生物学/">计算生物学</a></li>
 	        
-				<li><a href="/tags/自然哲学/">自然哲学</a></li>
+				<li><a href="/tags/流行病研究/">流行病研究</a></li>
 	        
 				<li><a href="/tags/人文与艺术/">人文与艺术</a></li>
+	        
+				<li><a href="/tags/自然哲学/">自然哲学</a></li>
 	        
 			</ul>
 		</nav>
@@ -143,6 +145,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -163,21 +167,23 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 12.5%"><a href="/">首页</a></li>
+					<li style="width: 11.11111111111111%"><a href="/">首页</a></li>
 		        
-					<li style="width: 12.5%"><a href="/archives">所有文章</a></li>
+					<li style="width: 11.11111111111111%"><a href="/archives">所有文章</a></li>
 		        
-					<li style="width: 12.5%"><a href="/tags/游历与随笔/">游历与随笔</a></li>
+					<li style="width: 11.11111111111111%"><a href="/tags/游历与随笔/">游历与随笔</a></li>
 		        
-					<li style="width: 12.5%"><a href="/tags/环境与基因/">环境×基因</a></li>
+					<li style="width: 11.11111111111111%"><a href="/tags/环境与基因/">环境×基因</a></li>
 		        
-					<li style="width: 12.5%"><a href="/tags/分子生物学/">分子生物学</a></li>
+					<li style="width: 11.11111111111111%"><a href="/tags/分子生物学/">分子生物学</a></li>
 		        
-					<li style="width: 12.5%"><a href="/tags/计算生物学/">计算生物学</a></li>
+					<li style="width: 11.11111111111111%"><a href="/tags/计算生物学/">计算生物学</a></li>
 		        
-					<li style="width: 12.5%"><a href="/tags/自然哲学/">自然哲学</a></li>
+					<li style="width: 11.11111111111111%"><a href="/tags/流行病研究/">流行病研究</a></li>
 		        
-					<li style="width: 12.5%"><a href="/tags/人文与艺术/">人文与艺术</a></li>
+					<li style="width: 11.11111111111111%"><a href="/tags/人文与艺术/">人文与艺术</a></li>
+		        
+					<li style="width: 11.11111111111111%"><a href="/tags/自然哲学/">自然哲学</a></li>
 		        
 				</ul>
 			</nav>
@@ -214,14 +220,14 @@
       
         <p>虽然可以用python、R写脚本，但喜欢上bash不拘小节的风格。可以将各种命令行的程序看作bash内置的命令，黏合在一起，真正做到pipeline。而且bash本身的一些命令工具，如wc、grep、awk、sed等，小巧、方便，是python等无法达到的。总之，bash很适合大数据处理。<br><img src="/2016/04/01/20160401bash/bash.jpg" alt=""><br><a id="more"></a></p>
 <h5 id="1-系统配置"><a href="#1-系统配置" class="headerlink" title="1. 系统配置"></a>1. 系统配置</h5><p>.bashrc<br>.bash_profile  # R语言中是.Rprofile</p>
-<h5 id="2-X11-X-window"><a href="#2-X11-X-window" class="headerlink" title="2. X11 (X-window)"></a>2. X11 (X-window)</h5><p>Shell<br>#!/bin/bash<br>X11:     xming, Cygwin/xwin<br>VNC:     fastx</p>
+<h5 id="2-X11-X-window"><a href="#2-X11-X-window" class="headerlink" title="2. X11 (X-window)"></a>2. X11 (X-window)</h5><p>X11:     xming, Cygwin/xwin<br>VNC:     fastx</p>
 <h5 id="3-文件管理系统"><a href="#3-文件管理系统" class="headerlink" title="3. 文件管理系统"></a>3. 文件管理系统</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/   root</div><div class="line">~/  home</div><div class="line">./  current directory</div><div class="line">../ last directory</div></pre></td></tr></table></figure>
-<h5 id="4-输入输出"><a href="#4-输入输出" class="headerlink" title="4. 输入输出"></a>4. 输入输出</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">__read__ a						#赋值给a</div><div class="line">__echo__ $a						#显示a</div><div class="line">a=\`command\` OR __$(__command__)__	#把命令结果赋值给a</div><div class="line">__/dev/clipboard__				#cat /dev/clipboard  echo $a &gt; /dev/clipboard</div></pre></td></tr></table></figure>
-<h5 id="5-重定向与管道命令"><a href="#5-重定向与管道命令" class="headerlink" title="5. 重定向与管道命令"></a>5. 重定向与管道命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">__\&gt;/&gt;&gt;__: 输出到文件</div><div class="line">__|__: 输出到控制台(下一个命令)</div><div class="line">__tee__: 既输出到控制台，又输出到文件。 tee test.txt</div></pre></td></tr></table></figure>
-<h5 id="6-Command-substitution"><a href="#6-Command-substitution" class="headerlink" title="6. $() ${}Command substitution"></a>6. $() ${}Command substitution</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(command) = \`command\` # 命令取代, `a=$(head -10 a.txt)`</div><div class="line">$&#123;a&#125; $&#123;#a&#125; $&#123;a[*]&#125;       # 变量取代</div><div class="line">$((1*2))                 # 算数运算取代</div></pre></td></tr></table></figure>
-<h5 id="7-变量-与数组"><a href="#7-变量-与数组" class="headerlink" title="7. 变量$与数组()"></a>7. 变量$与数组()</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">a=(1 2 3 4 5 6)</div><div class="line">a=&#123;1..10&#125;  OR  &#123;a..z&#125;  OR &#123;a..c&#125;&#123;1..3&#125;</div><div class="line">a=(`seq 1 1 10`) # a=`seq 1 1 10` doesn&apos;t work! seq is used to create strings; ( ) is for array!</div><div class="line">$&#123;a[0]&#125;		# get the first element of a</div><div class="line">$&#123;a[*]&#125;		# get the whole elements in a; \* can be replaced by @.</div><div class="line">$&#123;a[*]:1:6&#125;	# get the elements from 2nd to 6th</div><div class="line">$&#123;#a[*]&#125;	# get the length of a</div></pre></td></tr></table></figure>
+<h5 id="4-输入输出"><a href="#4-输入输出" class="headerlink" title="4. 输入输出"></a>4. 输入输出</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">read a						#赋值给a</div><div class="line">echo $a						#显示a</div><div class="line">a=`command` OR $(command)	#把命令结果赋值给a</div><div class="line">/dev/clipboard				#cat /dev/clipboard  echo $a &gt; /dev/clipboard</div></pre></td></tr></table></figure>
+<h5 id="5-重定向与管道命令"><a href="#5-重定向与管道命令" class="headerlink" title="5. 重定向与管道命令"></a>5. 重定向与管道命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt;/&gt;&gt;: 输出到文件</div><div class="line">|: 输出到控制台(下一个命令)</div><div class="line">tee: 既输出到控制台，又输出到文件。 tee test.txt</div></pre></td></tr></table></figure>
+<h5 id="6-Command-substitution"><a href="#6-Command-substitution" class="headerlink" title="6. $() ${}Command substitution"></a>6. $() ${}Command substitution</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(command) = `command` # 命令取代, `a=$(head -10 a.txt)`</div><div class="line">$&#123;a&#125; $&#123;#a&#125; $&#123;a[*]&#125;       # 变量取代</div><div class="line">$((1*2))                 # 算数运算取代</div></pre></td></tr></table></figure>
+<h5 id="7-变量-与数组"><a href="#7-变量-与数组" class="headerlink" title="7. 变量$与数组()"></a>7. 变量$与数组()</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">a=(1 2 3 4 5 6)</div><div class="line">a=&#123;1..10&#125;  OR  &#123;a..z&#125;  OR &#123;a..c&#125;&#123;1..3&#125;</div><div class="line">a=(`seq 1 1 10`) # a=`seq 1 1 10` doesn&apos;t work! seq is used to create strings; ( ) is for array!</div><div class="line">$&#123;a[0]&#125;		# get the first element of a</div><div class="line">$&#123;a[*]&#125;		# get the whole elements in a; * can be replaced by @.</div><div class="line">$&#123;a[*]:1:6&#125;	# get the elements from 2nd to 6th</div><div class="line">$&#123;#a[*]&#125;	# get the length of a</div></pre></td></tr></table></figure>
 <h5 id="8-字符串"><a href="#8-字符串" class="headerlink" title="8. 字符串"></a>8. 字符串</h5><p>字符串被看成一种特殊数组，所有字符串的处理都通过<strong>${}</strong>进行($’\n’是换行符)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">str=ATGCTAGCTAGCACGTAGCTACGTACGTACGTACGTAGCTAGTA</div><div class="line">$&#123;#str&#125;</div><div class="line">$&#123;str:1:2&#125;</div><div class="line">$&#123;str/substring/replacement&#125; or $&#123;str//substring/replacement&#125;  # substring can be a regulation expression</div><div class="line">example count a leter: a=$&#123;str//[^a]&#125;; echo $&#123;#a&#125;</div><div class="line">$&#123;str^^&#125;  $&#123;str,,&#125;  #大小写转换</div><div class="line">tr set1 set2  		# set1 set2中元素是一一对应的，可以用POSIX字符：</div><div class="line">[:alpha:]  [:digit:]  [:alnum:]  [:blank:]  [:lower:]  [:upper:]</div></pre></td></tr></table></figure></p>
-<h5 id="9-函数"><a href="#9-函数" class="headerlink" title="9. 函数"></a>9. 函数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#定义</div><div class="line">#在函数体内，通过 $n 获取参数值，$#为参数个数，$@为所有的参数($\*将$@作为整个字符串输出)</div><div class="line">function foo() &#123;</div><div class="line">statements</div><div class="line">return</div><div class="line">&#125;</div><div class="line">#调用</div><div class="line">foo</div></pre></td></tr></table></figure>
+<h5 id="9-函数"><a href="#9-函数" class="headerlink" title="9. 函数"></a>9. 函数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#定义</div><div class="line">#在函数体内，通过 $n 获取参数值，$#为参数个数，$@为所有的参数($*将$@作为整个字符串输出)</div><div class="line">function foo() &#123;</div><div class="line">statements</div><div class="line">return</div><div class="line">&#125;</div><div class="line">#调用</div><div class="line">foo</div></pre></td></tr></table></figure>
 <h5 id="10-控制语句"><a href="#10-控制语句" class="headerlink" title="10. 控制语句"></a>10. 控制语句</h5><p>分支:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">if [condition]</div><div class="line">   then ...</div><div class="line">else if [condition]</div><div class="line">   then...</div><div class="line">else</div><div class="line">   then...</div><div class="line">fi</div></pre></td></tr></table></figure></p>
 <p>循环:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">for i in $(seq 10)</div><div class="line">do</div><div class="line">    commands</div><div class="line">done</div></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">for((i=0;i&lt;=10;i++)) </div><div class="line">do</div><div class="line">    commands</div><div class="line">done</div></pre></td></tr></table></figure>
@@ -492,7 +498,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">这不是科学的乐园&lt;br&gt;而是科学的森林&lt;br&gt;无处不充满着奥秘&lt;br&gt;Email:sunnysean@qq.com&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">这不是科学的乐园&lt;br&gt;而是科学的森林&lt;br&gt;无处不充满着引人入胜的奥秘&lt;br&gt;Email:sunnysean@qq.com&lt;br&gt;</div>
   	  	
     	</section>
     
