@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/2015/11/11/20151111psiblast/p1.png">
 <meta property="og:image" content="http://yoursite.com/2015/11/11/20151111psiblast/p0.png">
 <meta property="og:image" content="http://yoursite.com/2015/11/11/20151111psiblast/align2.jpg">
-<meta property="og:updated_time" content="2017-12-06T11:56:22.430Z">
+<meta property="og:updated_time" content="2017-12-06T12:07:55.875Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PSI-BLAST寻找同源蛋白">
 <meta name="twitter:description" content="我们常用BLAST（blastn和blastp）从数据库中寻找某一序列(query)的相似序列(target)，这种方法是pairwise comparison method。本质上讲也是通过计算距离，来衡量两条序列的相似性大小。">
@@ -81,8 +81,6 @@
 				<li><a href="/tags/流行病研究/">流行病研究</a></li>
 	        
 				<li><a href="/tags/人文与艺术/">人文与艺术</a></li>
-	        
-				<li><a href="/tags/自然哲学/">自然哲学</a></li>
 	        
 			</ul>
 		</nav>
@@ -150,8 +148,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -172,23 +168,21 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 11.11111111111111%"><a href="/">首页</a></li>
+					<li style="width: 12.5%"><a href="/">首页</a></li>
 		        
-					<li style="width: 11.11111111111111%"><a href="/archives">所有文章</a></li>
+					<li style="width: 12.5%"><a href="/archives">所有文章</a></li>
 		        
-					<li style="width: 11.11111111111111%"><a href="/tags/游历与随笔/">游历与随笔</a></li>
+					<li style="width: 12.5%"><a href="/tags/游历与随笔/">游历与随笔</a></li>
 		        
-					<li style="width: 11.11111111111111%"><a href="/tags/环境与基因/">环境×基因</a></li>
+					<li style="width: 12.5%"><a href="/tags/环境与基因/">环境×基因</a></li>
 		        
-					<li style="width: 11.11111111111111%"><a href="/tags/分子生物学/">分子生物学</a></li>
+					<li style="width: 12.5%"><a href="/tags/分子生物学/">分子生物学</a></li>
 		        
-					<li style="width: 11.11111111111111%"><a href="/tags/计算生物学/">计算生物学</a></li>
+					<li style="width: 12.5%"><a href="/tags/计算生物学/">计算生物学</a></li>
 		        
-					<li style="width: 11.11111111111111%"><a href="/tags/流行病研究/">流行病研究</a></li>
+					<li style="width: 12.5%"><a href="/tags/流行病研究/">流行病研究</a></li>
 		        
-					<li style="width: 11.11111111111111%"><a href="/tags/人文与艺术/">人文与艺术</a></li>
-		        
-					<li style="width: 11.11111111111111%"><a href="/tags/自然哲学/">自然哲学</a></li>
+					<li style="width: 12.5%"><a href="/tags/人文与艺术/">人文与艺术</a></li>
 		        
 				</ul>
 			</nav>
@@ -223,10 +217,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我们常用<strong>BLAST</strong>（blastn和blastp）从数据库中寻找某一序列(query)的相似序列(target)，这种方法是pairwise comparison method。本质上讲也是通过计算距离，来衡量两条序列的相似性大小。<br><img src="/2015/11/11/20151111psiblast/psiblast1.jpg" alt=""><br><a id="more"></a><br>而<strong>PSI-BLAST</strong>(Positive-specific Interative Basic Local Alignment Search Tools)是基于profile搜索的方法，来寻找目标序列。PSI-BLAST先从query序列开始，获得一系列相似性序列，看作是同一蛋白家族，然后构建一个profile。这个profile的矩阵化形式，称之为position-specific score matrix (PSSM)。PSI-BLAST用PSSM，而不是初始的query序列，从数据库中搜索目标序列。<br><img src="/2015/11/11/20151111psiblast/psiblast2.jpg" alt=""><br>PSSM的特点是：highly conserved positions receive high score and weakly conserved positions receive scores near zero. PSI-BLAST重在发现有relationship的序列，例如有些蛋白质序列间相似性较低，但3D结构非常类似。它比BLAST用一条query序列更有效地找出同源蛋白质。特别是寻找distant homologues，这显然是BLAST实现不了的。</p>
+        <p>我们常用<strong>BLAST</strong>（blastn和blastp）从数据库中寻找某一序列(query)的相似序列(target)，这种方法是pairwise comparison method。本质上讲也是通过计算距离，来衡量两条序列的相似性大小。<br><img src="/2015/11/11/20151111psiblast/psiblast1.jpg" alt=""><br><a id="more"></a><br>而<strong>PSI-BLAST</strong>(Positive-specific Interative Basic Local Alignment Search Tools)是基于profile搜索的方法，来寻找目标序列。PSI-BLAST先从query序列开始，获得一系列相似性序列，看作是同一蛋白家族，然后构建一个profile。这个profile的矩阵化形式，称之为position-specific score matrix (PSSM)。PSI-BLAST用PSSM，而不是初始的query序列，从数据库中搜索目标序列。<br><img src="/2015/11/11/20151111psiblast/psiblast2.jpg" alt=""><br>PSSM的特点是：highly conserved positions receive high score and weakly conserved positions receive scores near zero. PSI-BLAST重在发现有relationship的序列，例如有些蛋白质序列间相似性较低，但3D结构非常类似。它比BLAST用一条query序列更有效地找出同源蛋白质。特别是寻找跨物种的distant homologues，这显然是BLAST实现不了的。</p>
+<p>PSSM中同一个氨基酸在不同位点的得分不同，因此比PAM和BLOSUM更强调保守性和结构性，而不是序列本身。</p>
 <p><strong>PSI-BLAST</strong>分为几个重要步骤：</p>
 <ol>
-<li>用初始的一条蛋白质序列作为query，去blast蛋白质数据库，获得初始结果</li>
+<li>用初始的一条蛋白质序列作为query，去BLAST蛋白质数据库(BLOSUM62)，获得初始结果</li>
 <li>对初始的结果进行多序列比对，构建初始profile，即PSSM</li>
 <li>用PSSM作为query，搜索数据库，发现较远的相似性序列，并给出E-value</li>
 <li>构建新的PSSM，重复步骤3。这个过程不断迭代，直到没有符合要求(E-value threshold,比如0.005,有时可放宽至0.01)的新序列</li>
