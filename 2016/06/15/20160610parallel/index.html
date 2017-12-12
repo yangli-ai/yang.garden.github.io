@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Sci-Forest">
 <meta property="og:description" content="计算生物学是重要的科研工具。在大数据时代，计算常辅以并行计算技术以加快计算速度。我一直认为数据处理最重要的步骤不在分析阶段，而在预分析，也就是数据探索阶段。掌握了并行计算方法，可以更自由地探索大数据。比如，在我们医学领域里，进行探索研究时会不断地形成各种假设，也会突然冒出新的想法，需要一一去探索。没有高效率的计算能力，繁琐的运算会让大部分人中途而止，研究得不到尽兴。数据越大，这种瓶颈越明显。">
 <meta property="og:image" content="http://yoursite.com/2016/06/15/20160610parallel/parallel.jpg">
-<meta property="og:updated_time" content="2017-12-02T02:06:33.743Z">
+<meta property="og:updated_time" content="2017-12-07T09:31:51.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HPC:并行计算(Parallel Computing)">
 <meta name="twitter:description" content="计算生物学是重要的科研工具。在大数据时代，计算常辅以并行计算技术以加快计算速度。我一直认为数据处理最重要的步骤不在分析阶段，而在预分析，也就是数据探索阶段。掌握了并行计算方法，可以更自由地探索大数据。比如，在我们医学领域里，进行探索研究时会不断地形成各种假设，也会突然冒出新的想法，需要一一去探索。没有高效率的计算能力，繁琐的运算会让大部分人中途而止，研究得不到尽兴。数据越大，这种瓶颈越明显。">
@@ -220,7 +220,7 @@
 </ul>
 <p>一定把握好二者的区别: OpenMP共享内存，实现简单；MPI里不同node的CPU使用各自的内存。对一些耗费不大的计算生物学问题，不见的MPI速度更快，因为数据在不同node间传输的速度拖累了多个CPU带来的好处。</p>
 <p>R语言里通过doParallel包等可以方便地实现并行计算。但MPI难以实现，只能通过脚本方式;MATLAB通过pool可以实现OpenMP和MPI;其它程序，可以通过Linux里PBS的Batch功能，利用脚本实现OpenMP和MPI。</p>
-<p>除了通过CPU实现并行运算外，GPU也可进行并行运算。GPU运算在机器学习领域里很成熟了，但计算生物学(生物信息学)用的不多。想玩玩，可以试试Python里TensorFlow的GPU运算。</p>
+<p>除了通过CPU实现并行运算外，GPU也可进行并行运算。GPU运算在机器学习领域里很成熟了，但用户可操作性不高。若程序支持GPU，就可以用；不支持，用户无法作为。想玩玩，可以试试Python里TensorFlow的GPU运算。</p>
 <h3 id="2-Linux下实现并行运算"><a href="#2-Linux下实现并行运算" class="headerlink" title="2.Linux下实现并行运算"></a>2.Linux下实现并行运算</h3><p>大多数计算任务是用多个CPU集中完成一个任务，结束之后再进行下个任务。这既是合理利用计算资源的要求，也更是因为大部分计算生物学(生物信息学)的程序已经在内部实现了OpenMP功能。特别是单个任务就需要耗费大量的计算资源时，如序列比对。当遇见一些较为简单但却杂而多的任务时，可以通过Linux命令或脚本实现并行运算。注意，此时有些任务不需要并行运算，甚至在单机上串行即可。</p>
 <h4 id="2-1-Linux命令"><a href="#2-1-Linux命令" class="headerlink" title="2.1 Linux命令"></a>2.1 Linux命令</h4><p>★ <strong>&amp;命令</strong><br>    <code>command1 &amp; command2 &amp; command3</code> # 本质是利用&amp;的后台功能<br>★ <strong>xargs命令</strong><br>    <code>cat list.txt | xargs  command</code>  # 适用于向同一个程序传递不同的参数，-P参数可以控制最大进程数<br>★ <strong>parallel命令</strong></p>
 <ul>
