@@ -371,6 +371,82 @@
 
 
   
+    <article id="post-20161002emboss" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/02/20161002emboss/">EMBOSS:序列处理的小工具集合</a>
+    </h1>
+  
+
+        
+        <a href="/2016/10/02/20161002emboss/" class="archive-article-date">
+  	<time datetime="2016-10-02T05:46:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>EMBOOS是一系列处理核酸序列和蛋白质序列的命令行工具的集合. 它包括了序列的提取, 查找, 比对和简单的序列分析等若干小程序. 它们都是独立的命令行工具, 所以用起来小巧而高效, 避免了图形界面程序和R/Python等编程工具的繁琐.<br><img src="/2016/10/02/20161002emboss/emboss.jpg" alt=""></p>
+<h4 id="1-Write-and-Obatin-sequence"><a href="#1-Write-and-Obatin-sequence" class="headerlink" title="1. Write and Obatin sequence"></a>1. Write and Obatin sequence</h4><h6 id="1-1-Write-sequence"><a href="#1-1-Write-sequence" class="headerlink" title="1.1. Write sequence"></a>1.1. Write sequence</h6><p><code>seqret</code>: read and write (return) sequences in a standard format<br><code>newseq</code>: write new sequence in fasta format<br><code>pasteseq</code>: insert a sequence into another at a certain position<br><code>seqcount</code>:</p>
+<h6 id="1-2-Sequence-retrieval"><a href="#1-2-Sequence-retrieval" class="headerlink" title="1.2. Sequence retrieval"></a>1.2. Sequence retrieval</h6><p><code>seqret</code> -sequence x.fa -sbegin 1 -send 100 #无法从基因组提取某条染色体上的序列<br><code>seqretsplit</code>:<br><code>extractseq</code> -sequence x.fa -region 1-10,20-30 # 将不同片段连接起来<br><code>samtools</code> faidx hg38.fa chr20:1-100 # 这可以是提取任意染色体上任意片段的最好方法<br><code>nthseq</code>:<br><code>nthseqset</code>:</p>
+<h6 id="1-3-Sequence-searching"><a href="#1-3-Sequence-searching" class="headerlink" title="1.3. Sequence searching"></a>1.3. Sequence searching</h6><p><code>dreg</code>: search dna sequence with regular expression pattern<br><code>preg</code>: search protein sequence with regular expression pattern<br><code>fuzznuc</code>: search dna sequence with PROSITE style pattern<br><code>fuzzpro</code>: earch protein sequence with PROSITE style pattern<br><code>fuzztran</code>:<br><code>wordfinder</code>: match large sequences against one or more other sequences<br><code>wordcount</code>: count and extract unique words in molecular sequence(s)<br><code>wordmatch</code>: find regions of identity (exact matches) of two sequences</p>
+<h4 id="2-Multiple-sequences"><a href="#2-Multiple-sequences" class="headerlink" title="2. Multiple sequences"></a>2. Multiple sequences</h4><h6 id="2-1-Sequence-Combination"><a href="#2-1-Sequence-Combination" class="headerlink" title="2.1. Sequence Combination"></a>2.1. Sequence Combination</h6><p><code>merger|megamerger</code>: merge two overlapping sequences<br><code>diffseq</code>: compare and report features of two similar sequences<br><code>union</code>: concatenate multiple sequences into a single sequence</p>
+<h6 id="2-2-Pairwise-alignment"><a href="#2-2-Pairwise-alignment" class="headerlink" title="2.2. Pairwise alignment"></a>2.2. Pairwise alignment</h6><p><code>dotmatcher</code><br><code>dottup</code><br><code>dotpath</code><br><code>needle</code>: global alignment<br><code>water</code>: local alignment<br><code>matcher|supermatcher</code>: local alignment when water is low-efficient for big <code>sequence</code><br><code>wordmatch</code>: common words</p>
+<h6 id="2-3-Multiple-alignment"><a href="#2-3-Multiple-alignment" class="headerlink" title="2.3. Multiple alignment"></a>2.3. Multiple alignment</h6><p><code>polydot</code>: dotplot among sequences<br><code>emma</code>: interface to ClustalW<br><code>infoalign</code>: show information of alignment result<br><code>cons</code>: show consensus<br><code>showalign</code>: display alignment result<br><code>prettyplot</code>:</p>
+<h4 id="3-Sequence-analysis"><a href="#3-Sequence-analysis" class="headerlink" title="3. Sequence analysis"></a>3. Sequence analysis</h4><h6 id="3-1-Statistics"><a href="#3-1-Statistics" class="headerlink" title="3.1. Statistics"></a>3.1. Statistics</h6><p><code>infoseq</code>: display basic information about sequences<br><code>compseq</code>: calculate the composition of unique words in sequences<br><code>wordcount</code>: count and extract unique words in molecular sequence(s)<br><code>freak</code>: generate residue/base frequency table or plot<br><code>cpgplot</code>: identify and plot CpG islands in nucleotide sequence(s)</p>
+<h6 id="3-2-Feature-parsing"><a href="#3-2-Feature-parsing" class="headerlink" title="3.2. Feature parsing"></a>3.2. Feature parsing</h6><p><code>extractfeat</code>: extract features from sequence(s)<br><code>showfeat</code>: display features of a sequence in pretty format<br><code>coderet</code>: extract CDS, mRNA and translations from feature tables<br><code>showorf</code>: show ORF of a nucleotide sequence<br><code>plotorf</code>: plot ORF<br><code>marscan</code>: find matrix/scaffold recognition (MRS) signatures in DNA sequences</p>
+<h6 id="3-3-Repeat-finding"><a href="#3-3-Repeat-finding" class="headerlink" title="3.3. Repeat finding"></a>3.3. Repeat finding</h6><p><code>einverted</code>: inverted repeat<br><code>palindrome</code>: palindrome<br><code>etandem</code>:<br><code>equicktandem</code>:</p>
+<h6 id="3-4-Restrition-sites-and-vector-map"><a href="#3-4-Restrition-sites-and-vector-map" class="headerlink" title="3.4. Restrition sites and vector map"></a>3.4. Restrition sites and vector map</h6><p><code>restrict</code>:<br><code>remap</code>:<br><code>restover</code>:</p>
+<h6 id="3-5-siRNA-and-primer-design"><a href="#3-5-siRNA-and-primer-design" class="headerlink" title="3.5. siRNA and primer design"></a>3.5. siRNA and primer design</h6><p><code>sirna</code>:<br><code>eprimer3</code>:<br><code>primersearch</code>:<br><code>stsearch</code>:</p>
+<h6 id="3-6-motif-finding"><a href="#3-6-motif-finding" class="headerlink" title="3.6 motif finding"></a>3.6 motif finding</h6><p><code>patmatmotifs</code>: scan a protein sequence with motifs from the PROSITE database</p>
+<h6 id="3-7-Translation"><a href="#3-7-Translation" class="headerlink" title="3.7. Translation"></a>3.7. Translation</h6><p><code>transeq</code>: translate DNA into protein in a fasta file<br><code>prettyseq</code>: write a nucleotide sequence and its translation to file<br><code>backtranseq</code>: from protein sequence to DNA<br><code>sixpack</code>: six types of translation</p>
+<h6 id="3-8-change-sequence"><a href="#3-8-change-sequence" class="headerlink" title="3.8. change sequence"></a>3.8. change sequence</h6><p><code>msbar</code>: mutate sequence<br><code>maskseq</code>: mask sequence</p>
+<h4 id="4-Nucleotide-property"><a href="#4-Nucleotide-property" class="headerlink" title="4. Nucleotide property"></a>4. Nucleotide property</h4><p><code>dan</code>: calculate nucleic acid melting temperature<br><code>banana</code>: plot bending and curvature data for B-DNA<br><code>btwisted</code>: calculate the twisting in a B-DNA sequence</p>
+<h4 id="5-Protein-property"><a href="#5-Protein-property" class="headerlink" title="5. Protein property"></a>5. Protein property</h4><p><code>pepstats</code>: calculate statistics of protein properties<br><code>pepinfo</code>: plot amino acid properties of a protein sequence in parallel.<br><code>charge</code>: charge<br><code>iep</code>: isoelectric point<br><code>octanol</code>: White-Wimley protein hydropathy plot<br><code>tmap</code>: predict and plot transmembrane segments<br><code>pepwindow</code>: draw a hydropathy plot for a protein sequence<br><code>pepwheel</code>: draw a helical wheel diagram for a protein sequence<br><code>pepnet</code>: draw a helical net for a protein sequence<br><code>hmoment</code>: calculate and plot hydrophobic moment for protein sequence(s)<br><code>garnier</code>: predict protein secondary structure using GOR method</p>
+<h4 id="6-other-tools"><a href="#6-other-tools" class="headerlink" title="6. other tools"></a>6. other tools</h4><p><code>nohtml</code>: remove html mark<br><code>notab</code>:<br><code>nospace</code>:<br><code>noreturn</code>:</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/10/02/20161002emboss/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-20160711chipseqpeak" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -724,67 +800,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/04/26/20160426Antinous/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20160424lakeshorelimited" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/21/20160424lakeshorelimited/">在驶往纽约的湖滨号上</a>
-    </h1>
-  
-
-        
-        <a href="/2016/04/21/20160424lakeshorelimited/" class="archive-article-date">
-  	<time datetime="2016-04-21T11:49:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>因回纽约取大件行李，也希望体验铁路旅行方式，所以选择了经济实惠的Amtrak列车，往返芝加哥和纽约。Amtrak是跨美国大陆的铁路客运商，为普通美国人提供了经济而且消磨时间的旅行方式。若干人放弃快捷的飞机，宁愿选择耗时的铁路，选择一种紧张城市生活之外的传统之旅。<br><img src="/2016/04/21/20160424lakeshorelimited/1.jpg" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2016/04/21/20160424lakeshorelimited/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/04/21/20160424lakeshorelimited/">展开全文 >></a>
         </p>
       
 
