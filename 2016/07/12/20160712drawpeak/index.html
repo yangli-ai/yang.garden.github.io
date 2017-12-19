@@ -6,19 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>经典生物信息数据库 | Sci-Forest</title>
+  <title>MATLAB画peaks(滤波器法) | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基因/蛋白质命名和综述:HGNC: HUGO Gene Nomenclature Committee&amp;emsp;&amp;emsp;&amp;emsp;Gene familyGENECARD: Human Gene Database&amp;emsp;&amp;emsp;&amp;emsp;GIFtS: GeneCards inferred functionality score&amp;emsp;&amp;emsp;&amp;emsp;Alias, Geno">
-<meta name="keywords" content="计算生物学">
+  <meta name="description" content="以前试图用三维地形图可视化二维空间中任意点的取值，演示用。如同MATLAB中peak函数产生一个二维矩阵，用surf或者mesh可视化。但peak函数不能指定”峰”在什么位置，而手工设定某点为任意值时，该点与周围没有平滑的过度，特别是设置了任意多个点的值，计算很麻烦。今天突然想到了类似Photoshop高斯模糊的方法可能行。恰好MATLAB中有fspecial(设置滤波器)和imfilter(应用">
+<meta name="keywords" content="流病与统计">
 <meta property="og:type" content="article">
-<meta property="og:title" content="经典生物信息数据库">
-<meta property="og:url" content="http://yoursite.com/2015/06/18/20150618biodatabase/index.html">
+<meta property="og:title" content="MATLAB画peaks(滤波器法)">
+<meta property="og:url" content="http://yoursite.com/2016/07/12/20160712drawpeak/index.html">
 <meta property="og:site_name" content="Sci-Forest">
-<meta property="og:description" content="基因/蛋白质命名和综述:HGNC: HUGO Gene Nomenclature Committee&amp;emsp;&amp;emsp;&amp;emsp;Gene familyGENECARD: Human Gene Database&amp;emsp;&amp;emsp;&amp;emsp;GIFtS: GeneCards inferred functionality score&amp;emsp;&amp;emsp;&amp;emsp;Alias, Geno">
-<meta property="og:updated_time" content="2017-12-18T10:02:05.862Z">
+<meta property="og:description" content="以前试图用三维地形图可视化二维空间中任意点的取值，演示用。如同MATLAB中peak函数产生一个二维矩阵，用surf或者mesh可视化。但peak函数不能指定”峰”在什么位置，而手工设定某点为任意值时，该点与周围没有平滑的过度，特别是设置了任意多个点的值，计算很麻烦。今天突然想到了类似Photoshop高斯模糊的方法可能行。恰好MATLAB中有fspecial(设置滤波器)和imfilter(应用">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/first.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/average.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/gaussian.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/disk.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/laplacian.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/log.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/motion.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/sobel.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/prewitt.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/gs0.1.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/gs0.5.png">
+<meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/gs1.png">
+<meta property="og:updated_time" content="2017-12-19T03:47:44.711Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="经典生物信息数据库">
-<meta name="twitter:description" content="基因/蛋白质命名和综述:HGNC: HUGO Gene Nomenclature Committee&amp;emsp;&amp;emsp;&amp;emsp;Gene familyGENECARD: Human Gene Database&amp;emsp;&amp;emsp;&amp;emsp;GIFtS: GeneCards inferred functionality score&amp;emsp;&amp;emsp;&amp;emsp;Alias, Geno">
+<meta name="twitter:title" content="MATLAB画peaks(滤波器法)">
+<meta name="twitter:description" content="以前试图用三维地形图可视化二维空间中任意点的取值，演示用。如同MATLAB中peak函数产生一个二维矩阵，用surf或者mesh可视化。但peak函数不能指定”峰”在什么位置，而手工设定某点为任意值时，该点与周围没有平滑的过度，特别是设置了任意多个点的值，计算很麻烦。今天突然想到了类似Photoshop高斯模糊的方法可能行。恰好MATLAB中有fspecial(设置滤波器)和imfilter(应用">
+<meta name="twitter:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/first.png">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -190,38 +203,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20150618biodatabase" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20160712drawpeak" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      经典生物信息数据库
+      MATLAB画peaks(滤波器法)
     </h1>
   
 
         
-        <a href="/2015/06/18/20150618biodatabase/" class="archive-article-date">
-  	<time datetime="2015-06-18T12:31:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-06-18</time>
+        <a href="/2016/07/12/20160712drawpeak/" class="archive-article-date">
+  	<time datetime="2016-07-12T03:44:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="基因-蛋白质命名和综述"><a href="#基因-蛋白质命名和综述" class="headerlink" title="基因/蛋白质命名和综述:"></a>基因/蛋白质命名和综述:</h5><p><strong>HGNC</strong>: HUGO Gene Nomenclature Committee<br>&emsp;&emsp;&emsp;Gene family<br><strong>GENECARD</strong>: Human Gene Database<br>&emsp;&emsp;&emsp;GIFtS: GeneCards inferred functionality score<br>&emsp;&emsp;&emsp;Alias, Genomics, Proteins, Variants, Transcripts,<br>&emsp;&emsp;&emsp;Orthologs, Paralogs, Domains &amp; Families, Function,<br>&emsp;&emsp;&emsp;Localization, Pathways &amp; Interactions,<br>&emsp;&emsp;&emsp;Drugs &amp; Compounds, Disorders<br><a id="more"></a></p>
+        <p>以前试图用三维地形图可视化二维空间中任意点的取值，演示用。如同MATLAB中peak函数产生一个二维矩阵，用surf或者mesh可视化。但peak函数不能指定”峰”在什么位置，而手工设定某点为任意值时，该点与周围没有平滑的过度，特别是设置了任意多个点的值，计算很麻烦。今天突然想到了类似Photoshop高斯模糊的方法可能行。恰好MATLAB中有fspecial(设置滤波器)和imfilter(应用滤波器)函数，果然可以。<br><img src="/2016/07/12/20160712drawpeak/first.png" alt=""><br><a id="more"></a></p>
+<ol>
+<li>初始二维矩阵，通过ones或zeros都可以。然后手工设置某点或某块的值。</li>
+<li>fspecial函数中有多种滤波器方法，有average, gaussian, disk, laplacian, log, motion, sobel, prewitt。</li>
+<li>imfilter可以使用多次，使得设定的点与周围点更平滑。</li>
+</ol>
+<p><strong>Average滤波器</strong>:<br><img src="/2016/07/12/20160712drawpeak/average.png" alt=""><br><strong>Gaussian滤波器</strong>:<br><img src="/2016/07/12/20160712drawpeak/gaussian.png" alt=""><br><strong>Disk滤波器</strong>:<br><img src="/2016/07/12/20160712drawpeak/disk.png" alt=""><br><strong>Laplacian滤波器</strong>:<br><img src="/2016/07/12/20160712drawpeak/laplacian.png" alt=""><br><strong>Log滤波器</strong>:<br><img src="/2016/07/12/20160712drawpeak/log.png" alt=""><br><strong>Motion滤波器</strong>:<br><img src="/2016/07/12/20160712drawpeak/motion.png" alt=""><br><strong>Sobel滤波器</strong>:<br><img src="/2016/07/12/20160712drawpeak/sobel.png" alt=""><br><strong>Prewitt滤波器</strong>:<br><img src="/2016/07/12/20160712drawpeak/prewitt.png" alt=""></p>
+<p>综上，average和gaussian都可以。gaussian更好，不会改变背景值。</p>
 <hr>
-<h5 id="基因组注释和基因"><a href="#基因组注释和基因" class="headerlink" title="基因组注释和基因:"></a>基因组注释和基因:</h5><p><strong>RefSeq/GENCODE</strong>: Annotation database<br><strong>NCBI(refGene)/UCSC(knownGene)/Ensembl(ensGene)</strong>: Ensembl已融入GENCODE； UCSC也有意反映GENCODE；所以最终还是RefSeq和GENCODE两大派。<br><strong>CCDS</strong>: Consensus Coding Sequence database<br><strong>ExAC</strong>: Exon Aggregation Consortium</p>
+<p><strong>Gaussian不同SIGMA(0.1, 0.5, 1)和不同HSIZE的图像</strong>(8次imfilter): Gaussian等滤波器有两个参数:HSIZE,SIGMA。其中HSIZE是用HSIZE大小的区块做平滑。有些滤波器没有参数。<br><img src="/2016/07/12/20160712drawpeak/gs0.1.png" alt=""></p>
 <hr>
-<h5 id="DNA变异"><a href="#DNA变异" class="headerlink" title="DNA变异:"></a>DNA变异:</h5><p><strong>HGVS</strong>: Human Genome Variant Society, 仅是突变命名数据库<br><strong>dbSNP</strong>：<br><strong>1KGP</strong>: 1000 Genome Project<br><strong>HGMD</strong>: Human Gene Mutation Database<br><strong>ClinVar</strong>:<br><strong>OMIM</strong>: Online Mendelian Inheritance in Man</p>
+<p><img src="/2016/07/12/20160712drawpeak/gs0.5.png" alt=""></p>
 <hr>
-<h5 id="Regulation-element"><a href="#Regulation-element" class="headerlink" title="Regulation element:"></a>Regulation element:</h5><p><strong>ENCODE</strong>:<br><strong>Roadmap</strong>:<br><strong>MethDB</strong>:<br><strong>miRbase</strong>:<br><strong>lncRNAdb</strong>:</p>
-<hr>
-<h5 id="蛋白质序列和结构"><a href="#蛋白质序列和结构" class="headerlink" title="蛋白质序列和结构"></a>蛋白质序列和结构</h5><p><strong>UniProtKB</strong>:  (P12345) Universal Protein Knowledgebase, 蛋白质的综合信息<br><strong>RCSB PDB</strong>: (XXXX) Protein Data Bank</p>
-<h5 id="蛋白质家族和结构域"><a href="#蛋白质家族和结构域" class="headerlink" title="蛋白质家族和结构域:"></a>蛋白质家族和结构域:</h5><p><strong>Pfam</strong>: family，domain<br><strong>Prosite</strong>: family, domain, functional site<br><strong>SMART</strong>: include pfam domain, transmembrane segments, coiled coid regions, signal peptide<br><strong>CDD</strong>(Conserved Domain Database, id: cd1234567),以及CD search工具(基于PSI-BLAST)<br>(另外有两个结构数据库，<strong>CSD</strong>和<strong>NDB</strong>，分别是蛋白质和核酸)</p>
-<hr>
-<h5 id="功能注释"><a href="#功能注释" class="headerlink" title="功能注释:"></a>功能注释:</h5><p><strong>GO</strong>: Gene Oncology<br><strong>KEGG/Rectome</strong>: pathway database<br><strong>STRING</strong>: Protein-protein interaction</p>
+<p><img src="/2016/07/12/20160712drawpeak/gs1.png" alt=""></p>
+<p>使用滤波器有个缺点，会拉低峰的高度。所以实际应用时，设置不同的初始高度，看哪一个处理后的值符合理想的值。</p>
 
       
 
@@ -266,7 +282,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">流病与统计</a>
         		</li>
       		
 		</ul>
@@ -322,7 +338,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/06/18/20150618biodatabase/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/07/12/20160712drawpeak/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -336,18 +352,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2015/10/12/20151012nano/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/02/20161002emboss/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          环境因素:Nanomaterial
+          EMBOSS:序列处理的小工具集合
         
       </div>
     </a>
   
   
-    <a href="/2015/05/19/20150519book/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">《追风筝的人》：成年后还要追逐那些美好的东西</div>
+    <a href="/2016/07/11/20160711chipseqpeak/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ChIP-seq中peak的形状</div>
       <i class="icon-circle-right"></i>
     </a>
   
