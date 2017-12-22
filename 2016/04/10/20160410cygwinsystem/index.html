@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/04/10/20160410cygwinsystem/index.html">
 <meta property="og:site_name" content="Sci-Forest">
 <meta property="og:description" content="Cygwin是在windows系统下安装和使用Linux工具的绝佳方式。当然windows系统现在也可以安装原生态的Ubuntu，不过它与windows是隔离的。Cygwin的最大优势是可以同时用linux和windows的命令行工具，只要设置好环境变量即可。所以通过Cygwin可以享受命令行方式带来的尽情操纵数据的自由感。">
-<meta property="og:updated_time" content="2017-12-19T07:48:22.152Z">
+<meta property="og:updated_time" content="2017-12-19T14:39:21.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用CYGWIN">
 <meta name="twitter:description" content="Cygwin是在windows系统下安装和使用Linux工具的绝佳方式。当然windows系统现在也可以安装原生态的Ubuntu，不过它与windows是隔离的。Cygwin的最大优势是可以同时用linux和windows的命令行工具，只要设置好环境变量即可。所以通过Cygwin可以享受命令行方式带来的尽情操纵数据的自由感。">
@@ -212,6 +212,11 @@
       
         <p>Cygwin是在windows系统下安装和使用Linux工具的绝佳方式。当然windows系统现在也可以安装原生态的Ubuntu，不过它与windows是隔离的。Cygwin的最大优势是可以同时用linux和windows的命令行工具，只要设置好环境变量即可。所以通过Cygwin可以享受命令行方式带来的尽情操纵数据的自由感。<br><a id="more"></a></p>
 <h5 id="环境变量设置"><a href="#环境变量设置" class="headerlink" title="环境变量设置"></a>环境变量设置</h5><p>vi ~/.bashrc</p>
+<h5 id="与网络有关的linux命令"><a href="#与网络有关的linux命令" class="headerlink" title="与网络有关的linux命令"></a>与网络有关的linux命令</h5><p>wget: 下载<br>axel：多线程下载工具<br>curl: 模拟http请求</p>
+<p>ftp:<br>sftp:ssh ftp<br>scp: scp localfile user@ip:~/remotedirectory # ssh copy</p>
+<h5 id="与进程有关的linux命令"><a href="#与进程有关的linux命令" class="headerlink" title="与进程有关的linux命令"></a>与进程有关的linux命令</h5><p>&amp;: 后台<br>nohup：服务器后台，需用exit推出本地终端; no hangup<br>CTRL+Z and fg: 挂起和恢复</p>
+<p>jobs:<br>top: 监控进程<br>tail -f: 监控文本文件改变</p>
+<h5 id="文本处理的linux命令"><a href="#文本处理的linux命令" class="headerlink" title="文本处理的linux命令"></a>文本处理的linux命令</h5><p>vi:<br>grep:<br>awk:<br>sed:</p>
 <h5 id="编译和安装"><a href="#编译和安装" class="headerlink" title="编译和安装"></a>编译和安装</h5><p><strong>gcc工具链</strong>：gcc/g++在执行编译工作的时候，总共需要4步</p>
 <ol>
 <li>预处理：处理源码中的预处理语句,生成.i的文件[预处理器cpp]</li>
@@ -220,7 +225,7 @@
 <li>链接：链接目标代码,生成可执行程序[链接器ld]</li>
 </ol>
 <p>./configure -prefix=/yourpath # 来生成 Makefile<br>make # 从Makefile中读取指令，然后编译; 重新编译时,仅仅编译修改过的源文件;若编译所有文件,用-B参数<br>make install # 从Makefile中读取指令，安装到指定的位置<br>make clean<br>make uninstall</p>
-<h5 id="两种动态库-static和shared"><a href="#两种动态库-static和shared" class="headerlink" title="两种动态库:static和shared"></a>两种动态库:static和shared</h5><p>export LIBRARY_PATH=$LIBRARY_PATH:/lippath  # 静态链接库 static,以.a为后缀<br>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/libpath # 动态链接库 shared,以.so为后缀</p>
+<h6 id="两种动态库-static和shared"><a href="#两种动态库-static和shared" class="headerlink" title="两种动态库:static和shared"></a>两种动态库:static和shared</h6><p>export LIBRARY_PATH=$LIBRARY_PATH:/lippath  # 静态链接库 static,以.a为后缀<br>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/libpath # 动态链接库 shared,以.so为后缀</p>
 <p>它们用途不同: 在于编译时加载，还是运行时加载</p>
 <ul>
 <li><p><strong>编译时，动态库的搜索路径顺序如下（不会递归其子目录）</strong>：</p>
@@ -240,7 +245,7 @@
 </li>
 </ul>
 <p>可以通过pkg-config检测所依赖的动态库是否存在<br>也可以通过ld –verbose查看动态库目录<br>共享动态库有不同版本时,可以用符号连接方式: ln -s libhello.so.1  libhello.so</p>
-<h5 id="编译和安装时的常见问题"><a href="#编译和安装时的常见问题" class="headerlink" title="编译和安装时的常见问题"></a>编译和安装时的常见问题</h5><p>./configure时：/usr/lib/gcc/x86_64-pc-cygwin/5.3.0/../../../../x86_64-pc-cygwin/bin/ld: cannot find -lpng<br>collect2: error: ld returned 1 exit status</p>
+<h6 id="编译和安装时的常见问题"><a href="#编译和安装时的常见问题" class="headerlink" title="编译和安装时的常见问题"></a>编译和安装时的常见问题</h6><p>./configure时：/usr/lib/gcc/x86_64-pc-cygwin/5.3.0/../../../../x86_64-pc-cygwin/bin/ld: cannot find -lpng<br>collect2: error: ld returned 1 exit status</p>
 <p>判断某个lib是否存在: $ cygcheck -l libpng16-devel |grep png.h<br>可以修改在configure中修改lib，添加/usr/include/libpng16，不过最好是设置好动态库，以永久解决问题。</p>
 <p>Cygwin下某些编译错误可以由于静态加载引起，此时gcc  -static为静态加载方式,可以把static删除</p>
 
