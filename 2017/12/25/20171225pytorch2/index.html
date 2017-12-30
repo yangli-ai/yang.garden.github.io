@@ -6,14 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 计算生物学 | Sci-Forest</title>
+  <title>pytorch:激活函数、损失函数小结 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sci-Forest">
-<meta property="og:url" content="http://yoursite.com/tags/计算生物学/index.html">
+  <meta name="description" content="总结pytorch里的激活函数、损失函数以及卷积、池化等">
+<meta name="keywords" content="计算生物学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pytorch:激活函数、损失函数小结">
+<meta property="og:url" content="http://yoursite.com/2017/12/25/20171225pytorch2/index.html">
 <meta property="og:site_name" content="Sci-Forest">
+<meta property="og:description" content="总结pytorch里的激活函数、损失函数以及卷积、池化等">
+<meta property="og:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/pytorch.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/activation.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/loss.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/distance.png">
+<meta property="og:updated_time" content="2017-12-30T05:45:49.279Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sci-Forest">
+<meta name="twitter:title" content="pytorch:激活函数、损失函数小结">
+<meta name="twitter:description" content="总结pytorch里的激活函数、损失函数以及卷积、池化等">
+<meta name="twitter:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/pytorch.png">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -185,350 +195,76 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-20171225pytorch2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      pytorch:激活函数、损失函数小结
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/25/20171225pytorch2/" class="archive-article-date">
+
+        
+        <a href="/2017/12/25/20171225pytorch2/" class="archive-article-date">
   	<time datetime="2017-12-25T05:41:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/25/20171225pytorch2/">pytorch:激活函数、损失函数小结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/06/20171006docking/" class="archive-article-date">
-  	<time datetime="2017-10-06T06:24:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/06/20171006docking/">蛋白-配体结合:联合使用分子对接和分子动力学模拟</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/15/20170915dock/" class="archive-article-date">
-  	<time datetime="2017-09-15T12:57:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/15/20170915dock/">蛋白-配体结合:AutoDock Vina对接蛋白和配体</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/10/20170910MD/" class="archive-article-date">
-  	<time datetime="2017-09-10T15:44:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/10/20170910MD/">分子动力学模拟时的软件和文件格式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/02/20170902quantum/" class="archive-article-date">
-  	<time datetime="2017-09-02T10:40:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/02/20170902quantum/">研究小分子与生物大分子的结合:量子化学方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/15/20170815md/" class="archive-article-date">
-  	<time datetime="2017-08-15T13:52:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/15/20170815md/">分子模拟(Molecular Simulation)以及量子力学与分子力学</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/01/20170601computationbio/" class="archive-article-date">
-  	<time datetime="2017-06-01T13:03:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/01/20170601computationbio/">“所有的生物学都是计算生物学“</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/20170501cygwin/" class="archive-article-date">
-  	<time datetime="2017-05-15T10:19:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/20170501cygwin/">通过鼠标右键进入cygwin，并自动打开当前文件夹</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
+        <p>总结pytorch里的激活函数、损失函数以及卷积、池化等<br><img src="/2017/12/25/20171225pytorch2/pytorch.png" alt=""><br><a id="more"></a></p>
+<h5 id="1-Activation-function"><a href="#1-Activation-function" class="headerlink" title="1.Activation function"></a>1.Activation function</h5><p><img src="/2017/12/25/20171225pytorch2/activation.png" alt=""></p>
+<h6 id="Lineaer"><a href="#Lineaer" class="headerlink" title="Lineaer:"></a><strong>Lineaer</strong>:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">nn.Linear(in_features, out_features, bias=True)</div><div class="line">    y=Ax+b</div><div class="line">nn.Bilinear(in1_features, in2_features, out_features, bias=True)</div><div class="line">    y=x1*A*x2+b</div></pre></td></tr></table></figure>
+<h6 id="Non-linear"><a href="#Non-linear" class="headerlink" title="Non-linear"></a><strong>Non-linear</strong></h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">nn.ReLU(inplace=False)</div><div class="line">nn.ReLU6(inplace=False)</div><div class="line">nn.ELU(alpha=1.0, inplace=False)</div><div class="line">nn.SELU(inplace=False)</div><div class="line">nn.PReLU(num_parameters=1, init=0.25)</div><div class="line">nn.LeakyReLU(negative_slope=0.01, inplace=False)</div><div class="line">nn.Threshold(threshold, value, inplace=False)</div><div class="line">nn.Hardtanh(min_val=-1, max_val=1, inplace=False, min_value=None, max_value=None)</div><div class="line">nn.Sigmoid</div><div class="line">nn.LogSigmoid</div><div class="line">nn.Tanh</div><div class="line">nn.Tanhshrink</div><div class="line">nn.Softplus(beta=1, threshold=20)</div><div class="line">nn.Softmax(dim=None)</div><div class="line">nn.LogSoftmax(dim=None)</div><div class="line">nn.Softmax2d</div><div class="line">nn.Softmin(dim=None)</div><div class="line">nn.Softshrink(lambd=0.5)</div><div class="line">nn.Softsign</div></pre></td></tr></table></figure>
+<h6 id="nn-xx与nn-functional-xx区别"><a href="#nn-xx与nn-functional-xx区别" class="headerlink" title="nn.xx与nn.functional.xx区别:"></a><strong>nn.xx与nn.functional.xx区别</strong>:</h6><p>前者时包装好的类，后者是可直接调用的函数；nn.xx类的forward函数调用了nn.functional.xx函数</p>
+<h5 id="2-Loss-function"><a href="#2-Loss-function" class="headerlink" title="2.Loss function"></a>2.Loss function</h5><p><img src="/2017/12/25/20171225pytorch2/loss.png" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">nn.L1Loss(size_average=True, reduce=True)</div><div class="line">nn.MSELoss(size_average=True, reduce=True)</div><div class="line">nn.CrossEntropyLoss(weight=None, size_average=True, ignore_index=-100, reduce=True)</div><div class="line">nn.NLLLoss(weight=None, size_average=True, ignore_index=-100, reduce=True)</div><div class="line">nn.PoissonNLLLoss(log_input=True, full=False, size_average=True, eps=1e-08)</div><div class="line">nn.NLLLoss2d(weight=None, size_average=True, ignore_index=-100, reduce=True)</div><div class="line">nn.KLDivLoss(size_average=True, reduce=True)</div><div class="line">nn.BCELoss(weight=None, size_average=True)</div><div class="line">nn.BCEWithLogitsLoss(weight=None, size_average=True)</div><div class="line">nn.MarginRankingLoss(margin=0, size_average=True)</div><div class="line">nn.HingeEmbeddingLoss(margin=1.0, size_average=True)</div><div class="line">nn.MultiLabelMarginLoss(size_average=True)</div><div class="line">nn.SmoothL1Loss(size_average=True, reduce=True)</div><div class="line">nn.SoftMarginLoss(size_average=True)</div><div class="line">nn.CosineEmbeddingLoss(margin=0, size_average=True)</div></pre></td></tr></table></figure></p>
+<h5 id="3-Normalization"><a href="#3-Normalization" class="headerlink" title="3.Normalization"></a>3.Normalization</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">nn.BatchNorm1d(num_features, eps=1e-05, momentum=0.1, affine=True)</div><div class="line">nn.BatchNorm2d(num_features, eps=1e-05, momentum=0.1, affine=True)</div><div class="line">nn.BatchNorm3d(num_features, eps=1e-05, momentum=0.1, affine=True)</div><div class="line">nn.InstanceNorm1d(num_features, eps=1e-05, momentum=0.1, affine=False)</div><div class="line">nn.InstanceNorm2d(num_features, eps=1e-05, momentum=0.1, affine=False)</div><div class="line">nn.InstanceNorm3d(num_features, eps=1e-05, momentum=0.1, affine=False)</div></pre></td></tr></table></figure>
+<h5 id="4-Convolution"><a href="#4-Convolution" class="headerlink" title="4.Convolution"></a>4.Convolution</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Conv1d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True)</div><div class="line">nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True)</div><div class="line">nn.Conv3d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True)</div><div class="line">nn.ConvTranspose1d(in_channels, out_channels, kernel_size, stride=1, padding=0, output_padding=0, groups=1, bias=True, dilation=1)[s</div><div class="line">nn.ConvTranspose2d(in_channels, out_channels, kernel_size, stride=1, padding=0, output_padding=0, groups=1, bias=True, dilation=1)</div><div class="line">nn.ConvTranspose3d(in_channels, out_channels, kernel_size, stride=1, padding=0, output_padding=0, groups=1, bias=True, dilation=1)</div></pre></td></tr></table></figure>
+<h5 id="5-Pooling"><a href="#5-Pooling" class="headerlink" title="5.Pooling"></a>5.Pooling</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">nn.MaxPl1d(knl_iz, tid=Nn, padding=0, dilatin=1, tn_indi=Fal, il_md=Fal)</div><div class="line">nn.MaxPl2d(knl_iz, tid=Nn, padding=0, dilatin=1, tn_indi=Fal, il_md=Fal)</div><div class="line">nn.MaxPl3d(knl_iz, tid=Nn, padding=0, dilatin=1, tn_indi=Fal, il_md=Fal)</div><div class="line">nn.Maxnpl1d(knl_iz, tid=Nn, padding=0)</div><div class="line">nn.Maxnpl2d(knl_iz, tid=Nn, padding=0)</div><div class="line">nn.Maxnpl3d(knl_iz, tid=Nn, padding=0)</div><div class="line">nn.AvgPl1d(knl_iz, tid=Nn, padding=0, il_md=Fal, nt_inld_pad=T)</div><div class="line">nn.AvgPl2d(knl_iz, tid=Nn, padding=0, il_md=Fal, nt_inld_pad=T)</div><div class="line">nn.AvgPl3d(knl_iz, tid=Nn, padding=0, il_md=Fal, nt_inld_pad=T)</div><div class="line">nn.FatinalMaxPl2d(knl_iz, tpt_iz=Nn, tpt_ati=Nn, tn_indi=Fal, _andm_ampl=Nn)</div><div class="line">nn.LPPl2d(nm_typ, knl_iz, tid=Nn, il_md=Fal)</div><div class="line">nn.AdaptivMaxPl1d(tpt_iz, tn_indi=Fal)</div><div class="line">nn.AdaptivMaxPl2d(tpt_iz, tn_indi=Fal)</div><div class="line">nn.AdaptivMaxPl3d(tpt_iz, tn_indi=Fal)</div><div class="line">nn.AdaptivAvgPl1d(tpt_iz)</div><div class="line">nn.AdaptivAvgPl2d(tpt_iz)</div><div class="line">nn.AdaptivAvgPl3d(tpt_iz)</div></pre></td></tr></table></figure>
+<h5 id="6-Dropout"><a href="#6-Dropout" class="headerlink" title="6.Dropout"></a>6.Dropout</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">nn.Dropout(p=0.5, inplace=False)</div><div class="line">nn.Dropout2d(p=0.5, inplace=False)</div><div class="line">nn.Dropout3d(p=0.5, inplace=False)</div><div class="line">nn.AlphaDropout(p=0.5)</div></pre></td></tr></table></figure>
+<h5 id="7-Distance-functions"><a href="#7-Distance-functions" class="headerlink" title="7.Distance functions"></a>7.Distance functions</h5><p><img src="/2017/12/25/20171225pytorch2/distance.png" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">nn.CosineSimilarity(dim=1, eps=1e-08)</div><div class="line">nn.PairwiseDistance(p=2, eps=1e-06)</div></pre></td></tr></table></figure></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/payzhi.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/paywei.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/02/20161002emboss/" class="archive-article-date">
-  	<time datetime="2016-10-02T05:46:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/02/20161002emboss/">EMBOSS:序列处理的小工具集合</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -540,60 +276,104 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/12/25/20171225pytorch2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/11/20160711chipseqpeak/" class="archive-article-date">
-  	<time datetime="2016-07-11T12:54:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-11</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/11/20160711chipseqpeak/">ChIP-seq中peak的形状</a>
-    </h1>
+  
+    <a href="/2017/10/06/20171006docking/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">蛋白-配体结合:联合使用分子对接和分子动力学模拟</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/tags/计算生物学/page/2/">2</a><a class="page-number" href="/tags/计算生物学/page/3/">3</a><a class="extend next" rel="next" href="/tags/计算生物学/page/2/">Next &raquo;</a>
-    </nav>
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -617,9 +397,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
