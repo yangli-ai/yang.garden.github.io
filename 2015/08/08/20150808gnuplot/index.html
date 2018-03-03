@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Sci-Forest</title>
+  <title>Gnuplot:一行命令迅速可视化数据 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sci-Forest">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="Gnuplot本是linux下的命令行作图工具，以command-driven interactive方式。不同于python、R等需要读取数据到内存，然后作图；更不同Origin、Sigmaplot等窗口程序。Gnuplot也有windows版本。它的方便之处在于迅速把文本文件中的数据可视化，而且可以把它看作awk、sed这样的linux命令，无缝融入脚本。极其方便数据探索。">
+<meta name="keywords" content="流病与统计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gnuplot:一行命令迅速可视化数据">
+<meta property="og:url" content="http://yoursite.com/2015/08/08/20150808gnuplot/index.html">
 <meta property="og:site_name" content="Sci-Forest">
+<meta property="og:description" content="Gnuplot本是linux下的命令行作图工具，以command-driven interactive方式。不同于python、R等需要读取数据到内存，然后作图；更不同Origin、Sigmaplot等窗口程序。Gnuplot也有windows版本。它的方便之处在于迅速把文本文件中的数据可视化，而且可以把它看作awk、sed这样的linux命令，无缝融入脚本。极其方便数据探索。">
+<meta property="og:image" content="http://yoursite.com/2015/08/08/20150808gnuplot/gnuplot.png">
+<meta property="og:updated_time" content="2018-03-03T11:44:21.285Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sci-Forest">
+<meta name="twitter:title" content="Gnuplot:一行命令迅速可视化数据">
+<meta name="twitter:description" content="Gnuplot本是linux下的命令行作图工具，以command-driven interactive方式。不同于python、R等需要读取数据到内存，然后作图；更不同Origin、Sigmaplot等窗口程序。Gnuplot也有windows版本。它的方便之处在于迅速把文本文件中的数据可视化，而且可以把它看作awk、sed这样的linux命令，无缝融入脚本。极其方便数据探索。">
+<meta name="twitter:image" content="http://yoursite.com/2015/08/08/20150808gnuplot/gnuplot.png">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -185,415 +192,240 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20150808gnuplot" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Gnuplot:一行命令迅速可视化数据
+    </h1>
+  
+
+        
+        <a href="/2015/08/08/20150808gnuplot/" class="archive-article-date">
+  	<time datetime="2015-08-08T11:35:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-08</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Gnuplot本是linux下的命令行作图工具，以command-driven interactive方式。不同于python、R等需要读取数据到内存，然后作图；更不同Origin、Sigmaplot等窗口程序。Gnuplot也有windows版本。它的<strong>方便之处在于迅速把文本文件中的数据可视化</strong>，而且可以把它看作awk、sed这样的linux命令，无缝融入脚本。<strong>极其方便数据探索</strong>。<br><img src="/2015/08/08/20150808gnuplot/gnuplot.png" alt=""><br><a id="more"></a></p>
+<p>#####1.输入文件：<br>可供Gnuplot用的输入文本很灵活，不需要担心有没有注释，不要担心数据分隔符：</p>
+<ul>
+<li>注释行comments: 默认以#开头，但可以指定<strong>set datafile commentschars “#%”</strong></li>
+<li>单个空行:表示同一个数据集中的不连续处</li>
+<li>双空行: 表示两个数据集的分隔,同过plot中的index指定不同数据集</li>
+<li>分隔符seperator：默认为空格whitespace，但可以指定<strong>set datafile separator “\t”</strong>，或者任意字符</li>
+</ul>
+<p>#####2.绘图命令+fit命令：<br>常用的是plot和splot，其参数可以灵活选择<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">plot for [i=b:e:s]          # for [i=1:6]可供下面$i用,或者这样用for：do for [i=1:3] &#123;commands&#125;</div><div class="line">       [xmin:xmax]&apos;datafile&apos; [matrix|binary] # 没有datafile，也得用&apos;&apos;</div><div class="line">       index b:e:s          #指定数据集</div><div class="line">       every s::b::e        #指定行</div><div class="line">       using 1:2 &quot;%lf,%lf&quot;  #指定字段，可以用数学函数对$1操作</div><div class="line">                            #&quot;%lf,%lf&quot;，可选，怎样把每一行分解成各个变量</div><div class="line">                            #using 1:(10)可绘制水平水平线</div><div class="line">       with lines|points|linespoint|boxes|yerrorbars|xerrorbars... </div><div class="line">            filledcurves above|below x1|x2|y1=2   </div><div class="line">            image|rgbimage         </div><div class="line">            t|lw|lc|pt|ps   #各种属性设置 lc rgb &apos;blue&apos;                    </div><div class="line">            labels                 </div><div class="line">       notitle|title &apos;var&apos;          #legend的title</div><div class="line">       smooth unique|frequency|bezier|sbezier|csplines|acsplines #smooth方法</div><div class="line">plot &apos;datafile&apos; using 1:2 w l, &apos;&apos; using 1:3 w l  #其中&apos;&apos;不能漏掉，默认为datafile</div><div class="line">plot &apos;datafile&apos; matrix w image, &apos;&apos; matrix using 1:2:($3==0?&quot;&quot;:sprintf(&quot;%d&quot;,$3)) w labels  # 读入matrix</div><div class="line">plot &apos;fish.jpg&apos; binary filetype=jpg with rgbimage # 读入图片</div><div class="line"></div><div class="line">set pm3d [interpolate 20,20]     #配合下面splot作图时，把第三列数据作为z轴高低</div><div class="line">set pm3d map  #配合下面splot作图时，把第三列数据作为颜色深浅; unset view恢复</div><div class="line">set hidden3d  #背后图像不显示</div><div class="line"></div><div class="line">splot   #参数同上，但可以用with pm3d|filledcurves|rgbimage</div><div class="line">        #本质是三维作图，可以通过 set view 0,0，显示为二维</div><div class="line">splot x^2+y^2</div><div class="line">splot  &apos;&apos; using (x):(1):(sin(x)) w filledcurves notitle #三维中显示二维图</div><div class="line">splot &apos;x.txt&apos; matrix nonuniform notitle with pm3d   #读取matrix数据，显示为2D image</div><div class="line">        #搭配：set palette defined (0 &quot;blue&quot;,1 &quot;white&quot;, 2 &quot;red&quot;) </div><div class="line">        #搭配：unset xtics; unset ytics</div><div class="line">        #搭配：splot command1, &apos;&apos; matrix nonuniform with lines lc rgb &apos;white&apos;</div><div class="line">replot  #set之后更新图像;以及图像叠加(第一个用plot，后面的用replot)</div><div class="line"></div><div class="line">set label &apos;0&apos;  at  25,57 front tc ls 1</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">y(x)=a*x**2+b*x</div><div class="line">fit y(x) &apos;datafile&apos; via a,b,c #拟合a,b,c三个参数</div><div class="line">plot y(x)</div><div class="line">clear   #清除已有图像</div></pre></td></tr></table></figure>
+<p>#####3.几个特殊设置：</p>
+<ul>
+<li>unset view #</li>
+</ul>
+<p><strong>坐标轴：</strong>  xrange/yrange/cbrange/tics/xtics/ytics/cbtics</p>
+<ul>
+<li>set title|xlabel|ylable</li>
+<li>set xrange|yrange|cbrange [10:-10]|[<em>:-10]|[</em>:*] reverse #搭配set sample 100</li>
+<li>set tics scale 0 #删除ticks</li>
+<li>set xtics|ytics|cbtics b,s,e|(1,2,3,4,5,6)|(“low” -10, “medium” 0, “high” 10)</li>
+<li>set x2tics|y2tics  #设置左、上轴刻度</li>
+<li>set colorbox {noborder|}</li>
+<li>set key</li>
+<li>unset tics|xtics|ytics|cbtics|colorbox|key #unset即删除</li>
+</ul>
+<p><strong>多个子图：</strong></p>
+<ul>
+<li>set multiplot</li>
+<li>set origin 0,0</li>
+<li>set size 0.5,0.5 # 0.5 means 50% of canvas</li>
+</ul>
+<p><strong>三维图：</strong></p>
+<ul>
+<li>set isosamples 50,50 #曲线密度</li>
+<li>set hidden3d #遮挡背后曲线</li>
+<li>unset surface #扔掉曲线，只保留色块</li>
+<li>set palette defined (0 “blue”,1 “white”, 2 “red”)  #设置map</li>
+<li>set contour base|surface|both #等高线位置</li>
+<li>set view 0,0  #视角</li>
+</ul>
+<p>#####4.一行命令绘图:</p>
+<ul>
+<li>gnuplot -e ‘plot; pause -1’</li>
+<li>gnuplot -e ‘plot’ -persist  #这种方式似乎更占CPU，但可以用于实时绘图</li>
+</ul>
+<p>为了方便，在~/.bashrc里添加：<br>alias qplot=’gnuplot -persist -e’<br>qplot2(){<br> nuplot -persist -e ‘plot “$1” using 1:2 with lines’;<br>}</p>
+<p>#####5.操作图像:<br>有几个非常有用的快捷键，可以方便的核查数据<br> +-：缩小或放大<br>右键选择: 放大选择区域<br>箭头：左右上下平移<br>&lt;&gt;：3d图时旋转<br>a：恢复初始图<br>r：获得鼠标所在位置的信息<br>b：显示或隐藏box</p>
+<p>#####6.gnuplot内部编程</p>
+<ul>
+<li>字符串: ‘data’.i.’.txt’结果是 data100.txt(若i=100)；sprintf(‘%.2f’, $3)把$3转化为字符串</li>
+<li>数组: list=’a b c d e’, word(list,1)结果为’a’,或者for [i in list]</li>
+<li>for语句: for [i in list], for [i=1:20:2]。plot或者do后面使用for</li>
+<li>do for [i in list]: do对for进行操作 </li>
+<li>plot后可以接shell语句，如plot ‘&lt; tail -n 10 datafile’</li>
+<li>gnuplot里通过!直接运行linux命令,如!ls</li>
+</ul>
+<p>gnuplot有若干更复杂的细节设置，可以help查找，但供快速绘图目的的命令这些足以。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/payzhi.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/paywei.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/02/10/20180210proteindynamics/" class="archive-article-date">
-  	<time datetime="2018-02-10T11:45:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/10/20180210proteindynamics/">蛋白质动力学:一门与分子生物学互补的知识</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">流病与统计</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/25/20171225pytorch2/" class="archive-article-date">
-  	<time datetime="2017-12-25T05:41:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/25/20171225pytorch2/">pytorch:激活函数、损失函数小结</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/08/08/20150808gnuplot/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/20/20171220quantumbiology/" class="archive-article-date">
-  	<time datetime="2017-12-20T11:40:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-20</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/20/20171220quantumbiology/">量子生物学与《量子生物学入门》</a>
-    </h1>
+    <a href="/2015/09/20/20150920ppi/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          蛋白质-DNA互作和蛋白质-蛋白质互作实验方法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/06/18/20150618biodatabase/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">经典生物信息数据库</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/06/20171006docking/" class="archive-article-date">
-  	<time datetime="2017-10-06T06:24:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/06/20171006docking/">蛋白-配体结合:联合使用分子对接和分子动力学模拟</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/15/20170915dock/" class="archive-article-date">
-  	<time datetime="2017-09-15T12:57:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/15/20170915dock/">蛋白-配体结合:AutoDock Vina对接蛋白和配体</a>
-    </h1>
-  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/10/20170910MD/" class="archive-article-date">
-  	<time datetime="2017-09-10T15:44:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/10/20170910MD/">分子动力学模拟时的软件和文件格式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/02/20170902quantum/" class="archive-article-date">
-  	<time datetime="2017-09-02T10:40:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/02/20170902quantum/">研究小分子与生物大分子的结合:量子化学方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/15/20170815md/" class="archive-article-date">
-  	<time datetime="2017-08-15T13:52:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/15/20170815md/">分子模拟(Molecular Simulation)以及量子力学与分子力学</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/01/20170801toxicology/" class="archive-article-date">
-  	<time datetime="2017-08-01T02:16:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/01/20170801toxicology/">我在环境-基因交互作用研究上的关注方向</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">环境与基因</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/04/20170701epibook/" class="archive-article-date">
-  	<time datetime="2017-07-04T05:04:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/04/20170701epibook/">两本科普读物《遗传的革命》和《垃圾DNA》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">分子生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/6/">6</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -617,8 +449,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
