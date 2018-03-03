@@ -15,15 +15,15 @@
 <meta property="og:url" content="http://yoursite.com/2017/12/25/20171225pytorch2/index.html">
 <meta property="og:site_name" content="Sci-Forest">
 <meta property="og:description" content="总结pytorch里的激活函数、损失函数以及卷积、池化等">
-<meta property="og:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/pytorch.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/pytorchlogo.png">
 <meta property="og:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/activation.png">
 <meta property="og:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/loss.png">
 <meta property="og:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/distance.png">
-<meta property="og:updated_time" content="2017-12-30T05:45:49.279Z">
+<meta property="og:updated_time" content="2018-03-03T11:53:45.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pytorch:激活函数、损失函数小结">
 <meta name="twitter:description" content="总结pytorch里的激活函数、损失函数以及卷积、池化等">
-<meta name="twitter:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/pytorch.png">
+<meta name="twitter:image" content="http://yoursite.com/2017/12/25/20171225pytorch2/pytorchlogo.png">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -215,7 +215,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>总结pytorch里的激活函数、损失函数以及卷积、池化等<br><img src="/2017/12/25/20171225pytorch2/pytorch.png" alt=""><br><a id="more"></a></p>
+        <p>总结pytorch里的激活函数、损失函数以及卷积、池化等<br><img src="/2017/12/25/20171225pytorch2/pytorchlogo.png" alt=""><br><a id="more"></a></p>
 <h5 id="1-Activation-function"><a href="#1-Activation-function" class="headerlink" title="1.Activation function"></a>1.Activation function</h5><p><img src="/2017/12/25/20171225pytorch2/activation.png" alt=""></p>
 <h6 id="Lineaer"><a href="#Lineaer" class="headerlink" title="Lineaer:"></a><strong>Lineaer</strong>:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">nn.Linear(in_features, out_features, bias=True)</div><div class="line">    y=Ax+b</div><div class="line">nn.Bilinear(in1_features, in2_features, out_features, bias=True)</div><div class="line">    y=x1*A*x2+b</div></pre></td></tr></table></figure>
 <h6 id="Non-linear"><a href="#Non-linear" class="headerlink" title="Non-linear"></a><strong>Non-linear</strong></h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">nn.ReLU(inplace=False)</div><div class="line">nn.ReLU6(inplace=False)</div><div class="line">nn.ELU(alpha=1.0, inplace=False)</div><div class="line">nn.SELU(inplace=False)</div><div class="line">nn.PReLU(num_parameters=1, init=0.25)</div><div class="line">nn.LeakyReLU(negative_slope=0.01, inplace=False)</div><div class="line">nn.Threshold(threshold, value, inplace=False)</div><div class="line">nn.Hardtanh(min_val=-1, max_val=1, inplace=False, min_value=None, max_value=None)</div><div class="line">nn.Sigmoid</div><div class="line">nn.LogSigmoid</div><div class="line">nn.Tanh</div><div class="line">nn.Tanhshrink</div><div class="line">nn.Softplus(beta=1, threshold=20)</div><div class="line">nn.Softmax(dim=None)</div><div class="line">nn.LogSoftmax(dim=None)</div><div class="line">nn.Softmax2d</div><div class="line">nn.Softmin(dim=None)</div><div class="line">nn.Softshrink(lambd=0.5)</div><div class="line">nn.Softsign</div></pre></td></tr></table></figure>
