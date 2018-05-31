@@ -187,6 +187,67 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20160708dbsnp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/08/20160708dbsnp/">NCBI dbSNP vcf文件整理并建库</a>
+    </h1>
+  
+
+        
+        <a href="/2016/07/08/20160708dbsnp/" class="archive-article-date">
+  	<time datetime="2016-07-08T11:19:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>从NCBI上下载了dbSNP150 common的数据，vcf格式，解压后共8G。我只需要chr、start、end、rs id、ref、alt、type、frequency信息，并整理成bed格式。chr、start、end、rs id、ref、alt各自为一个字段，并通过tab隔开，而其它各种信息合并为一个字段，以;分隔。数据量小时，联合使用notepad++替换字符串和Excel处理格式，即可生成各种生信格式。但数据量太大(若是all版本，有20多G)，笔记本上不能打开，即便打开操作很卡。<br><img src="/2016/07/08/20160708dbsnp/awk.jpg" alt=""><br></p>
+        
+          <a class="article-more-a" href="/2016/07/08/20160708dbsnp/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/07/08/20160708dbsnp/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-20160815seqfeature" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -723,67 +784,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/04/10/20160410cygwinsystem/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20160401bash" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/01/20160401bash/">Bash编程</a>
-    </h1>
-  
-
-        
-        <a href="/2016/04/01/20160401bash/" class="archive-article-date">
-  	<time datetime="2016-04-01T02:07:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>虽然可以用python、R写脚本，但喜欢上bash不拘小节的风格。可以将各种命令行的程序看作bash内置的命令，黏合在一起，真正做到pipeline。而且bash本身的一些命令工具，如wc、grep、awk、sed等，小巧、方便，是python等无法达到的。总之，bash很适合大数据处理。<br><img src="/2016/04/01/20160401bash/bash.jpg" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2016/04/01/20160401bash/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/04/01/20160401bash/">展开全文 >></a>
         </p>
       
 

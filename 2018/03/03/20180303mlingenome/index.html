@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>蛋白质动力学:一门与分子生物学互补的知识 | Sci-Forest</title>
+  <title>深度学习在基因组学中的应用 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="蛋白质是生物体结构和功能的基本单位。研究蛋白质，有两大类不同研究的思路。一种是分子生物学研究，其研究对象为大量的蛋白质分子(例如western blotting中μg级别的上样量，ELISA的ng/ml级别检出限&amp;lt;大概也是μg级别&amp;gt;)。它观察蛋白质分子群体的平均行为，如研究信号通路中上游蛋白引起下游蛋白的激活或失活等。另一类是分子动力学研究，其研究对象为蛋白质分子个体，既有计算机模拟，">
+  <meta name="description" content="深度学习方法，如CNN、RNN、Auto-Encoder等，已经广泛用于对图像、语音、文本等数据进行机器学习。但是涉及DNA序列的基因组数据显然与上述数据类型不同。此外，深度学习是“黑箱”模式；相反，基因组序列有明显的生物学意义。本文总结了当前基因组学研究中如何针对DNA序列数据进行深度学习，以管中窥豹。">
 <meta name="keywords" content="计算生物学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="蛋白质动力学:一门与分子生物学互补的知识">
-<meta property="og:url" content="http://yoursite.com/2018/02/10/20180210proteindynamics/index.html">
+<meta property="og:title" content="深度学习在基因组学中的应用">
+<meta property="og:url" content="http://yoursite.com/2018/03/03/20180303mlingenome/index.html">
 <meta property="og:site_name" content="Sci-Forest">
-<meta property="og:description" content="蛋白质是生物体结构和功能的基本单位。研究蛋白质，有两大类不同研究的思路。一种是分子生物学研究，其研究对象为大量的蛋白质分子(例如western blotting中μg级别的上样量，ELISA的ng/ml级别检出限&amp;lt;大概也是μg级别&amp;gt;)。它观察蛋白质分子群体的平均行为，如研究信号通路中上游蛋白引起下游蛋白的激活或失活等。另一类是分子动力学研究，其研究对象为蛋白质分子个体，既有计算机模拟，">
-<meta property="og:image" content="http://yoursite.com/2018/02/10/20180210proteindynamics/landscape.jpg">
-<meta property="og:updated_time" content="2018-03-10T16:30:06.757Z">
+<meta property="og:description" content="深度学习方法，如CNN、RNN、Auto-Encoder等，已经广泛用于对图像、语音、文本等数据进行机器学习。但是涉及DNA序列的基因组数据显然与上述数据类型不同。此外，深度学习是“黑箱”模式；相反，基因组序列有明显的生物学意义。本文总结了当前基因组学研究中如何针对DNA序列数据进行深度学习，以管中窥豹。">
+<meta property="og:image" content="http://yoursite.com/2018/03/03/20180303mlingenome/mlingenome.jpg">
+<meta property="og:updated_time" content="2018-05-31T14:08:28.282Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="蛋白质动力学:一门与分子生物学互补的知识">
-<meta name="twitter:description" content="蛋白质是生物体结构和功能的基本单位。研究蛋白质，有两大类不同研究的思路。一种是分子生物学研究，其研究对象为大量的蛋白质分子(例如western blotting中μg级别的上样量，ELISA的ng/ml级别检出限&amp;lt;大概也是μg级别&amp;gt;)。它观察蛋白质分子群体的平均行为，如研究信号通路中上游蛋白引起下游蛋白的激活或失活等。另一类是分子动力学研究，其研究对象为蛋白质分子个体，既有计算机模拟，">
-<meta name="twitter:image" content="http://yoursite.com/2018/02/10/20180210proteindynamics/landscape.jpg">
+<meta name="twitter:title" content="深度学习在基因组学中的应用">
+<meta name="twitter:description" content="深度学习方法，如CNN、RNN、Auto-Encoder等，已经广泛用于对图像、语音、文本等数据进行机器学习。但是涉及DNA序列的基因组数据显然与上述数据类型不同。此外，深度学习是“黑箱”模式；相反，基因组序列有明显的生物学意义。本文总结了当前基因组学研究中如何针对DNA序列数据进行深度学习，以管中窥豹。">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/03/20180303mlingenome/mlingenome.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -192,35 +192,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20180210proteindynamics" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20180303mlingenome" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      蛋白质动力学:一门与分子生物学互补的知识
+      深度学习在基因组学中的应用
     </h1>
   
 
         
-        <a href="/2018/02/10/20180210proteindynamics/" class="archive-article-date">
-  	<time datetime="2018-02-10T11:45:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-10</time>
+        <a href="/2018/03/03/20180303mlingenome/" class="archive-article-date">
+  	<time datetime="2018-03-03T13:57:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>蛋白质是生物体结构和功能的基本单位。研究蛋白质，有两大类不同研究的思路。一种是分子生物学研究，其研究对象为大量的蛋白质分子(例如western blotting中μg级别的上样量，ELISA的ng/ml级别检出限&lt;大概也是μg级别&gt;)。它观察蛋白质分子群体的平均行为，如研究信号通路中上游蛋白引起下游蛋白的激活或失活等。另一类是分子动力学研究，其研究对象为蛋白质分子个体，既有计算机模拟，也有实验方法(如核磁共振动力学)，后者是前者的补充。以蛋白质磷酸化激活为例，蛋白质分子的变化不是仅仅磷酸化/非磷酸化(激活/失活)两种状态之间开关式变化，而是一个构象动态变化的过程，微弱的结构变化如何引起显著的功能改变，这是分子生物学所不及的，需要分子动力学研究。任何科研都有足够代表性样本的要求，分子动力学也不能脱离该原则。但它往往以时间点的重复性采样弥补个体重复性的不足。<br><img src="/2018/02/10/20180210proteindynamics/landscape.jpg" alt=""><br><a id="more"></a><br>对蛋白质进行分子动力学模拟的最终目标，就是蛋白质动力学的研究内容。<strong>如果了解了蛋白质动力学的研究思路，无疑会使分子动力学模拟的结果分析更加深入、更好地服务医学研究</strong>。</p>
-<h5 id="1-以“能量”衡量状态的思路"><a href="#1-以“能量”衡量状态的思路" class="headerlink" title="1.以“能量”衡量状态的思路"></a>1.以“能量”衡量状态的思路</h5><p>与分子生物学研究思路不同，分子动力学的研究喜欢用”能量”来衡量分子动态变化中的某个状态点，并以此判断其变化的原因和结局，这有点类似物理和化学的研究，也是我以前没有体验过的思维方式。所以它一直在“能量—结构—功能”环中的“能量—结构”上，而分子生物学一般只考虑“功能”自身的环路。</p>
-<p>自由能景观图谱(free energy landscape)是可视化蛋白质的能量–结构关系的工具。在自由能景观图中，z轴为能量，单位是KJ/mol。x和y轴是反应坐标，若是有太多的维度，它们可以是主成分分析的PC1和PC2。它的基础是，不同的能量决定了蛋白不同的空间构象，构象互变的速度则取决于不同构象间的能垒(energy barrier)大小。蛋白的相对构象或者能量状态可以被功能改变(例如磷酸化等共价修饰)，也可以改变功能(与其它蛋白质相互作用)。所以说，能影响蛋白能量状态的因子可能会影响蛋白质的功能。</p>
-<p>能量驱使了多肽链折叠成具有三维结构的蛋白质，同时也控制着蛋白质三维结构的转换，进而影响其功能。蛋白质上氨基酸残基的突变可能会影响其三维结构或者功能，这也可以用ΔG衡量。</p>
-<h5 id="2-“构象集合”和“动态性”"><a href="#2-“构象集合”和“动态性”" class="headerlink" title="2.“构象集合”和“动态性”"></a>2.“构象集合”和“动态性”</h5><p>在宏观看来，蛋白质处于两种状态间，如磷酸化和去磷酸化。但蛋白质分子实际上按照熵增的规律，存在多种状态，是各种构象组合起来的整体。这种现象可以见于各种情况：侧链、活性位点、二级结构、蛋白质折叠等等。</p>
-<p>在分子动力学模拟中可以看到，蛋白质不是被动的on或者off，而是不断地处于运动中。直观上最明显的运动方式是振动，这反应了分子以最低势能点(可能是局部的)为平衡点，在其附近不断的来回运动。在外部因素的作用下，这种运动会远离平衡点，直到另一个最低势能点。</p>
-<p>有可能振动本身也影响着化学物的生物活性。前段时间看BBC科普片《量子的故事》，讲述一个例子，形状差异很大的两个分子(苯甲醛和氢氰酸)产生相同的嗅觉(苦杏仁味)。科学家认为，化学键的振动引起受体的共振。通过改变振动(重氢代替氢)，而不是化学结构，确认了这一个假设。他们认为，配体-受体先通过锁-匙原理靠近结合，然后通过共振传递信息。</p>
-<h5 id="3-蛋白质动力学补充分子生物学的微观解释-几个例子"><a href="#3-蛋白质动力学补充分子生物学的微观解释-几个例子" class="headerlink" title="3.蛋白质动力学补充分子生物学的微观解释: 几个例子"></a>3.蛋白质动力学补充分子生物学的微观解释: 几个例子</h5><p>同源二聚体CAP与cAMP结合后，与第二个cAMP的亲和力下降，蛋白的运动速度变慢，从微秒级上升到了毫秒级(成为“固化rigidification“)，但是蛋白的整体结构并没有发生改变。所以这种分子生物学变化只是蛋白动力学发生了改变。钙调蛋白不同结构域与钙离子结合后，以不同的方式改变钙调蛋白内在的动力学特性，达到调节钙调蛋白亲和力的目的，这一点是分子生物学无法解释的。吗啡与μ阿片受体结合后，会引起与之结合的α2A肾上腺素能受体的构象发生改变，进而又会抑制与之相连的G蛋白活化并抑制下游的信号通路，这其中并没有蛋白质修改的改变。WASP蛋白的VCA结构域通常都被临近的GBD结构域所抑制。WASP激动剂与WASP结合后，通过别构作用取消GBD结构域的抑制作用，这种变化也是通过蛋白质动力学实现的。</p>
-<p>总之，分子生物学里，讨论蛋白质结构改变引起功能改变时，一般认为这些结构变化是蛋白质翻译后修饰、聚体的形成等“质”的变化，这些变化伴随显著的结构变化。蛋白质动力学却提示分子动力学式的变化也会改变蛋白质的功能，特别是小分子配体与蛋白质结合引起后者功能改变(这是我所关心的)。看了这些例子，我想起了咏春拳所谓的寸劲，即发力时距离之短促，不需要大起大落的运动也能击打敌人。</p>
+        <p>深度学习方法，如CNN、RNN、Auto-Encoder等，已经广泛用于对图像、语音、文本等数据进行机器学习。但是涉及DNA序列的基因组数据显然与上述数据类型不同。此外，深度学习是“黑箱”模式；相反，基因组序列有明显的生物学意义。本文总结了当前基因组学研究中如何针对DNA序列数据进行深度学习，以管中窥豹。<br><a id="more"></a></p>
+<h5 id="1-深度学习在基因组学中的用途"><a href="#1-深度学习在基因组学中的用途" class="headerlink" title="1.深度学习在基因组学中的用途"></a>1.深度学习在基因组学中的用途</h5><p><strong>判断基因成分</strong>:<br>例如根据序列判断其是否为外显子(exons), 内含子( introns), 启动子(promoters), 增强子(enhancers), positioned nucleosomes, 剪接位点( splice sites), 非转录区 (untranslated region, UTR)等。<br><strong>检测突变</strong>:<br>根据测序结果，检测DNA碱基变异位点，识别SNV、InDel。<br><strong>预测基因表达</strong>:<br><strong>RNA亚细胞定位</strong>:<br><strong>预测蛋白质三维结构</strong>:<br><strong>预测疾病</strong>:</p>
+<h5 id="2-怎样用深度学习处理DNA序列数据"><a href="#2-怎样用深度学习处理DNA序列数据" class="headerlink" title="2.怎样用深度学习处理DNA序列数据"></a>2.怎样用深度学习处理DNA序列数据</h5><p>但我们更加关系深度学习是怎样处理DNA序列数据的。怎样将DNA序列数据与图像、文本等常用机器学习数据对象关联起来。RNN本来用于处理文本序列，显然可以用于DNA序列；CNN擅长处理图像。但我们可以这把DNA序列理解为图像问题: 如同图像有RGB三个通道，基因序列的一个窗口可以看做有4个通道 (A, T, C, G)的一维序列，转化为一维卷积核可分析的单序列(single sequence)。CNN从中提取图像特征；Auto encoder常用来数据降维，或许可以借此探索基因序列间隐含的依赖关系。</p>
+<h5 id="3-DNA序列数据的编码"><a href="#3-DNA序列数据的编码" class="headerlink" title="3.DNA序列数据的编码"></a>3.DNA序列数据的编码</h5><p>怎样将DNA序列转化为图像数据？可以参考DeepVariant处理DNA序列的方式。如用one-hot编码，如下图<br><img src="/2018/03/03/20180303mlingenome/mlingenome.jpg" alt=""></p>
+<h5 id="4-改进学习的要点–特征提取"><a href="#4-改进学习的要点–特征提取" class="headerlink" title="4.改进学习的要点–特征提取"></a>4.改进学习的要点–特征提取</h5><p>虽然深度学习的优势之一是自动提取数据特征，但对于基因组学数据可以提前人工提取一些特征，再纳入深度学习模型中。这相当于利用某些先验信息。</p>
 
       
 
@@ -321,7 +317,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/02/10/20180210proteindynamics/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/03/03/20180303mlingenome/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -335,18 +331,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/03/20180303mlingenome/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          深度学习在基因组学中的应用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/12/25/20171225pytorch2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">pytorch:激活函数、损失函数小结</div>
+    <a href="/2018/02/10/20180210proteindynamics/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">蛋白质动力学:一门与分子生物学互补的知识</div>
       <i class="icon-circle-right"></i>
     </a>
   
