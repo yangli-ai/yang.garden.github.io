@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>GWAS数据处理的核心步骤 | Sci-Forest</title>
+  <title>Oncogenesis中的早期事件/过渡表型 | Sci-Forest</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="过去两个月仔细看完了两本GWAS的英文书，顺便恶补了遗传研究的知识，特别是GWAS数据处理方面和基因组注释。然后把积攒下的各种疑问跟张老师聊了聊，收获颇丰。张老师不是医学出身，但博后专门做生物信息和遗传学研究，知道这里面的各种tips和常识。这些零碎的东西和技巧性的东西不是依靠自学就能知道的，需要多年的实际经验。这也是我近几年慢慢体会到的观点，博士和博后培训始终需要指导的；仅靠自学，好多坎过不了。">
-<meta name="keywords" content="计算生物学">
+  <meta name="description" content="Immortalization和transformation指的是培养细胞的两种特殊的增值表型（growth phenotype），这两种表型皆是细胞走向恶性过程中表现。它们背后有与之相对应的分子机制，虽然这些分子机制已被广泛认为是肿瘤的hallmark之一，但有这两种表型的细胞仍不完全等价于癌细胞，而且它们向肿瘤发展的过程中还需要经历其它的变化。对它们发现、认识、和建立具有这些表型的细胞系是历史">
+<meta name="keywords" content="分子生物学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GWAS数据处理的核心步骤">
-<meta property="og:url" content="http://yoursite.com/2016/05/03/20160501gwas/index.html">
+<meta property="og:title" content="Oncogenesis中的早期事件&#x2F;过渡表型">
+<meta property="og:url" content="http://yoursite.com/2016/10/05/20161005transformedcell/index.html">
 <meta property="og:site_name" content="Sci-Forest">
-<meta property="og:description" content="过去两个月仔细看完了两本GWAS的英文书，顺便恶补了遗传研究的知识，特别是GWAS数据处理方面和基因组注释。然后把积攒下的各种疑问跟张老师聊了聊，收获颇丰。张老师不是医学出身，但博后专门做生物信息和遗传学研究，知道这里面的各种tips和常识。这些零碎的东西和技巧性的东西不是依靠自学就能知道的，需要多年的实际经验。这也是我近几年慢慢体会到的观点，博士和博后培训始终需要指导的；仅靠自学，好多坎过不了。">
-<meta property="og:image" content="http://yoursite.com/2016/05/03/20160501gwas/gwas1.jpg">
-<meta property="og:image" content="http://yoursite.com/2016/05/03/20160501gwas/gwas2.jpg">
-<meta property="og:updated_time" content="2017-11-24T17:56:50.327Z">
+<meta property="og:description" content="Immortalization和transformation指的是培养细胞的两种特殊的增值表型（growth phenotype），这两种表型皆是细胞走向恶性过程中表现。它们背后有与之相对应的分子机制，虽然这些分子机制已被广泛认为是肿瘤的hallmark之一，但有这两种表型的细胞仍不完全等价于癌细胞，而且它们向肿瘤发展的过程中还需要经历其它的变化。对它们发现、认识、和建立具有这些表型的细胞系是历史">
+<meta property="og:image" content="http://yoursite.com/2016/10/05/20161005transformedcell/transformedcell.jpg">
+<meta property="og:image" content="http://yoursite.com/2016/10/05/20161005transformedcell/carcinogenesis.jpg">
+<meta property="og:updated_time" content="2018-10-30T08:32:17.981Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GWAS数据处理的核心步骤">
-<meta name="twitter:description" content="过去两个月仔细看完了两本GWAS的英文书，顺便恶补了遗传研究的知识，特别是GWAS数据处理方面和基因组注释。然后把积攒下的各种疑问跟张老师聊了聊，收获颇丰。张老师不是医学出身，但博后专门做生物信息和遗传学研究，知道这里面的各种tips和常识。这些零碎的东西和技巧性的东西不是依靠自学就能知道的，需要多年的实际经验。这也是我近几年慢慢体会到的观点，博士和博后培训始终需要指导的；仅靠自学，好多坎过不了。">
-<meta name="twitter:image" content="http://yoursite.com/2016/05/03/20160501gwas/gwas1.jpg">
+<meta name="twitter:title" content="Oncogenesis中的早期事件&#x2F;过渡表型">
+<meta name="twitter:description" content="Immortalization和transformation指的是培养细胞的两种特殊的增值表型（growth phenotype），这两种表型皆是细胞走向恶性过程中表现。它们背后有与之相对应的分子机制，虽然这些分子机制已被广泛认为是肿瘤的hallmark之一，但有这两种表型的细胞仍不完全等价于癌细胞，而且它们向肿瘤发展的过程中还需要经历其它的变化。对它们发现、认识、和建立具有这些表型的细胞系是历史">
+<meta name="twitter:image" content="http://yoursite.com/2016/10/05/20161005transformedcell/transformedcell.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
   
@@ -193,48 +193,48 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20160501gwas" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20161005transformedcell" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      GWAS数据处理的核心步骤
+      Oncogenesis中的早期事件/过渡表型
     </h1>
   
 
         
-        <a href="/2016/05/03/20160501gwas/" class="archive-article-date">
-  	<time datetime="2016-05-03T15:23:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-03</time>
+        <a href="/2016/10/05/20161005transformedcell/" class="archive-article-date">
+  	<time datetime="2016-10-05T02:23:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>过去两个月仔细看完了两本GWAS的英文书，顺便恶补了遗传研究的知识，特别是GWAS数据处理方面和基因组注释。然后把积攒下的各种疑问跟张老师聊了聊，收获颇丰。张老师不是医学出身，但博后专门做生物信息和遗传学研究，知道这里面的各种tips和常识。这些零碎的东西和技巧性的东西不是依靠自学就能知道的，需要多年的实际经验。这也是我近几年慢慢体会到的观点，博士和博后培训始终需要指导的；仅靠自学，好多坎过不了。也知道了我所学的医学遗传学是群体遗传学，只是遗传学的一个分支，这对我自己关心的基因-环境交互作用主题打开另一扇学习的大门。正好一周前，张老师有批Affy SNP6.0芯片的数据，让我给处理一下。处理过程中，有问题直接问他。处理结果也跟他核对一下。算完后，整个过程和结果没有什么问题。<br><img src="/2016/05/03/20160501gwas/gwas1.jpg" alt=""></p>
-<p><center>Manhattan图往往是GWAS研究的第一张图 </center><br><a id="more"></a></p>
-<p>群体遗传学，包括各种研究设计和统计推断，基本是遗传流行病学的内容。胡永华老师写的中文书《遗传流行病学》里有很系统很详细的描述。但这本书是传统的流行病学书，不是”大数据”时代下的场景。当前组学条件下，科研过程中有一些重要步骤，如原始数据的预处理、GWAS”大”数据的统计处理、显著SNP位点的注释等等，胡老师的书都没有涉及，这正是生物信息学的内容。</p>
-<p>拿到SNP芯片数据后，有几个重要的步骤，它们需要专门的软件完成: 用shapeit进行<strong>shaping</strong>、用impute2进行<strong>imputation</strong>、用plink或R语言进行<strong>statistical analysis</strong>、再用各种数据库和可视化软件进行<strong>annotation</strong>并<strong>visualization</strong>。其中的各种后勤工作，如格式转化、部分SNP的提取等可以用fcgene。统计分析时，plink可以进行各种预备性工作，而利用R的灵活性进行统计分析。<br><img src="/2016/05/03/20160501gwas/gwas2.jpg" alt=""></p>
-<h4 id="Step-1-Alignment-of-the-SNPs-flip-to-fwd-strand"><a href="#Step-1-Alignment-of-the-SNPs-flip-to-fwd-strand" class="headerlink" title="Step 1: Alignment of the SNPs: flip to fwd strand"></a>Step 1: Alignment of the SNPs: flip to fwd strand</h4><pre><code>shapeit -check -B -M -R --output-log    #--input-ref
-</code></pre><h4 id="Step-2-Phasing-sample-–chrX"><a href="#Step-2-Phasing-sample-–chrX" class="headerlink" title="Step 2: Phasing sample  [–chrX]"></a>Step 2: Phasing sample  [–chrX]</h4><pre><code>shapeit -B chr1_sample.bed chr1_sample.bim chr1_sample.fam \  --impute-ped  --impute-vcf 
-  -M chr1_reference.map  
-  -O chr1_sample_phased          
-  --thread 8 
-shapeit -B gwas \ 
-  -M genetic_map.txt \ 
-  -R --input-ref reference.haplotypes.gz reference.legend.gz reference.sample \ 
-  -O gwas.phased.with.ref 
-</code></pre><h4 id="Step-3-Imputation"><a href="#Step-3-Imputation" class="headerlink" title="Step 3: Imputation"></a>Step 3: Imputation</h4><pre><code>impute2 -use_prephased_g   [--chrX] 
-  -known_haps_g gwas.phased.haps  
-  -h reference.hap  
-  -l reference.leg 
-  -m genetic_map 
-  -int 9.1e6 9.6e6  
-  -Ne 20000  
-  -o gwas.imputed 
-</code></pre><h4 id="Step-4-plink"><a href="#Step-4-plink" class="headerlink" title="Step 4: plink"></a>Step 4: plink</h4><p>详细的步骤可以看它们的帮助文件。通过程序的名字理解数据处理的过程是个很好的选择。图1的Manhattan图往往是GWAS统计分析的第一个结果。</p>
+        <p>Immortalization和transformation指的是培养细胞的两种特殊的增值表型（growth phenotype），这两种表型皆是细胞走向恶性过程中表现。它们背后有与之相对应的分子机制，虽然这些分子机制已被广泛认为是肿瘤的hallmark之一，但有这两种表型的细胞仍不完全等价于癌细胞，而且它们向肿瘤发展的过程中还需要经历其它的变化。对它们发现、认识、和建立具有这些表型的细胞系是历史上轰轰烈烈地(没错，是这个词) 研究病毒致癌机制中发展起来的，现在仍然应用于致癌过程的研究和化学物致癌作用的毒理学评价。<br><img src="/2016/10/05/20161005transformedcell/transformedcell.jpg" alt=""><br><a id="more"></a></p>
+<h5 id="Genetic-damage-Mutation"><a href="#Genetic-damage-Mutation" class="headerlink" title="Genetic damage/Mutation:"></a>Genetic damage/Mutation:</h5><p>本文中不探讨此方面，但把其列为本文的主题词以提醒自己，因为自己早些时候过于关注了这个方面。这是受毒理学思维的影响，影响了我的整个博士课题。对于肿瘤研究而言，这是个坏的影响。不过，随着NGS的普及，这方面有了新的思路。</p>
+<h5 id="Immortalization"><a href="#Immortalization" class="headerlink" title="Immortalization:"></a>Immortalization:</h5><p>是指细胞打破了Hayflick limit，不受telomere长度缩短带来了凋亡的这一限制。Immortalization和senescense这一对表型通常被认为telomere length变化的两个结局。[更有甚者，肿瘤细胞内telomere不仅不缩短还被telomerase复合物维持。正常情况下telomerase仅在S期有活性，以维持小部分细胞的端粒长度]</p>
+<p>正常情况下，当telomere缩短到一定程度，细胞内部的DNA损伤修复机制便会启动，并引起P53表达上调。P53进一步上调P21，抑制细胞周期，使之停留在G1期。在immortalization背后的分子机制，不仅有telomere，还有其它，如P53。这些immortalized的细胞通常失去正常的P53活性，因而可以逃避凋亡、亦不能在DNA损伤时启动相关的修复机制。但失去P53活性不是immortalization的充分条件，有其它共同作用的因素。</p>
+<p>Immortalization不等于transformation，也不等于瘤性。immortal细胞虽然增值不受限制，但仍有contact inhibition和anchorage dependency。也就是说，它们仍受某些信号的控制。这些细胞也不具有成瘤性 (non-tumorigenic) ，因为它们无法在免疫缺陷小鼠体内形成肿瘤。</p>
+<p>那如何产生immortal细胞内？若干immortal的细胞(系)早已被人为分离出来或产生，包括肿瘤细胞(如Hela)和非肿瘤(如3T3)。早期时，immortal细胞多从肿瘤细胞分离出来。现在可以改造细胞的基因组产生各种immortal细胞。比如表达病毒癌基因以抑制P53和Rb的功能：来自于papilloma virus的E6和E7，simian virus的SV40，还有v-myc；还比如通过逆转录病毒质粒过表达telomerase和hTERT(这可以避免改变细胞的遗传成分)。 </p>
+<p>当用于肿瘤研究时，immortal细胞可以作为“first-hit”模型，它没有恶性表型，很适合致癌过程的研究。这些细胞系不仅仅用于肿瘤研究，还用于各种用途，如单抗生产、疫苗生产、毒理学测试、细胞正常机制研究等。</p>
+<h5 id="Transformation"><a href="#Transformation" class="headerlink" title="Transformation:"></a>Transformation:</h5><p>非瘤性细胞经历一些事件，改变了遗传物质，因而获得了一些癌细胞样的特点。其中两种特点最为重要：失去接触抑制 (loss of contact inhibition) 和不依赖锚点 (anchorage independency) ，这代表了细胞获得了自主分裂的能力。除了这两点外，Weiberg还给出了transformed cells其它的特点：</p>
+<ul>
+<li>形态改变，呈圆形</li>
+<li>不受控制的持续增长</li>
+<li>对生长刺激因子的依赖减少</li>
+<li>高饱和密度</li>
+<li>除去生长因子刺激后也不能停止其生长</li>
+<li>有关葡萄糖的运输活动增加</li>
+<li>具有致瘤性</li>
+</ul>
+<p>从背后的分子机制来说，transformed细胞不依赖于外部的生长信号和生存条件而主动地分裂增值，这赋予了它们恶性转化的潜能(还不算是真正的癌细胞)。通常，transformation的原因是环境中的致癌物（carcinogen）导致的基因组上自发或诱发的基因突变。Transformation过程中涉及到两类carcinogen：initiator和promoter。Initiator破坏DNA，产生突变，promoter刺激细胞增值。它们单独之一不能导致细胞的transformation。transforming mutations常常发生于癌基因或抑癌基因。<br><img src="/2016/10/05/20161005transformedcell/carcinogenesis.jpg" alt=""><br>图中联合应用initiator和promoter后的三种结局：transformation regression，transformation maintenance和transformation to cancer。区别在于initiator和promoter后的第三步操作。</p>
+<p>还有其它的分子过程被认为导致了transformation，比如miRNA。有研究发现miRNA misregulation不是transformation的结果表现，而是其原因[与此对应有tumor suppressive miRNA的概念]。这些研究促进了我们对transformation的认识，特别是non-genotoxic carcinogen的理解。还有其它的各种因子。transformed cells又有transformative features。【so，what should be focused on?】</p>
+<h5 id="EMT"><a href="#EMT" class="headerlink" title="EMT:"></a>EMT:</h5><p>上皮间质转化，Epithelial-mesenchymal transition。肿瘤细胞发生转移的事件，E-cadherin表达的缺失是EMT的关键步骤。内容略。</p>
+<h5 id="Tumorigenesis"><a href="#Tumorigenesis" class="headerlink" title="Tumorigenesis:"></a>Tumorigenesis:</h5><p>本文中不探讨tumorigenesis，但把列为本文的第四个主题词。这因为提醒自己不要忘记tumorigenesis是immortalization和transformation之后的阶段。</p>
+<p>后记：曾以为毒理学中的致癌作用研究是解开肿瘤发生秘密的大门，后来却被当头一棒。毒理学中的致癌研究几乎全部是评价研究，而非机制研究。真正的致癌机制研究在毒理学之外，在肿瘤学里。</p>
 
       
 
@@ -279,7 +279,7 @@ shapeit -B gwas \
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">分子生物学</a>
         		</li>
       		
 		</ul>
@@ -335,7 +335,7 @@ shapeit -B gwas \
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/05/03/20160501gwas/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/10/05/20161005transformedcell/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -349,18 +349,18 @@ shapeit -B gwas \
   
 <nav id="article-nav">
   
-    <a href="/2016/05/05/20160505carcinogentest/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/01/01/20170101gene/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          致癌研究中的一些表型/检测终点
+          环境基因交互作用
         
       </div>
     </a>
   
   
-    <a href="/2016/04/26/20160426Antinous/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Antinous的破镜重圆</div>
+    <a href="/2016/10/02/20161002emboss/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">EMBOSS:序列处理的小工具集合</div>
       <i class="icon-circle-right"></i>
     </a>
   
