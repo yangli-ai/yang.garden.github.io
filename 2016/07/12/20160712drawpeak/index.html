@@ -6,14 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MATLAB画peaks(滤波器法) | Sci-Forest</title>
+  <title>MATLAB画peaks(滤波器法) | Yang&#39;s Garden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="以前试图用三维地形图可视化二维空间中任意点的取值，演示用。如同MATLAB中peak函数产生一个二维矩阵，用surf或者mesh可视化。但peak函数不能指定”峰”在什么位置，而手工设定某点为任意值时，该点与周围没有平滑的过度，特别是设置了任意多个点的值，计算很麻烦。今天突然想到了类似Photoshop高斯模糊的方法可能行。恰好MATLAB中有fspecial(设置滤波器)和imfilter(应用">
-<meta name="keywords" content="流病与统计">
+<meta name="keywords" content="计算生物学">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MATLAB画peaks(滤波器法)">
 <meta property="og:url" content="http://yoursite.com/2016/07/12/20160712drawpeak/index.html">
-<meta property="og:site_name" content="Sci-Forest">
+<meta property="og:site_name" content="Yang&#39;s Garden">
 <meta property="og:description" content="以前试图用三维地形图可视化二维空间中任意点的取值，演示用。如同MATLAB中peak函数产生一个二维矩阵，用surf或者mesh可视化。但peak函数不能指定”峰”在什么位置，而手工设定某点为任意值时，该点与周围没有平滑的过度，特别是设置了任意多个点的值，计算很麻烦。今天突然想到了类似Photoshop高斯模糊的方法可能行。恰好MATLAB中有fspecial(设置滤波器)和imfilter(应用">
 <meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/first.png">
 <meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/average.png">
@@ -27,13 +27,13 @@
 <meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/gs0.1.png">
 <meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/gs0.5.png">
 <meta property="og:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/gs1.png">
-<meta property="og:updated_time" content="2017-12-19T03:47:44.711Z">
+<meta property="og:updated_time" content="2018-10-30T08:46:11.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MATLAB画peaks(滤波器法)">
 <meta name="twitter:description" content="以前试图用三维地形图可视化二维空间中任意点的取值，演示用。如同MATLAB中peak函数产生一个二维矩阵，用surf或者mesh可视化。但peak函数不能指定”峰”在什么位置，而手工设定某点为任意值时，该点与周围没有平滑的过度，特别是设置了任意多个点的值，计算很麻烦。今天突然想到了类似Photoshop高斯模糊的方法可能行。恰好MATLAB中有fspecial(设置滤波器)和imfilter(应用">
 <meta name="twitter:image" content="http://yoursite.com/2016/07/12/20160712drawpeak/first.png">
   
-    <link rel="alternative" href="/atom.xml" title="Sci-Forest" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Yang&#39;s Garden" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -63,7 +63,7 @@
 			<img src="/img/profile.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Sci-Forest</a></h1>
+		  <h1 class="header-author"><a href="/">Yang&#39;s Garden</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">记录我的所见、所闻、所学、所得  Email:sunnysean@qq.com</p>
@@ -83,8 +83,6 @@
 				<li><a href="/tags/分子生物学/">分子生物学</a></li>
 	        
 				<li><a href="/tags/计算生物学/">计算生物学</a></li>
-	        
-				<li><a href="/tags/流病与统计/">流病与统计</a></li>
 	        
 				<li><a href="/tags/人文与艺术/">人文与艺术</a></li>
 	        
@@ -131,14 +129,12 @@
 				<img src="/img/profile.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Sci-Forest</h1>
+			  <h1 class="header-author js-header-author">Yang&#39;s Garden</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>记录我的所见、所闻、所学、所得  Email:sunnysean@qq.com<i class="icon icon-quo-right"></i></p>
 			
 			
-			
-				
 			
 				
 			
@@ -174,21 +170,19 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 12.5%"><a href="/">首页</a></li>
+					<li style="width: 14.285714285714286%"><a href="/">首页</a></li>
 		        
-					<li style="width: 12.5%"><a href="/archives">所有文章</a></li>
+					<li style="width: 14.285714285714286%"><a href="/archives">所有文章</a></li>
 		        
-					<li style="width: 12.5%"><a href="/tags/游历与随笔/">游历与随笔</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags/游历与随笔/">游历与随笔</a></li>
 		        
-					<li style="width: 12.5%"><a href="/tags/环境与基因/">环境×基因</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags/环境与基因/">环境×基因</a></li>
 		        
-					<li style="width: 12.5%"><a href="/tags/分子生物学/">分子生物学</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags/分子生物学/">分子生物学</a></li>
 		        
-					<li style="width: 12.5%"><a href="/tags/计算生物学/">计算生物学</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags/计算生物学/">计算生物学</a></li>
 		        
-					<li style="width: 12.5%"><a href="/tags/流病与统计/">流病与统计</a></li>
-		        
-					<li style="width: 12.5%"><a href="/tags/人文与艺术/">人文与艺术</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags/人文与艺术/">人文与艺术</a></li>
 		        
 				</ul>
 			</nav>
@@ -282,7 +276,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">流病与统计</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
         		</li>
       		
 		</ul>
@@ -405,7 +399,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 Sci-Forest
+    		&copy; 2018 Yang&#39;s Garden
     	</div>
       	<div class="footer-right">
       		<a href="http://yangli.name/" target="_blank">Maintained by Yang</a>
