@@ -6,14 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 计算生物学 | Yang&#39;s Garden</title>
+  <title>基因突变的寻找和功能评估 | Yang&#39;s Garden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Yang&#39;s Garden">
-<meta property="og:url" content="http://yoursite.com/tags/计算生物学/page/2/index.html">
+  <meta name="description" content="二代测序使寻找基因突变变得更容易了，科研者可以很方便地获得任何个体的整个基因组范围内的突变。但是医学问题并没有因此得到解决，因为存在大量无关紧要的突变，这是基因多样性的一种表现，而非病理性的异常。此外对于肿瘤疾病而言，基因组上存在大量的突变，筛选关键突变成为重中之重，无论对于病因学还是基因靶向治疗而言都是必需的。">
+<meta name="keywords" content="计算生物学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基因突变的寻找和功能评估">
+<meta property="og:url" content="http://yoursite.com/2018/06/01/20180601mutationsig/index.html">
 <meta property="og:site_name" content="Yang&#39;s Garden">
+<meta property="og:description" content="二代测序使寻找基因突变变得更容易了，科研者可以很方便地获得任何个体的整个基因组范围内的突变。但是医学问题并没有因此得到解决，因为存在大量无关紧要的突变，这是基因多样性的一种表现，而非病理性的异常。此外对于肿瘤疾病而言，基因组上存在大量的突变，筛选关键突变成为重中之重，无论对于病因学还是基因靶向治疗而言都是必需的。">
+<meta property="og:image" content="http://yoursite.com/2018/06/01/20180601mutationsig/lolliplot.gif">
+<meta property="og:image" content="http://yoursite.com/2018/06/01/20180601mutationsig/mutspectrum.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/01/20180601mutationsig/tmb.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/01/20180601mutationsig/oncoplot.png">
+<meta property="og:updated_time" content="2018-11-22T17:09:55.025Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yang&#39;s Garden">
+<meta name="twitter:title" content="基因突变的寻找和功能评估">
+<meta name="twitter:description" content="二代测序使寻找基因突变变得更容易了，科研者可以很方便地获得任何个体的整个基因组范围内的突变。但是医学问题并没有因此得到解决，因为存在大量无关紧要的突变，这是基因多样性的一种表现，而非病理性的异常。此外对于肿瘤疾病而言，基因组上存在大量的突变，筛选关键突变成为重中之重，无论对于病因学还是基因靶向治疗而言都是必需的。">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/01/20180601mutationsig/lolliplot.gif">
   
     <link rel="alternative" href="/atom.xml" title="Yang&#39;s Garden" type="application/atom+xml">
   
@@ -179,36 +189,110 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20180601mutationsig" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      基因突变的寻找和功能评估
+    </h1>
+  
+
+        
+        <a href="/2018/06/01/20180601mutationsig/" class="archive-article-date">
+  	<time datetime="2018-06-01T13:43:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-01</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>二代测序使寻找基因突变变得更容易了，科研者可以很方便地获得任何个体的整个基因组范围内的突变。但是医学问题并没有因此得到解决，因为存在大量无关紧要的突变，这是基因多样性的一种表现，而非病理性的异常。此外对于肿瘤疾病而言，基因组上存在大量的突变，筛选关键突变成为重中之重，无论对于病因学还是基因靶向治疗而言都是必需的。<br><img src="/2018/06/01/20180601mutationsig/lolliplot.gif" alt=""><br><a id="more"></a><br>基因突变的寻找和功能评估的流程如下：</p>
+<h5 id="Step-1-寻找突变"><a href="#Step-1-寻找突变" class="headerlink" title="Step 1: 寻找突变"></a>Step 1: 寻找突变</h5><p>寻找突变的工具Mutation Calling工具:<br>GATK4，这是最为常用的<br>Varscan<br>SomaticSniper<br>Strelka</p>
+<h5 id="Step-2-突变的重要性"><a href="#Step-2-突变的重要性" class="headerlink" title="Step 2: 突变的重要性"></a>Step 2: 突变的重要性</h5><ul>
+<li>基于疾病数据库进行注释: 看该突变是否被数据库收录，如OMIM、COSMIC等</li>
+<li>基于数据本身统计特征: 依赖于群体的数据，多数依赖于肿瘤-正常组织配对设计<ul>
+<li>MutSig/MutSigCV: 统计突变频率高于基因组背景突变频率的基因，以此发现驱动基因。基于MATLAB的工具</li>
+<li>MSEA: 通过分析突变热点区域(Mutation hotspot region)发现候选驱动基因</li>
+</ul>
+</li>
+<li>基于DNA序列的进化保守性: <ul>
+<li>SIFT: 根据序列的保守性预测突变对蛋白质功能的影响。保守性越大，该位点功能越重要，突变的危害越大。而保守性数据基于PSI-BLAST对同源序列比对的结果。</li>
+</ul>
+</li>
+<li>基于DNA序列的基因组注释:<ul>
+<li>ANNOVAR: 能够确定突变是否导致蛋白质编码变化以及受影响的氨基酸,也能识别特定基因组区域的variants,如保守性区域,TFBS,DHS,组蛋白结合修饰区域。</li>
+<li>Oncotator: ANNOVAR的竞争者</li>
+<li>SnpEff:</li>
+<li>VEP:</li>
+</ul>
+</li>
+<li>基于蛋白质的结构和功能: (同时也考虑了DNA序列的特征)<ul>
+<li>PolyPhen: 除了序列本身的保守性外，还参考突变对蛋白质三维结构和功能的影响。</li>
+<li>STRUM: 预测突变对蛋白质折叠稳定性的影响</li>
+<li>CanDra: 基于蛋白质结构、进化和基因特征。参考了COSMIC数据库</li>
+<li>MutationTaster: 基于蛋白质结构、突变率、OMIM数据库、HGMD数据库</li>
+<li>ActiveDriver:基于蛋白质的活跃区，如信号位点、结构域、调控区域等</li>
+<li>CanBind: 寻找突变高发的一些蛋白质结合区</li>
+<li>SGDriver: 基于蛋白结构</li>
+</ul>
+</li>
+<li>基于DNA序列/蛋白质的边缘效应: 是否影响蛋白质与其它蛋白质的结合、转录因子与DNA的结合、miRNA与mRNA的结合</li>
+<li>基于生物学通路:<ul>
+<li>Pathscan</li>
+<li>CanPredict</li>
+<li>TransFIC</li>
+<li>FunSeq2</li>
+<li>SuSpect</li>
+</ul>
+</li>
+</ul>
+<h5 id="Step-3-大量突变的整体特征"><a href="#Step-3-大量突变的整体特征" class="headerlink" title="Step 3: 大量突变的整体特征"></a>Step 3: 大量突变的整体特征</h5><ul>
+<li>突变特征谱(Mutation signature): C&gt;A、C&gt;G、C&gt;T、T&gt;A、T&gt;C、T&gt;G划分共6种不同的突变形式，加上上下游的碱基，共4<em>6</em>4=96种<br><img src="/2018/06/01/20180601mutationsig/mutspectrum.png" alt=""></li>
+<li>肿瘤突变负荷(Tumor mutation burden, TMB): 基因组上每百万碱基中，发生在体细胞编码区碱基的替换或者缺失、增加的事件数。<br><img src="/2018/06/01/20180601mutationsig/tmb.png" alt=""></li>
+<li>高频突变(基因)、驱动基因: 寻找突变频率显著高于背景突变频率的基因，并结合突变热点、功能、进化保守性，筛选高频突变基因，锁定driver Gene范围。软件如MutSigCV<br><img src="/2018/06/01/20180601mutationsig/oncoplot.png" alt=""><br>此外还有高频拷贝数变异分析、融合基因分析.</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/payzhi.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/paywei.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/01/20170601computationbio/" class="archive-article-date">
-  	<time datetime="2017-06-01T13:03:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/01/20170601computationbio/">“所有的生物学都是计算生物学“</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -220,374 +304,104 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/15/20170501cygwin/" class="archive-article-date">
-  	<time datetime="2017-05-15T10:19:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/15/20170501cygwin/">通过鼠标右键进入cygwin，并自动打开当前文件夹</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/21/20170121uncertainty/" class="archive-article-date">
-  	<time datetime="2017-01-21T09:43:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/21/20170121uncertainty/">衡量不确定性(variance和entropy)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/02/20161002emboss/" class="archive-article-date">
-  	<time datetime="2016-10-02T05:46:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/02/20161002emboss/">EMBOSS:序列处理的小工具集合</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/06/01/20180601mutationsig/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/12/20160712drawpeak/" class="archive-article-date">
-  	<time datetime="2016-07-12T03:44:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-12</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/12/20160712drawpeak/">MATLAB画peaks(滤波器法)</a>
-    </h1>
+  
+    <a href="/2018/03/03/20180303mlingenome/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深度学习在基因组学中的应用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/11/20160711chipseqpeak/" class="archive-article-date">
-  	<time datetime="2016-07-11T12:54:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/11/20160711chipseqpeak/">ChIP-seq中peak的形状</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/08/20160708dbsnp/" class="archive-article-date">
-  	<time datetime="2016-07-08T11:19:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/08/20160708dbsnp/">NCBI dbSNP vcf文件整理并建库</a>
-    </h1>
-  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/18/20160815seqfeature/" class="archive-article-date">
-  	<time datetime="2016-06-18T15:53:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/18/20160815seqfeature/">(命令行方式)基因组Sequence和Feature(Range)的操作和转换</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/15/20160610parallel/" class="archive-article-date">
-  	<time datetime="2016-06-15T13:52:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/15/20160610parallel/">HPC:并行计算(Parallel Computing)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/06/20160606website/" class="archive-article-date">
-  	<time datetime="2016-06-06T10:39:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/06/20160606website/">域名解析时的名词</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/计算生物学/">&laquo; Prev</a><a class="page-number" href="/tags/计算生物学/">1</a><span class="page-number current">2</span><a class="page-number" href="/tags/计算生物学/page/3/">3</a><a class="page-number" href="/tags/计算生物学/page/4/">4</a><a class="extend next" rel="next" href="/tags/计算生物学/page/3/">Next &raquo;</a>
-    </nav>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -611,9 +425,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
