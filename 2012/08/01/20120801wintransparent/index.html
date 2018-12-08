@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>flask建站的第一个例子 | Yang&#39;s Garden</title>
+  <title>Python调用WinAPI把窗口透明 | Yang&#39;s Garden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Flask同Django一样，是基于Python的web框架。Flask很“轻”，非常适用于开发web服务的API。这里的一个例子是所有人第一次学习flask用的。对我而言，它的用途是快速建立小巧的生信站点或在线API，所以URL和对应的视图函数的返回值是我最为关注的。">
+  <meta name="description" content="有时需要某些软件的窗体变透明，可以通过调用WinAPI实现。Python也可以调用WinAPI。下面代码备用。">
 <meta name="keywords" content="计算生物学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flask建站的第一个例子">
-<meta property="og:url" content="http://yoursite.com/2017/02/03/20170203flask/index.html">
+<meta property="og:title" content="Python调用WinAPI把窗口透明">
+<meta property="og:url" content="http://yoursite.com/2012/08/01/20120801wintransparent/index.html">
 <meta property="og:site_name" content="Yang&#39;s Garden">
-<meta property="og:description" content="Flask同Django一样，是基于Python的web框架。Flask很“轻”，非常适用于开发web服务的API。这里的一个例子是所有人第一次学习flask用的。对我而言，它的用途是快速建立小巧的生信站点或在线API，所以URL和对应的视图函数的返回值是我最为关注的。">
-<meta property="og:updated_time" content="2018-12-08T12:25:49.892Z">
+<meta property="og:description" content="有时需要某些软件的窗体变透明，可以通过调用WinAPI实现。Python也可以调用WinAPI。下面代码备用。">
+<meta property="og:image" content="http://yoursite.com/2012/08/01/20120801wintransparent/window.png">
+<meta property="og:updated_time" content="2018-12-08T13:41:07.596Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="flask建站的第一个例子">
-<meta name="twitter:description" content="Flask同Django一样，是基于Python的web框架。Flask很“轻”，非常适用于开发web服务的API。这里的一个例子是所有人第一次学习flask用的。对我而言，它的用途是快速建立小巧的生信站点或在线API，所以URL和对应的视图函数的返回值是我最为关注的。">
+<meta name="twitter:title" content="Python调用WinAPI把窗口透明">
+<meta name="twitter:description" content="有时需要某些软件的窗体变透明，可以通过调用WinAPI实现。Python也可以调用WinAPI。下面代码备用。">
+<meta name="twitter:image" content="http://yoursite.com/2012/08/01/20120801wintransparent/window.png">
   
     <link rel="alternative" href="/atom.xml" title="Yang&#39;s Garden" type="application/atom+xml">
   
@@ -184,32 +186,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20170203flask" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20120801wintransparent" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      flask建站的第一个例子
+      Python调用WinAPI把窗口透明
     </h1>
   
 
         
-        <a href="/2017/02/03/20170203flask/" class="archive-article-date">
-  	<time datetime="2017-02-03T12:17:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-03</time>
+        <a href="/2012/08/01/20120801wintransparent/" class="archive-article-date">
+  	<time datetime="2012-08-01T13:34:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2012-08-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Flask同Django一样，是基于Python的web框架。Flask很“轻”，非常适用于开发web服务的API。这里的一个例子是所有人第一次学习flask用的。对我而言，它的用途是快速建立小巧的生信站点或在线API，所以URL和对应的视图函数的返回值是我最为关注的。</p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import flask</div><div class="line">app = flask.Flask(__name__)</div></pre></td></tr></table></figure>
-<h5 id="简单的URL"><a href="#简单的URL" class="headerlink" title="简单的URL"></a>简单的URL</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@app.route(&apos;/&apos;)       # route装饰器，负责连接URL和视图函数</div><div class="line">def hello1():</div><div class="line">    return &apos;Hello World!&apos;</div><div class="line">	# 复杂的返回值:</div><div class="line">	# return &apos;&apos;&apos;html scripts&apos;&apos;&apos;</div><div class="line">	# return flask.render_template(&apos;index.html&apos;,name=&apos;test&apos;)  # 基于Jinja2模板引擎</div><div class="line">	# return flask.redirect(&apos;http://www.example.com&apos;) # 可以这样定义返回值的URL</div><div class="line">          url_for(&apos;index&apos;)  # website/index</div><div class="line">          url_for(&apos;user&apos;,name=&apos;john&apos;) # website/user/john</div><div class="line">          url_for(&apos;index&apos;,page=2)   	# website/?page=2</div><div class="line">	# return response # 这样定义reponse：</div><div class="line">          response=flask.make_response(&quot;Hello world&lt;&gt;&quot;)</div><div class="line">          response.set_cookie(&quot;item&quot;,&quot;value&quot;)</div></pre></td></tr></table></figure>
-<h5 id="复杂的URL和带有参数的URL"><a href="#复杂的URL和带有参数的URL" class="headerlink" title="复杂的URL和带有参数的URL"></a>复杂的URL和带有参数的URL</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@app.route(&apos;/get/&lt;x&gt;&apos;)</div><div class="line"># 可以/get/a&lt;x&gt;</div><div class="line"># 可以/get/&lt;int:x&gt; 或者 /get/&lt;float:x&gt;</div><div class="line"># 可以/get/&lt;path:x&gt;    path表示x里的/不作为分隔符</div><div class="line">def hello2(x):</div><div class="line">    codes</div></pre></td></tr></table></figure>
-<h5 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">app.run()        # app.run(port=80, debug=True)</div></pre></td></tr></table></figure>
+        <p>有时需要某些软件的窗体变透明，可以通过调用WinAPI实现。Python也可以调用WinAPI。下面代码备用。<br><img src="/2012/08/01/20120801wintransparent/window.png" alt=""><br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line">import win32gui</div><div class="line">import win32con</div><div class="line">import winxpgui</div><div class="line">import win32api</div><div class="line">import subprocess</div><div class="line">import time</div><div class="line"></div><div class="line">### get window from title</div><div class="line">##################################################</div><div class="line"># color transparent (does work for rgl)</div><div class="line">hwnd=win32gui.FindWindow(None,&quot;R Graphics: Device 2 (ACTIVE)&quot;)</div><div class="line">time.sleep(5)</div><div class="line">pos=win32api.GetCursorPos()</div><div class="line">dc=win32gui.GetWindowDC(hwnd)</div><div class="line">col=win32gui.GetPixel(dc,pos[0],pos[1])</div><div class="line">print(col)</div><div class="line">win32gui.SetWindowLong(hwnd,win32con.GWL_EXSTYLE,win32gui.GetWindowLong(hwnd,win32con.GWL_EXSTYLE)|win32con.WS_EX_LAYERED)</div><div class="line">winxpgui.SetLayeredWindowAttributes(hwnd,col,0,1)</div><div class="line">#################################################</div><div class="line"># alpha</div><div class="line">hwnd=win32gui.FindWindow(None,&quot;R Graphics: Device 2 (ACTIVE)&quot;)</div><div class="line">win32gui.SetWindowLong(hwnd,win32con.GWL_EXSTYLE,win32gui.GetWindowLong(hwnd,win32con.GWL_EXSTYLE)|win32con.WS_EX_LAYERED)</div><div class="line">winxpgui.SetLayeredWindowAttributes(hwnd,0,100,2)</div><div class="line">################################################</div><div class="line"># turn off</div><div class="line">hwnd=win32gui.FindWindow(None,&quot;R Graphics: Device 2 (ACTIVE)&quot;)</div><div class="line">win32gui.SetWindowLong(hwnd,win32con.GWL_EXSTYLE,win32gui.GetWindowLong(hwnd,win32con.GWL_EXSTYLE)|win32con.WS_EX_LAYERED)</div><div class="line">winxpgui.SetLayeredWindowAttributes(hwnd,0,0,0)</div><div class="line">###############################################</div><div class="line"></div><div class="line"># get window from position</div><div class="line">###############################################</div><div class="line"># color transparent (does work for rgl)</div><div class="line">time.sleep(3)</div><div class="line">pos=win32api.GetCursorPos()</div><div class="line">hwnd=win32gui.WindowFromPoint(pos)</div><div class="line">dc=win32gui.GetWindowDC(hwnd)</div><div class="line">col=win32gui.GetPixel(dc,pos[0],pos[1])</div><div class="line">print(col)</div><div class="line">win32gui.SetWindowLong(hwnd,win32con.GWL_EXSTYLE,win32gui.GetWindowLong(hwnd,win32con.GWL_EXSTYLE)|win32con.WS_EX_LAYERED)</div><div class="line">winxpgui.SetLayeredWindowAttributes(hwnd,col,0,1)</div><div class="line">###############################################</div><div class="line"># alpha</div><div class="line">time.sleep(3)</div><div class="line">pos=win32api.GetCursorPos()</div><div class="line">hwnd=win32gui.WindowFromPoint(pos)</div><div class="line">win32gui.SetWindowLong(hwnd,win32con.GWL_EXSTYLE,win32gui.GetWindowLong(hwnd,win32con.GWL_EXSTYLE)|win32con.WS_EX_LAYERED)</div><div class="line">winxpgui.SetLayeredWindowAttributes(hwnd,0,100,2)</div><div class="line">#############################################</div><div class="line"># turn off</div><div class="line">time.sleep(3)</div><div class="line">pos=win32api.GetCursorPos()</div><div class="line">hwnd=win32gui.WindowFromPoint(pos)</div><div class="line">win32gui.SetWindowLong(hwnd,win32con.GWL_EXSTYLE,win32gui.GetWindowLong(hwnd,win32con.GWL_EXSTYLE)|win32con.WS_EX_LAYERED)</div><div class="line">winxpgui.SetLayeredWindowAttributes(hwnd,0,0,0)</div></pre></td></tr></table></figure></p>
+
       
 
       
@@ -309,7 +307,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/02/03/20170203flask/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2012/08/01/20120801wintransparent/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -323,18 +321,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/01/20170301crispr/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2013/08/10/20130810distance/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CRISPR/Cas9学习小结
+          统计中的距离
         
       </div>
     </a>
   
   
-    <a href="/2017/01/21/20170121uncertainty/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">衡量不确定性(variance和entropy)</div>
+    <a href="/2012/07/10/20120710Lingshan/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">北京灵山</div>
       <i class="icon-circle-right"></i>
     </a>
   

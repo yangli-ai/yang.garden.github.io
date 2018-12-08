@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>flask建站的第一个例子 | Yang&#39;s Garden</title>
+  <title>统计中的距离 | Yang&#39;s Garden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Flask同Django一样，是基于Python的web框架。Flask很“轻”，非常适用于开发web服务的API。这里的一个例子是所有人第一次学习flask用的。对我而言，它的用途是快速建立小巧的生信站点或在线API，所以URL和对应的视图函数的返回值是我最为关注的。">
+  <meta name="description" content="距离是统计学中衡量事物间关系远近的指标，是任何高级统计学的基础。整理了衡量各种距离的指标。">
 <meta name="keywords" content="计算生物学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flask建站的第一个例子">
-<meta property="og:url" content="http://yoursite.com/2017/02/03/20170203flask/index.html">
+<meta property="og:title" content="统计中的距离">
+<meta property="og:url" content="http://yoursite.com/2013/08/10/20130810distance/index.html">
 <meta property="og:site_name" content="Yang&#39;s Garden">
-<meta property="og:description" content="Flask同Django一样，是基于Python的web框架。Flask很“轻”，非常适用于开发web服务的API。这里的一个例子是所有人第一次学习flask用的。对我而言，它的用途是快速建立小巧的生信站点或在线API，所以URL和对应的视图函数的返回值是我最为关注的。">
-<meta property="og:updated_time" content="2018-12-08T12:25:49.892Z">
+<meta property="og:description" content="距离是统计学中衡量事物间关系远近的指标，是任何高级统计学的基础。整理了衡量各种距离的指标。">
+<meta property="og:image" content="http://yoursite.com/2013/08/10/20130810distance/distance.png">
+<meta property="og:image" content="http://yoursite.com/2013/08/10/20130810distance/distance1.jpg">
+<meta property="og:image" content="http://yoursite.com/2013/08/10/20130810distance/distance2.jpg">
+<meta property="og:updated_time" content="2018-12-08T12:49:12.069Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="flask建站的第一个例子">
-<meta name="twitter:description" content="Flask同Django一样，是基于Python的web框架。Flask很“轻”，非常适用于开发web服务的API。这里的一个例子是所有人第一次学习flask用的。对我而言，它的用途是快速建立小巧的生信站点或在线API，所以URL和对应的视图函数的返回值是我最为关注的。">
+<meta name="twitter:title" content="统计中的距离">
+<meta name="twitter:description" content="距离是统计学中衡量事物间关系远近的指标，是任何高级统计学的基础。整理了衡量各种距离的指标。">
+<meta name="twitter:image" content="http://yoursite.com/2013/08/10/20130810distance/distance.png">
   
     <link rel="alternative" href="/atom.xml" title="Yang&#39;s Garden" type="application/atom+xml">
   
@@ -184,32 +188,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-20170203flask" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-20130810distance" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      flask建站的第一个例子
+      统计中的距离
     </h1>
   
 
         
-        <a href="/2017/02/03/20170203flask/" class="archive-article-date">
-  	<time datetime="2017-02-03T12:17:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-03</time>
+        <a href="/2013/08/10/20130810distance/" class="archive-article-date">
+  	<time datetime="2013-08-10T12:37:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-08-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Flask同Django一样，是基于Python的web框架。Flask很“轻”，非常适用于开发web服务的API。这里的一个例子是所有人第一次学习flask用的。对我而言，它的用途是快速建立小巧的生信站点或在线API，所以URL和对应的视图函数的返回值是我最为关注的。</p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import flask</div><div class="line">app = flask.Flask(__name__)</div></pre></td></tr></table></figure>
-<h5 id="简单的URL"><a href="#简单的URL" class="headerlink" title="简单的URL"></a>简单的URL</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@app.route(&apos;/&apos;)       # route装饰器，负责连接URL和视图函数</div><div class="line">def hello1():</div><div class="line">    return &apos;Hello World!&apos;</div><div class="line">	# 复杂的返回值:</div><div class="line">	# return &apos;&apos;&apos;html scripts&apos;&apos;&apos;</div><div class="line">	# return flask.render_template(&apos;index.html&apos;,name=&apos;test&apos;)  # 基于Jinja2模板引擎</div><div class="line">	# return flask.redirect(&apos;http://www.example.com&apos;) # 可以这样定义返回值的URL</div><div class="line">          url_for(&apos;index&apos;)  # website/index</div><div class="line">          url_for(&apos;user&apos;,name=&apos;john&apos;) # website/user/john</div><div class="line">          url_for(&apos;index&apos;,page=2)   	# website/?page=2</div><div class="line">	# return response # 这样定义reponse：</div><div class="line">          response=flask.make_response(&quot;Hello world&lt;&gt;&quot;)</div><div class="line">          response.set_cookie(&quot;item&quot;,&quot;value&quot;)</div></pre></td></tr></table></figure>
-<h5 id="复杂的URL和带有参数的URL"><a href="#复杂的URL和带有参数的URL" class="headerlink" title="复杂的URL和带有参数的URL"></a>复杂的URL和带有参数的URL</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@app.route(&apos;/get/&lt;x&gt;&apos;)</div><div class="line"># 可以/get/a&lt;x&gt;</div><div class="line"># 可以/get/&lt;int:x&gt; 或者 /get/&lt;float:x&gt;</div><div class="line"># 可以/get/&lt;path:x&gt;    path表示x里的/不作为分隔符</div><div class="line">def hello2(x):</div><div class="line">    codes</div></pre></td></tr></table></figure>
-<h5 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">app.run()        # app.run(port=80, debug=True)</div></pre></td></tr></table></figure>
+        <p>距离是统计学中衡量事物间关系远近的指标，是任何高级统计学的基础。整理了衡量各种距离的指标。<br><img src="/2013/08/10/20130810distance/distance.png" alt=""><br><a id="more"></a><br><img src="/2013/08/10/20130810distance/distance1.jpg" alt=""><br><img src="/2013/08/10/20130810distance/distance2.jpg" alt=""></p>
+
       
 
       
@@ -309,7 +309,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/02/03/20170203flask/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2013/08/10/20130810distance/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -323,18 +323,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/01/20170301crispr/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2013/08/31/20130831data/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CRISPR/Cas9学习小结
+          为数据分析的自由者而准备：Excel之上的MATLAB, R语言和Python
         
       </div>
     </a>
   
   
-    <a href="/2017/01/21/20170121uncertainty/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">衡量不确定性(variance和entropy)</div>
+    <a href="/2012/08/01/20120801wintransparent/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python调用WinAPI把窗口透明</div>
       <i class="icon-circle-right"></i>
     </a>
   
