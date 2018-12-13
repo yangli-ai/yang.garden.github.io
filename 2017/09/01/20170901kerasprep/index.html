@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Yang&#39;s Garden</title>
+  <title>Keras参考 | Yang&#39;s Garden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Yang&#39;s Garden">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="模型建立时注意input_shape,即张量的shape，都为tuple类型(不可以是n，即int类型)。一维张量的shape为(n, ),此时可以用input_dim=n代替而输入为2D/3D张量(samples|batch, input_shape); batch为1个或多个sample">
+<meta name="keywords" content="计算生物学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Keras参考">
+<meta property="og:url" content="http://yoursite.com/2017/09/01/20170901kerasprep/index.html">
 <meta property="og:site_name" content="Yang&#39;s Garden">
+<meta property="og:description" content="模型建立时注意input_shape,即张量的shape，都为tuple类型(不可以是n，即int类型)。一维张量的shape为(n, ),此时可以用input_dim=n代替而输入为2D/3D张量(samples|batch, input_shape); batch为1个或多个sample">
+<meta property="og:updated_time" content="2018-12-13T06:42:21.586Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yang&#39;s Garden">
+<meta name="twitter:title" content="Keras参考">
+<meta name="twitter:description" content="模型建立时注意input_shape,即张量的shape，都为tuple类型(不可以是n，即int类型)。一维张量的shape为(n, ),此时可以用input_dim=n代替而输入为2D/3D张量(samples|batch, input_shape); batch为1个或多个sample">
   
     <link rel="alternative" href="/atom.xml" title="Yang&#39;s Garden" type="application/atom+xml">
   
@@ -179,274 +184,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-20170910MD" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-20170901kerasprep" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/10/20170910MD/">分子动力学模拟时的软件和文件格式</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/10/20170910MD/" class="archive-article-date">
-  	<time datetime="2017-09-10T15:44:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我学习和使用分子动力学模拟知识，是为了探索环境污染物的毒理学效应机制。偶尔看一下下面罗列的文件格式，可以如同过电影一样回顾做分子动力学模拟时用到知识点和技巧。包括从处理小分子的Gaussian到模拟的Amber和Gromacs。通过这些工具，可以模拟并观察“环境有机污染物”和“蛋白质”以受体-配体模式相互作用的微观机制。<br><img src="/2017/09/10/20170910MD/a.png" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2017/09/10/20170910MD/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/10/20170910MD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20170902quantum" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/02/20170902quantum/">研究小分子与生物大分子的结合:量子化学方法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/02/20170902quantum/" class="archive-article-date">
-  	<time datetime="2017-09-02T10:40:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>研究小分子和生物学大分子的结合或相互作用，不外乎两种方式：以共价方式结合，以配体-受体方式结合。前者涉及到了化学键的断裂和生成，需要考虑化学知识。量子化学可帮助理解这种结合方式，所以这段时间参加了几次workshop。逐渐建立自己的量子化学知识体系。至于配体-受体结合方式，涉及到氢键、范德华力、库仑力等弱相互作用，多用分子力学知识处理。<br><img src="/2017/09/02/20170902quantum/quantum.jpg" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2017/09/02/20170902quantum/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/02/20170902quantum/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20170901gmxprep" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/01/20170901gmxprep/">Gromacs参考</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/01/20170901gmxprep/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:48:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Gromacs常用命令参考<br>!&lt;–more–&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gmx pdb2gmx  -f x.pdb  -p x.top    -o x.gro   -ignh</div><div class="line">    -inter		interactive selection, instead of charged</div><div class="line"> 		-ter -asp -glu -lys -arg -his -gln -ss 是否质子化|电荷，二硫键</div></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">gmx editconf -f x.gro -o x-PBC.gro  -d -box &amp; -center</div><div class="line">    # -o gmx file with box</div><div class="line">    tip: [通过editconf -f -o 可以将文件格式gro和pdb的转换]</div><div class="line">    -bt box type</div><div class="line">    -d minimum distance between box and mol, unit is nm</div><div class="line">    -c center</div><div class="line">    # 格式转换、box大小(-d; -box|angle配合)   蛋白质中心的位置(-center,默认为0 0 0)，</div><div class="line">    # 蛋白主轴方向(-princ&lt;否平行于x轴&gt;|align&lt;&gt;|aligncenter&lt;对准特定的向量&gt;)</div><div class="line">    # 平移(-translate)    旋转(-rotate)     缩放(-scale)，拆分(用index文件)，肽链加标记(-label,针对pdb)</div><div class="line">gmx editconf -f x.gro -o pdb</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gmx genconf -f -o -nbox a b c -dist x y z -rot</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gmx editconf -f gro|pdb -o gro|pdb  #也可以输入和输出pdb! 对分或者指定的部分任何几何操作!</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gmx solvate  -cp|box -cs  # (空)盒子里插入溶剂！gmx solvate -ci spc216 -box 2 2 2 -o h2o.gro</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gmx insert-molecules  -f|-box -ci  -nmol   	#(空)盒子里插入pdb|gro小分子!!</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gmx genion  -s -p -pname -nname -conc -neutral   #空盒子里部分溶剂分子替换为小分子!!</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gmx grompp -f em-vac-pme.mdp -c fws-PBC.gro -p fws.top -o em-vac.tpr  -t 续跑</div><div class="line">将上面提到的四种文件组合生成tpr文件，也就是top + gro + mdp + ndx = tpr</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gmx mdrun -v -deffnm em-vac                  -nt  4  -pin on</div><div class="line">    -v显示模拟过程中的信息</div><div class="line">    -deffnm指定默认的文件名称</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gmx solvate -cp -cs -o -p -maxsol|shell  -rot  水分子插入后，一定伴随top中[molecules]改变</div><div class="line">    -cp指定需要填充水分子的体系, 带模拟蛋白盒子</div><div class="line">    -cs指定使用SPC水模型进行填充, spc216是GROMACS统一的三位点水分子结构</div><div class="line">    -p修改体系的拓扑文件, top里加入相应水分子的物理参数 </div><div class="line">    -o指定填充水分子后的输出文件</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gmx grompp -f em-sol-pme.mdp -c fws-b4ion.gro -p fws.top -o ion.tpr</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gmx genion -s ion.tpr -p fws.top -o fws-b4em.gro -pname NA -nname CL -conc 0.15 -neutral</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/01/20170901gmxprep/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20170901amberprep" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/01/20170901amberprep/">Amber参考</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/01/20170901amberprep/" class="archive-article-date">
-  	<time datetime="2017-09-01T06:42:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>准备protein和ligand<br>!&lt;–more–&gt;</p>
-<p>#####ligand<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">acpype -i x.mol2 -n 0 # -n: net charge</div></pre></td></tr></table></figure></p>
-<h5 id="ligand"><a href="#ligand" class="headerlink" title="ligand"></a>ligand</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">branch 1 for BCC</div><div class="line">   antechamber -i raw.pdb|mol2 -fi pdb|mol2 -o lig.mol2 -fo mol2 -c resp|bcc</div><div class="line">   parmchk2    -i lig.mol2 -f mol2 -o lig.frcmod</div><div class="line">branch 2 for RESP</div><div class="line">   antechamber -i lig.mol2 -fi mol2 -o lig.in -fo gzmat</div><div class="line">   g092 lig.i</div><div class="line">   antechamber -i lig.out  -fi gout -o lig.prep -fo prepi -c resp|bcc</div><div class="line"></div><div class="line">branch 1 for Gromacs</div><div class="line">   directly copy charge from prep into itp file</div><div class="line">branch 2 for Amber (and then convert into Gromacs)</div><div class="line">   parmchk2    -i lig.prep -f prepi -o lig.frcmod</div><div class="line">   sleap #generate top and crd from mol2 and frcmod</div><div class="line">   acpype -p x.parmtop -x x.inpcrd -d -n 1  # -n: net charge  # after tleap</div></pre></td></tr></table></figure>
-<h5 id="protein-ligand"><a href="#protein-ligand" class="headerlink" title="protein (+ligand)"></a>protein (+ligand)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hand-edit pdb file</div><div class="line">pdb4amber -i old.pdb -o new.pdb -reduce -dry (remove water) (ambpdb)</div><div class="line">reduce</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">tleap命令:</div><div class="line">source leaprc.protein.ff14SB</div><div class="line">source leaprc.DNA.OL15</div><div class="line">source leaprc.RNA.OL3</div><div class="line">source leaprc.lipid17</div><div class="line">source leaprc.GLYCAM_06j</div><div class="line">source leaprc.gaff2</div><div class="line">source leaprc.water.tip3p   </div><div class="line"></div><div class="line">list</div><div class="line">check</div><div class="line">copy</div><div class="line">load/save+pdb/off/amberparams</div><div class="line"></div><div class="line">lig = loadmol2 lig.mol2       # must with charge antechamber -i mol2 -o mol2 -c bcc</div><div class="line">loadamberparams lig.frcmod    # 小分子立场参数缺失文件</div><div class="line">saveoff lig lig.lib</div><div class="line">saveamberparm lig lig.prmtop lig.inpcrd</div><div class="line"></div><div class="line">loadoff lig.lib</div><div class="line">loadamberparams lig.frcmod </div><div class="line"></div><div class="line">model= sequence &#123;ACE ALA NME&#125;</div><div class="line">  # ALA, ARG, ASN, ASP, CYS|CYX, GLU, GLN, GLY, HID|HIE|HIP, ILE,</div><div class="line">  # LEU, LYS, MET, PHE, PRO, SER, THR, TRP, TYR, VAL, N***, C***, </div><div class="line">  # DA, DT, DG, DC, RA, RU, RC, RG,</div><div class="line">edit model</div><div class="line"></div><div class="line">model=loadpdb x.pdb   #include ligand with the same name as lig.lib</div><div class="line">check|edit|combine model</div><div class="line">desc model</div><div class="line">desc model.1</div><div class="line">desc model.ALA</div><div class="line"></div><div class="line">bond model.1.SG  model.6.SG </div><div class="line">charge model </div><div class="line">addions model Na+ 0  </div><div class="line">solvatebox|solvateoct model TIP3PBOX 8.0 </div><div class="line"></div><div class="line">model3=combine &#123;model1 model2&#125;</div><div class="line">model4=copy model3</div><div class="line"></div><div class="line">saveamberparm model x.top x.crd</div><div class="line">savepdb model x.pdb</div><div class="line">quit</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># if convert top and crd into top and gro</div><div class="line">acpype -p x.parmtop -x x.inpcrd -d -n 1  # -n: net charge  # after tleap</div></pre></td></tr></table></figure>
-<h5 id="Nucleic-acid"><a href="#Nucleic-acid" class="headerlink" title="Nucleic acid"></a>Nucleic acid</h5><p>nab.exe:</p>
-<h5 id="MD"><a href="#MD" class="headerlink" title="MD"></a>MD</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sander -O -i em.mdin -p x.prmtop -c x.inpcrd -o em.mdout -r em.rst         </div><div class="line">sander -O -i pr.mdin -p x.prmtop -c em.rst   -o pr.mdout -r pr.rst         </div><div class="line">sander -O -i md.mdin -p x.prmtop -c md.rst   -o md.mdout -r md.rst -x md.crd</div></pre></td></tr></table></figure>
-<h5 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">ambpdb -p x.prmtop -c em.rst|crd &gt; em.pdb</div><div class="line">vmd</div><div class="line">process_mdout.perl</div><div class="line">cpptraj</div><div class="line">   parm   x.prmtop;  resinfo  atominfo</div><div class="line">   trajin  md.crd</div><div class="line">       distance</div><div class="line">       trajout  md.pdb</div><div class="line">   list actions</div><div class="line">   run</div><div class="line">pbsa</div></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/01/20170901amberprep/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20170901kerasprep" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/01/20170901kerasprep/">Keras参考</a>
+    <h1 class="article-title" itemprop="name">
+      Keras参考
     </h1>
   
 
@@ -460,72 +205,47 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>模型建立时注意input_shape,即张量的shape，都为tuple类型(不可以是n，即int类型)。一维张量的shape为(n, ),此时可以用input_dim=n代替而输入为2D/3D张量(samples|batch, input_shape); batch为1个或多个sample</p>
-        
-          <a class="article-more-a" href="/2017/09/01/20170901kerasprep/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">keras.dataset</div><div class="line">    .load_data(path)</div><div class="line">keras.preprocessing:  </div><div class="line">    .image</div><div class="line">    .text</div><div class="line">        .text_to_sequence|one_hot(=sklearn.LabelEncoder)|</div><div class="line">        .Tokenizer(分词并统计,fit_on_text|text_to_sequence|world_counts)</div><div class="line">    .sequence   </div><div class="line">        .pad_sequences(padding=&apos;pre|post&apos;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">keras.models</div><div class="line">    .Sequential</div><div class="line">    .Model</div><div class="line"></div><div class="line">load_model(filepath), model_from_json, load_weights(by_name=False)</div><div class="line">net1.save(filepath)</div><div class="line">net1.to_json(filepath)</div><div class="line">net1.save_weights(filename)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"># (None, m) or (None, m, n). None represents the dimension of sample size</div><div class="line">keras.layers.Dense(units,input_dim/shape,activation,kernel|bias_initializer|regularizer|constrains),</div><div class="line">    .Conv1D, MaxPooling1D, GlobalAveragePooling1D,</div><div class="line">    .Conv2D(filters,kernel_size,strides), MaxPooling2D,</div><div class="line">    .SimpleRNN, Embedding, Masking, LSTM, GRU，TimeDistributed  # embedding比one-hot更有效</div><div class="line">    .Flatten,Reshape,Dropout,Lambda(相当于没有参数的层),</div><div class="line">    .Merge(add,substract,average,concatenate)#首字母大写为类，小写为函数</div><div class="line"></div><div class="line">每个layer的属性和方法</div><div class="line">    .trainable=False</div><div class="line">    .input|output|input_shape|output_shape</div><div class="line">    .get_config()   .get|set_weights()</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">keras.activations(&apos;linear|relu|softmax&apos;)</div><div class="line">keras.initializers</div><div class="line">keras.regularizers</div><div class="line">keras.constraints</div><div class="line"></div><div class="line">keras.losses            MSE, binary_crossentropy, cateogrical_crossentropy</div><div class="line">keras.optimizers     SGD(lr=0.01,momentum=0.9,nesterov=True)</div><div class="line">keras.metrics</div><div class="line"></div><div class="line">keras.callbacks/Callback,TensorBoard,EarlyStopping,ReduceLROnPlateau,LearningRateScheduler</div><div class="line">keras.backend/as K</div><div class="line">keras.engine.topology    Layer 自定义layer的父类，另一种方法为Lambda</div><div class="line">keras.utils</div><div class="line">    .normalize.to_categorical(y_train, num_classes=)  plot_model</div><div class="line">    # to_categorical用于y(=sklearn.LabelEncoder+sklearn.OneHotEncoder)，one-hot用于作为x的word</div><div class="line">keras.applications</div><div class="line">    .resnet50|vgg16</div><div class="line">keras.wrapper</div><div class="line">    .scikit_learn(build_fn=net1,epochs, batch_size)</div></pre></td></tr></table></figure>
+<p><strong>例子1：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">from keras.models import Sequential,Model</div><div class="line">from keras.layers import Input,Lambda(K.sin)</div><div class="line">from keras.layers import Dense(units,input_dim=100/input_dim=(100,None),activation=&apos;relu|sigmoid&apos;)</div><div class="line">from keras.optimizers import SGD(lr),ADAM,RMEprop</div><div class="line">import keras.backend as K  #Lambda必需用K.sum等函数; 不能直接用sum，必需K.sum</div><div class="line">from keras.callbacks import Callback, TensorBoard, EarlyStopping</div><div class="line"></div><div class="line">net1=Sequential([Dense,Dense])</div><div class="line">net1.add(Dense(units,input_dim))</div><div class="line">net1.summary()   .get_config()  .inputs  .layers .outputs</div><div class="line">net1.compile(</div><div class="line">    loss=&apos;mse|categorical_crossentropy|binary_crossentropy&apos;,</div><div class="line">    optimizer=&apos;sgd|adam|rmsprop&apos;,</div><div class="line">    metrics=[&apos;accurary&apos;])</div><div class="line"></div><div class="line">net1.fit(x_train,y_train,batch_size=32, epochs=10,callbacks=None, validation_split=0.1) #10% is validation set</div><div class="line">net1.train_on_batch(x_batch,y_batch)</div><div class="line"></div><div class="line">net1.evaluate(x_test,y_test)</div><div class="line">net1.predict(x_new)</div></pre></td></tr></table></figure></p>
+<p><strong>例子2：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">inputs = Input(shape=(784,), name=)</div><div class="line">x = Dense(64, activation=&apos;relu&apos;, name=)(inputs)</div><div class="line">x = Dense(64, activation=&apos;relu&apos;)(x)</div><div class="line">predictions = Dense(10, activation=&apos;softmax&apos;)(x)</div><div class="line">net2=Model(inputs=inputs, outputs=predictions)</div><div class="line">net2.summary()</div><div class="line">net2.compile(loss=&apos;&apos;,optimizer=&apos;sgd|adam&apos;,metrics=[&apos;accuracy&apos;])</div><div class="line">net2.fit(x,y)</div><div class="line">net2.predict(x_new)</div><div class="line"></div><div class="line">net3=Model(inputs=net1.input, outputs=net1.get_layer(name).output)           outputs=net1.layers[0].output</div><div class="line">net3.predict(x_train)</div><div class="line">net4=K.function([net1.layers[0].input], [net1.layers[3].output])</div><div class="line">net4([x])[0]</div><div class="line"></div><div class="line">tb=TensorBoard(log_dir=&apos;./Graph&apos;,histogram_freq=0,write_graph=True,write_image=True)</div><div class="line"></div><div class="line">net1.fit(x_train,y_train,[validation_data=(x_test,y_test)],epochs,batch_size,callbacks=[tb]) </div><div class="line"># OR</div><div class="line">for i in range(N): </div><div class="line">   loss=net1.train_on_batch()</div><div class="line">   if i%10==0:</div><div class="line">        print(i,loss)</div></pre></td></tr></table></figure></p>
 
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/01/20170901kerasprep/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20170815md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/15/20170815md/">分子模拟(Molecular Simulation)以及量子力学与分子力学</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/15/20170815md/" class="archive-article-date">
-  	<time datetime="2017-08-15T13:52:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>对生物学的微观过程，可以进行计算机模拟，观察实验方法无法获得的微观机制信息。<br><img src="/2017/08/15/20170815md/md1.jpg" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2017/08/15/20170815md/#more">more >></a>
-        
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/payzhi.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/paywei.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -545,262 +265,83 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/15/20170815md/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/01/20170901kerasprep/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-20170801toxicology" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/01/20170801toxicology/">我在环境-基因交互作用研究上的关注方向</a>
-    </h1>
+    <a href="/2017/09/01/20170901amberprep/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Amber参考
+        
+      </div>
+    </a>
   
-
-        
-        <a href="/2017/08/01/20170801toxicology/" class="archive-article-date">
-  	<time datetime="2017-08-01T02:16:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>将在以后的时间里重点关注下面的这些方向，出于环境-基因交互作用这个主题，以及个人的兴趣。<br><img src="/2017/08/01/20170801toxicology/a.png" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2017/08/01/20170801toxicology/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">环境与基因</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/01/20170801toxicology/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
   
-    <article id="post-20170701epibook" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    <a href="/2017/08/15/20170815md/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">分子模拟(Molecular Simulation)以及量子力学与分子力学</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/04/20170701epibook/">两本科普读物《遗传的革命》和《垃圾DNA》</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/04/20170701epibook/" class="archive-article-date">
-  	<time datetime="2017-07-04T05:04:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>[本文中的图来自网络]<br>最近看了Nessa Carey写的两本书，《遗传的革命/The Epigenetics Revolution》和《垃圾DNA/Junk DNA》，中文版的，由第三军医大学遗传学教研室的几位老师翻译的。两本书虽然名义上是科普书，但与其它的科普读物不同。作者本人是该领域的专家，所以这两本书还是相当专业的，弥补了专业文献的不足，至少在我看来如此。从亚马逊的读者评论中看出，绝大部分读者只看到书中提及表观遗传学/epigenetics和垃圾DNA/junk DNA两种现象，并没有体会到作者在这两本书里阐明的该领域内涵。阅读文献，可以很详细地知道它们背后的分子生物学机制，但你无法从中了解该领域的发展历程，和专家们在思考问题时所展现出来的思维方式。而这些真正智慧性的东西无法通过专业文献获得。<br></p>
-        
-          <a class="article-more-a" href="/2017/07/04/20170701epibook/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">分子生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/04/20170701epibook/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20170101spaciotempral" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/18/20170101spaciotempral/">带着一种时空观去读西方文化书籍</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/18/20170101spaciotempral/" class="archive-article-date">
-  	<time datetime="2017-06-18T12:37:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一直喜欢中西对比着去读西方人文类的书籍，总会产生各种感慨。</p>
-<p>我们与西方人的世界观大不同。历史上如此，现在亦如此。第一幅图是美国和欧洲的世界地图。它们以大西洋为中心，美国和欧洲强国居于两边。第二幅图是中国和日本的世界地图，以太平洋为中心，仍能看到美国的影子。第三幅图，是国产的北极地图。上网搜索，前两者清晰版比比皆是，第三幅无论如何找不到清晰版的。很高兴遇见这个搜索结果!综合当前社会的各种变化，很欣喜我们终于有了一个有战略眼光的政府，几百年来的首次。<br><img src="/2017/06/18/20170101spaciotempral/1.jpg" alt="西方眼里的世界"></p>
-<p><center>西方人眼里的世界</center><br></p>
-        
-          <a class="article-more-a" href="/2017/06/18/20170101spaciotempral/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">人文与艺术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/18/20170101spaciotempral/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20170601computationbio" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/01/20170601computationbio/">“所有的生物学都是计算生物学“</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/01/20170601computationbio/" class="archive-article-date">
-  	<time datetime="2017-06-01T13:03:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>剑桥大学肿瘤研究所的Florian Markowetz，在17年3月的PLOS Biology上发表了一篇同名文章《All biology is computational biology》，为搞计算的人在生物研究中的贡献正名。Florian提到了大部分人对计算的看法，诸如文章署名时，搞计算的被放在后面。他也提到自己曾经的一次面试：被质疑缺乏对生物学的深度理解，和科研能力，被认为“过度依赖合作者”(即没有第一作者的文章。因为第一作者通常不是搞计算的人)。<br></p>
-        
-          <a class="article-more-a" href="/2017/06/01/20170601computationbio/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/01/20170601computationbio/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+</nav>
 
 
 
@@ -808,9 +349,26 @@
 
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -833,8 +391,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
