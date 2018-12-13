@@ -6,14 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Yang&#39;s Garden</title>
+  <title>GATK4简明用法 | Yang&#39;s Garden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Yang&#39;s Garden">
-<meta property="og:url" content="http://yoursite.com/archives/page/5/index.html">
+  <meta name="description" content="GATK4是最新的GATK版本，它在算法上进行了优化，运行速率得到提高，而且整合了picard。GATK4依然是用java 语言开发的，但使用方式上更加人性化，比如所有命令都是gatk cmd方式，这里的cmd是任何可以用的cmd。GATK4 的最佳实践给出了5套pipeline: Germline SNP/Indel, Somatic SNV/Indel, RNAseq SNP/Indel, G">
+<meta name="keywords" content="计算生物学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GATK4简明用法">
+<meta property="og:url" content="http://yoursite.com/2018/05/10/20180510gatk/index.html">
 <meta property="og:site_name" content="Yang&#39;s Garden">
+<meta property="og:description" content="GATK4是最新的GATK版本，它在算法上进行了优化，运行速率得到提高，而且整合了picard。GATK4依然是用java 语言开发的，但使用方式上更加人性化，比如所有命令都是gatk cmd方式，这里的cmd是任何可以用的cmd。GATK4 的最佳实践给出了5套pipeline: Germline SNP/Indel, Somatic SNV/Indel, RNAseq SNP/Indel, G">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/logo.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/library.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/library2.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/bam.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/vcf.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/type.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/bestpractice.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/germline.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/haplotypecaller.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/vqsr.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/anotate1.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/anotate2.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/anotate3.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/check.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/rnaseq.png">
+<meta property="og:image" content="http://yoursite.com/2018/05/10/20180510gatk/somatic.png">
+<meta property="og:updated_time" content="2018-12-13T06:05:44.821Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yang&#39;s Garden">
+<meta name="twitter:title" content="GATK4简明用法">
+<meta name="twitter:description" content="GATK4是最新的GATK版本，它在算法上进行了优化，运行速率得到提高，而且整合了picard。GATK4依然是用java 语言开发的，但使用方式上更加人性化，比如所有命令都是gatk cmd方式，这里的cmd是任何可以用的cmd。GATK4 的最佳实践给出了5套pipeline: Germline SNP/Indel, Somatic SNV/Indel, RNAseq SNP/Indel, G">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/10/20180510gatk/logo.png">
   
     <link rel="alternative" href="/atom.xml" title="Yang&#39;s Garden" type="application/atom+xml">
   
@@ -179,36 +201,141 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-20180510gatk" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/10/20160410cygwinsystem/" class="archive-article-date">
-  	<time datetime="2016-04-10T07:46:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/10/20160410cygwinsystem/">使用CYGWIN</a>
+    <h1 class="article-title" itemprop="name">
+      GATK4简明用法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/05/10/20180510gatk/" class="archive-article-date">
+  	<time datetime="2018-05-10T05:24:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>GATK4是最新的GATK版本，它在算法上进行了优化，运行速率得到提高，而且整合了picard。GATK4依然是用java 语言开发的，但使用方式上更加人性化，比如所有命令都是gatk cmd方式，这里的cmd是任何可以用的cmd。GATK4 的最佳实践给出了5套pipeline: Germline SNP/Indel, Somatic SNV/Indel, RNAseq SNP/Indel, Germline CNV, Somatic CNV。本文是前段时间参与Broad和Intel中国在北京的培训班上的精简记录，供自己参考用，主要是我所关注的SNV/Indel。<br><img src="/2018/05/10/20180510gatk/logo.png" alt=""><br><a id="more"></a></p>
+<h5 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h5><h6 id="建库library"><a href="#建库library" class="headerlink" title="建库library"></a>建库library</h6><p><img src="/2018/05/10/20180510gatk/library.png" alt=""><br><img src="/2018/05/10/20180510gatk/library2.png" alt=""><br>注意几个名字的理解：</p>
+<ul>
+<li>fragment修补:  末端补平、3‘加A、加接头(插有barcode)、PCR扩增(引入P5/P7)</li>
+<li>adaptor: 测序primer结合(Read 1 primer，Read 2 primer)，其中反向adaptor也是</li>
+<li>index barcode:</li>
+<li>P5/P7: flowcell表面结合(桥式扩增时两个都用，测序时之前切断P7)</li>
+</ul>
+<h6 id="BAM-SAM-file"><a href="#BAM-SAM-file" class="headerlink" title="BAM/SAM file"></a>BAM/SAM file</h6><p><img src="/2018/05/10/20180510gatk/bam.png" alt=""></p>
+<h6 id="VCF-file"><a href="#VCF-file" class="headerlink" title="VCF file"></a>VCF file</h6><p><img src="/2018/05/10/20180510gatk/vcf.png" alt=""></p>
+<h6 id="不同类型的variant"><a href="#不同类型的variant" class="headerlink" title="不同类型的variant"></a>不同类型的variant</h6><p><img src="/2018/05/10/20180510gatk/type.png" alt=""></p>
+<h5 id="Module-1-Data-Pre-processing"><a href="#Module-1-Data-Pre-processing" class="headerlink" title="Module 1: Data Pre-processing"></a>Module 1: Data Pre-processing</h5><p>Prepare mapped, cleaned and sorted BAM</p>
+<h6 id="Step-1-MAPPING"><a href="#Step-1-MAPPING" class="headerlink" title="Step 1: MAPPING"></a>Step 1: MAPPING</h6><p>BWA for DNA, STAR for RNA-seq</p>
+<h6 id="Step-2-Sort"><a href="#Step-2-Sort" class="headerlink" title="Step 2: Sort"></a>Step 2: Sort</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gatk SortSam  -I  -O</div></pre></td></tr></table></figure>
+<p><img src="/2018/05/10/20180510gatk/bestpractice.png" alt=""></p>
+<h6 id="Step-3-Mark-duplicates"><a href="#Step-3-Mark-duplicates" class="headerlink" title="Step 3: Mark duplicates"></a>Step 3: Mark duplicates</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gatk MarkDuplicates -I  -O</div></pre></td></tr></table></figure>
+<h6 id="Step-4-BQSR"><a href="#Step-4-BQSR" class="headerlink" title="Step 4: BQSR"></a>Step 4: BQSR</h6><p><strong>BaseRecalibrator</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gatk BaseRecalibrator -R ref.fasta -I sample.bam -O recal.table</div><div class="line">          -knownSites snps.vcf.gz -knownSites indels.vcf.gz</div><div class="line">OR        -O recal_2nd.table  -bqsr recal.table #generate the 2nd recal table</div></pre></td></tr></table></figure></p>
+<p><strong>ApplyBQSR</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">gatk ApplyBQSR -R ref.fasta -I sample.bam -O sample_bqsr.bam</div><div class="line">               -bqsr recal.table</div><div class="line">               -SQQ 10 -SQQ 20 -SQQ 30 -SQQ40 # bin quals</div><div class="line">               --emit_original_quals  # emit original quals(OQ) to OQ tag</div></pre></td></tr></table></figure></p>
+<p><strong>Tool:AnalyzeCovariates</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gatk AnalyzeCovariates -before recal.table -after recal_2nd.table -plots plots.pdf</div></pre></td></tr></table></figure></p>
+<p>Notes:<br>alt contigs in GRCh38; the unmapped bam workflow; RNA-seq mapping</p>
+<h5 id="Module-2-Best-Practice-for-Germiline-SNP-amp-InDel"><a href="#Module-2-Best-Practice-for-Germiline-SNP-amp-InDel" class="headerlink" title="Module 2: Best Practice for Germiline SNP &amp; InDel"></a>Module 2: Best Practice for Germiline SNP &amp; InDel</h5><p><img src="/2018/05/10/20180510gatk/germline.png" alt=""></p>
+<h6 id="Step-1-Call-variants-with-HaplotypeCaller-consolidate-joint-call-with-cohort"><a href="#Step-1-Call-variants-with-HaplotypeCaller-consolidate-joint-call-with-cohort" class="headerlink" title="Step 1: Call variants with HaplotypeCaller (consolidate/joint-call with cohort)"></a>Step 1: Call variants with HaplotypeCaller (consolidate/joint-call with cohort)</h6><p>Note: VCF和GVCF格式略不同。GVCF称为genomic VCF，里面含有Non-variant site信息，不仅仅是该样本中的SNV。相当于提前把坐标对齐了，方便后面joint-calling。包括四步操作:</p>
+<ul>
+<li>identify ActiveRegions</li>
+<li>assemble plausible haplotypes (local realignment, collect likely haplotypes, Smith-Waterman align)</li>
+<li>score haplotypes using PairHMM</li>
+<li>genotype each sample at each potential variant site</li>
+</ul>
+<p><img src="/2018/05/10/20180510gatk/haplotypecaller.png" alt=""></p>
+<ul>
+<li><p><strong>Default mode</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gatk HaplotypeCaller -R ref.fasta -I sample.bam -O sample.vcf</div><div class="line">-L 20:10000-11000</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Realignment mode and ensemble haplotypes:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gatk HaplotypeCaller -R ref.fasta -I sample.bam -O sample.vcf</div><div class="line">#可产生多个ArtificialHaplotype</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>GVCF mode</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gatk HaplotypeCaller -R ref.fasta -I sample.bam -O sample.g.vcf</div><div class="line">-ERC GVCF|BP_RESOLUTION -L 20:10000-11000</div><div class="line">#GVCF for block, BR_RESOLUTION for site</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>GenomicsDBImport</strong> Consolidate GVCFs<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gatk GenomicsDBImport -R ref.fasta -V sample1.g.vcf -V sample2.g.vcf -V sample3.g.vcf</div><div class="line">--genomicsdb-workspace-path output/trio</div><div class="line">--intervals 20:10000000-10200000 | chr20</div><div class="line">#run on a single interval at a time 每次只能一个interval，如果多个用WDL scripts</div><div class="line">or gatk CombineGVCFs -R ref.fasta -V sample1.g.vcf -V sample2.g.gvcf -O combined.g.vcf</div></pre></td></tr></table></figure></p>
+<p><strong>GenotypeGVCFs</strong> Jointly genotype<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gatk GenotypeGVCFs -R ref.fasta -V gendb://output/trio|combined.g.vcf -O final_varaint.vcf</div><div class="line">[-L 20:10000000-10200000 | chr20]</div></pre></td></tr></table></figure></p>
+<h6 id="Step-2-Filter-low-quality"><a href="#Step-2-Filter-low-quality" class="headerlink" title="Step 2: Filter (low quality)"></a>Step 2: Filter (low quality)</h6><p>to balance sensitivity and specifity.<br>two filtering approaches:</p>
+<ul>
+<li>Hard-filters using binary thresholds: Applicable to all BUT requires expertise to define appropriately</li>
+<li>Variant “recalibration” using machine learning: More powerful BUT requires well-curated known resources</li>
+</ul>
+<p><strong>VQSR</strong>: SNP and InDel must be separately handled<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">gatk VariantRecalibrator -R ref.fasta -V raw.SNPs.vcf -resource [tags]:filename.vcf</div><div class="line">-an DP -an QD -an FS -an MQRankSum -mode SNP </div><div class="line">-recal-file raws.SNPs.recal </div><div class="line">-tranches-file raw.SNPs.tranches </div><div class="line">-rescript-file recal.plots.R</div><div class="line"># tags can be hapmap, 1000G, omni, dbsnp</div><div class="line"></div><div class="line">gatk ApplyVQSR -R ref.fasta -V raw.vcf -mode SNP </div><div class="line">-recal-file raw.SNPs.recal -tranches-file raw.SNPs.tranches </div><div class="line">-O recal.SNPs.vcf </div><div class="line">-ts-filter-level 99.0</div></pre></td></tr></table></figure></p>
+<p><img src="/2018/05/10/20180510gatk/vqsr.png" alt=""></p>
+<h6 id="Step-3-Refinement"><a href="#Step-3-Refinement" class="headerlink" title="Step 3: Refinement"></a>Step 3: Refinement</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gatk CalculateGenotypePosteriors</div><div class="line">gatk VariantFiltration</div></pre></td></tr></table></figure>
+<p><strong>Subset callset</strong> (only SNP and only one sample)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gatk SelectVariants -R  ref.fasta -V trio.vcf.gz -sn NA12878 -select-type SNP </div><div class="line">--exclude-non-variants -O motherSNP.vcf.gz</div></pre></td></tr></table></figure></p>
+<h6 id="Step-4-Annotate"><a href="#Step-4-Annotate" class="headerlink" title="Step 4: Annotate"></a>Step 4: Annotate</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gatk VariantAnnotator -R ref.fasta -V output/motherSNP.vcf.gz </div><div class="line">--resource giab:resources/motherGIABsnps.vcf.gz -E giab.callsets </div><div class="line">-O output/motherSNP.giab.vcf.gz</div></pre></td></tr></table></figure>
+<p><strong>Tabulate annotation result and Visualize</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gatk VariantsToTable -R ref/ref.fasta -V output/motherSNP.giab.vcf.gz -F CHROM -F POS -F QUAL -F BaseQRankSum -F MQRankSum -F ReadPosRandSum -F DP -F DP_Orig \</div><div class="line">&gt; -F FS -F MQ -F SOR -F giab.callsets -GF GO -O output/motherSNP.giab.txt</div><div class="line">Visualize in R</div></pre></td></tr></table></figure></p>
+<p><strong>Filter variants with QUAL&lt;30 (&lt;10 by default)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gatk VariantFiltration -R ref/ref.fasta -V output/motherSNP.vcf.gz --filter-expression &quot;QUAL &lt;30&quot; --fil ter-name &quot;qual30&quot; -O output/motherSNPqual30.vcf.gz</div></pre></td></tr></table></figure></p>
+<p><img src="/2018/05/10/20180510gatk/anotate1.png" alt=""><br><img src="/2018/05/10/20180510gatk/anotate2.png" alt=""><br><img src="/2018/05/10/20180510gatk/anotate3.png" alt=""></p>
+<h6 id="Step-5-Callset-Evaluation"><a href="#Step-5-Callset-Evaluation" class="headerlink" title="Step 5: Callset Evaluation"></a>Step 5: Callset Evaluation</h6><h6 id="Step-6-check-with-IGV"><a href="#Step-6-check-with-IGV" class="headerlink" title="Step 6: check with IGV"></a>Step 6: check with IGV</h6><p><img src="/2018/05/10/20180510gatk/check.png" alt=""><br>Note: Use RNA-seq data (mapping with STAR)<br><img src="/2018/05/10/20180510gatk/rnaseq.png" alt=""></p>
+<h5 id="Module-3-Best-Practice-for-Somatic-SNP-amp-InDel"><a href="#Module-3-Best-Practice-for-Somatic-SNP-amp-InDel" class="headerlink" title="Module 3: Best Practice for Somatic SNP &amp; InDel"></a>Module 3: Best Practice for Somatic SNP &amp; InDel</h5><p>different from Germline variants, due to purity (contamination of N/T) and heterogeneity<br><img src="/2018/05/10/20180510gatk/somatic.png" alt=""></p>
+<p>######Step 1: Call variants with Mutect2 (denoise with normal match and PoN)</p>
+<p><strong>Tumor-only mode</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gatk Mutect2 -R ref/Homo_sapiens_assembly38.fasta</div><div class="line">-I bams/tumor.bam -tumor HCC1143_tumor</div><div class="line">--disable-read-filter MateOnSameContigOrNoMappedMateReadFilter</div><div class="line">-L resources/chr17plus.interval_list</div><div class="line">-O output/1_somatic_m2.vcf.gz</div></pre></td></tr></table></figure></p>
+<p><strong>Tumor with match mode (with realignment)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">gatk Mutect2 -R ref/Homo_sapiens_assembly38.fasta</div><div class="line">-I bams/tumor.bam -I bams/normal.bam</div><div class="line">-tumor HCC1143_tumor -normal HCC1143_normal</div><div class="line">-pon resources/chr17_m2pon.vcf.gz</div><div class="line">--germline-resource resources/chr17_af-only-gnomad_grch38.vcf.gz</div><div class="line">--af-of-alleles-not-in-resource 0.0000025</div><div class="line">--disable-read-filter MateOnSameContigOrNoMappedMateReadFilter</div><div class="line">-L resources/chr17plus.interval_list</div><div class="line">-O output/1_somatic_m2.vcf.gz</div><div class="line">-bamout output/2_tumor_normal_m2.bam</div></pre></td></tr></table></figure></p>
+<p>比对paired normal /a panel of normal /a germline population resource，更能发现真实的somatic SNV</p>
+<h6 id="Step-2-Filter-contamination"><a href="#Step-2-Filter-contamination" class="headerlink" title="Step 2: Filter(contamination)"></a>Step 2: Filter(contamination)</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">gatk GetPileupSummaries -I bams/tumor.bam </div><div class="line">-V resources/chr17_small_exac_common_3_grch38.vcf.gz </div><div class="line">-O sandbo x/7_tumor_getpileupsummaries.table</div><div class="line">gatk CalculateContamination -I output/7_tumor_getpileupsummaries.table </div><div class="line">-O output/8_tumor_calculationcontamination.table</div><div class="line">gatk FilterMutectCalls -V output/1_somatic_m2.vcf.gz </div><div class="line">--contamination-table output/8_tumor_calculationcontamination.table </div><div class="line">-O output/9_somatic_oncefiltered.vcf.gz</div></pre></td></tr></table></figure>
+<h6 id="Step3-check-with-IGV"><a href="#Step3-check-with-IGV" class="headerlink" title="Step3: check with IGV"></a>Step3: check with IGV</h6><h5 id="Commands-in-GATK"><a href="#Commands-in-GATK" class="headerlink" title="Commands in GATK"></a>Commands in GATK</h5><h6 id="Base-Calling"><a href="#Base-Calling" class="headerlink" title="Base Calling:"></a>Base Calling:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CheckIlluminaDirectory (P) </div><div class="line">CollectIlluminaBasecallingMetrics (P)</div><div class="line">CollectIlluminaLaneMetrics (P)</div><div class="line">ExtractIlluminaBarcodes (P)</div><div class="line">IlluminaBasecallsToFastq (P)</div><div class="line">IlluminaBasecallsToSam (P)</div><div class="line">MarkIlluminaAdapters (P)</div></pre></td></tr></table></figure>
+<h6 id="Copy-Number-Variant-Discovery"><a href="#Copy-Number-Variant-Discovery" class="headerlink" title="Copy Number Variant Discovery:"></a>Copy Number Variant Discovery:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">AnnotateIntervals</div><div class="line">CallCopyRatioSegments</div><div class="line">CombineSegmentBreakpoints</div><div class="line">CreateReadCountPanelOfNormals</div><div class="line">DenoiseReadCounts</div><div class="line">DetermineGermlineContigPloidy</div><div class="line">GermlineCNVCaller</div><div class="line">ModelSegments</div><div class="line">PlotDenoisedCopyRatios</div><div class="line">PlotModeledSegments</div><div class="line">PostprocessGermlineCNVCalls</div></pre></td></tr></table></figure>
+<h6 id="Coverage-Analysis"><a href="#Coverage-Analysis" class="headerlink" title="Coverage Analysis:"></a>Coverage Analysis:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">ASEReadCounter</div><div class="line">CollectAllelicCounts</div><div class="line">CollectReadCounts</div><div class="line">CountBases</div><div class="line">CountBasesSpark</div><div class="line">CountReads</div><div class="line">CountReadsSpark</div><div class="line">GetPileupSummaries</div><div class="line">Pileup</div><div class="line">PileupSpark</div></pre></td></tr></table></figure>
+<h6 id="Diagnostics-and-Quality-Control"><a href="#Diagnostics-and-Quality-Control" class="headerlink" title="Diagnostics and Quality Control:"></a>Diagnostics and Quality Control:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">AccumulateVariantCallingMetrics (P)</div><div class="line">AnalyzeCovariates</div><div class="line">BamIndexStats (P)</div><div class="line">CalcMetadataSpark</div><div class="line">CalculateContamination</div><div class="line">CalculateReadGroupChecksum (P)</div><div class="line">CheckFingerprint (P)</div><div class="line">CheckPileup</div><div class="line">CheckTerminatorBlock (P)</div><div class="line">ClusterCrosscheckMetrics (P)</div><div class="line">CollectAlignmentSummaryMetrics (P)</div><div class="line">CollectBaseDistributionByCycle (P)</div><div class="line">CollectBaseDistributionByCycleSpark</div><div class="line">CollectGcBiasMetrics (P)</div><div class="line">CollectHiSeqXPfFailMetrics (P)</div><div class="line">CollectHsMetrics (P)</div><div class="line">CollectIndependentReplicateMetrics (P)</div><div class="line">CollectInsertSizeMetrics (P)</div><div class="line">CollectInsertSizeMetricsSpark</div><div class="line">CollectJumpingLibraryMetrics (P)</div><div class="line">CollectMultipleMetrics (P)</div><div class="line">CollectMultipleMetricsSpark</div><div class="line">CollectOxoGMetrics (P)</div><div class="line">CollectQualityYieldMetrics (P)</div><div class="line">CollectQualityYieldMetricsSpark</div><div class="line">CollectRawWgsMetrics (P)</div><div class="line">CollectRnaSeqMetrics (P)</div><div class="line">CollectRrbsMetrics (P)</div><div class="line">CollectSequencingArtifactMetrics (P)</div><div class="line">CollectTargetedPcrMetrics (P)</div><div class="line">CollectVariantCallingMetrics (P)</div><div class="line">CollectWgsMetrics (P)</div><div class="line">CollectWgsMetricsWithNonZeroCoverage (P)</div><div class="line">CompareBaseQualities</div><div class="line">CompareDuplicatesSpark</div><div class="line">CompareMetrics (P)</div><div class="line">CompareSAMs (P)</div><div class="line">ConvertSequencingArtifactToOxoG (P)</div><div class="line">CrosscheckFingerprints (P)</div><div class="line">CrosscheckReadGroupFingerprints (P)</div><div class="line">EstimateLibraryComplexity (P)</div><div class="line">EstimateLibraryComplexityGATK</div><div class="line">FlagStat</div><div class="line">FlagStatSpark</div><div class="line">GetSampleName</div><div class="line">MeanQualityByCycle (P)</div><div class="line">MeanQualityByCycleSpark</div><div class="line">QualityScoreDistribution (P)</div><div class="line">QualityScoreDistributionSpark</div><div class="line">ValidateSamFile (P)</div><div class="line">ViewSam (P)</div></pre></td></tr></table></figure>
+<h6 id="Intervals-Manipulation"><a href="#Intervals-Manipulation" class="headerlink" title="Intervals Manipulation:"></a>Intervals Manipulation:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">BedToIntervalList (P)</div><div class="line">IntervalListToBed (P)</div><div class="line">IntervalListTools (P)</div><div class="line">LiftOverIntervalList (P)</div><div class="line">PreprocessIntervals</div><div class="line">SplitIntervals</div></pre></td></tr></table></figure>
+<h6 id="Metagenomics"><a href="#Metagenomics" class="headerlink" title="Metagenomics:"></a>Metagenomics:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">PathSeqBuildKmers</div><div class="line">PathSeqBuildReferenceTaxonomy</div><div class="line">PathSeqBwaSpark</div><div class="line">PathSeqFilterSpark</div><div class="line">PathSeqPipelineSpark</div><div class="line">PathSeqScoreSpark</div></pre></td></tr></table></figure>
+<h6 id="Other"><a href="#Other" class="headerlink" title="Other:"></a>Other:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">CreateHadoopBamSplittingIndex</div><div class="line">FifoBuffer (P)</div><div class="line">GatherBQSRReports</div><div class="line">GatherTranches</div><div class="line">IndexFeatureFile</div><div class="line">ParallelCopyGCSDirectoryIntoHDFSSpark</div></pre></td></tr></table></figure>
+<h6 id="Read-Data-Manipulation"><a href="#Read-Data-Manipulation" class="headerlink" title="Read Data Manipulation:"></a>Read Data Manipulation:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">AddCommentsToBam (P)</div><div class="line">AddOrReplaceReadGroups (P)</div><div class="line">ApplyBQSR</div><div class="line">ApplyBQSRSpark</div><div class="line">BQSRPipelineSpark</div><div class="line">BamToBfq (P)</div><div class="line">BaseRecalibrator</div><div class="line">BaseRecalibratorSpark</div><div class="line">BaseRecalibratorSparkSharded</div><div class="line">BuildBamIndex (P)</div><div class="line">BwaAndMarkDuplicatesPipelineSpark</div><div class="line">BwaSpark</div><div class="line">CleanSam (P)</div><div class="line">ClipReads</div><div class="line">ConvertHeaderlessHadoopBamShardToBam</div><div class="line">DownsampleSam (P)</div><div class="line">ExtractOriginalAlignmentRecordsByNameSpark</div><div class="line">FastqToSam (P)</div><div class="line">FilterSamReads (P)</div><div class="line">FixMateInformation (P)</div><div class="line">FixMisencodedBaseQualityReads</div><div class="line">GatherBamFiles (P)</div><div class="line">LeftAlignIndels</div><div class="line">MarkDuplicates (P)</div><div class="line">MarkDuplicatesGATK</div><div class="line">MarkDuplicatesSpark</div><div class="line">MarkDuplicatesWithMateCigar (P)</div><div class="line">MergeBamAlignment (P)</div><div class="line">MergeSamFiles (P)</div><div class="line">PositionBasedDownsampleSam (P)</div><div class="line">PrintReads</div><div class="line">PrintReadsSpark</div><div class="line">ReorderSam (P)</div><div class="line">ReplaceSamHeader (P)</div><div class="line">RevertBaseQualityScores</div><div class="line">RevertOriginalBaseQualitiesAndAddMateCigar (P</div><div class="line">RevertSam (P)</div><div class="line">SamFormatConverter (P)</div><div class="line">SamToFastq (P)</div><div class="line">SetNmAndUqTags (P)</div><div class="line">SetNmMdAndUqTags (P)</div><div class="line">SimpleMarkDuplicatesWithMateCigar (P)</div><div class="line">SortSam (P)</div><div class="line">SortSamSpark</div><div class="line">SplitNCigarReads</div><div class="line">SplitReads</div><div class="line">SplitSamByLibrary (P)</div><div class="line">SplitSamByNumberOfReads (P)</div><div class="line">UmiAwareMarkDuplicatesWithMateCigar (P)</div><div class="line">UnmarkDuplicates</div></pre></td></tr></table></figure>
+<h6 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">BaitDesigner (P)</div><div class="line">BwaMemIndexImageCreator</div><div class="line">CreateSequenceDictionary (P)</div><div class="line">ExtractSequences (P)</div><div class="line">FindBadGenomicKmersSpark</div><div class="line">NonNFastaSize (P)</div><div class="line">NormalizeFasta (P)</div><div class="line">ScatterIntervalsByNs (P)</div></pre></td></tr></table></figure>
+<h6 id="Short-Variant-Discovery"><a href="#Short-Variant-Discovery" class="headerlink" title="Short Variant Discovery:"></a>Short Variant Discovery:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">CombineGVCFs</div><div class="line">GenomicsDBImport</div><div class="line">GenotypeGVCFs</div><div class="line">HaplotypeCaller</div><div class="line">HaplotypeCallerSpark</div><div class="line">Mutect2</div><div class="line">ReadsPipelineSpark</div></pre></td></tr></table></figure>
+<h6 id="Structural-Variant-Discovery"><a href="#Structural-Variant-Discovery" class="headerlink" title="Structural Variant Discovery:"></a>Structural Variant Discovery:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">DiscoverVariantsFromContigAlignmentsSAMSpark</div><div class="line">ExtractSVEvidenceSpark</div><div class="line">FindBreakpointEvidenceSpark</div><div class="line">StructuralVariationDiscoveryPipelineSpark</div><div class="line">SvDiscoverFromLocalAssemblyContigAlignmentsSp</div></pre></td></tr></table></figure>
+<h6 id="Variant-Evaluation-and-Refinement"><a href="#Variant-Evaluation-and-Refinement" class="headerlink" title="Variant Evaluation and Refinement:"></a>Variant Evaluation and Refinement:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">AnnotatePairOrientation</div><div class="line">AnnotateVcfWithBamDepth</div><div class="line">AnnotateVcfWithExpectedAlleleFraction</div><div class="line">CNNScoreVariants</div><div class="line">CNNVariantTrain</div><div class="line">CNNVariantWriteTensors</div><div class="line">CalculateGenotypePosteriors</div><div class="line">CalculateMixingFractions</div><div class="line">Concordance</div><div class="line">CountFalsePositives</div><div class="line">CountVariants</div><div class="line">CountVariantsSpark</div><div class="line">FilterVariantTranches</div><div class="line">FindMendelianViolations (P)</div><div class="line">Funcotator</div><div class="line">GenotypeConcordance (P)</div><div class="line">ValidateBasicSomaticShortMutations</div><div class="line">ValidateVariants</div><div class="line">VariantsToTable</div></pre></td></tr></table></figure>
+<h6 id="Variant-Filtering"><a href="#Variant-Filtering" class="headerlink" title="Variant Filtering:"></a>Variant Filtering:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ApplyVQSR</div><div class="line">CreateSomaticPanelOfNormals</div><div class="line">FilterByOrientationBias</div><div class="line">FilterMutectCalls</div><div class="line">FilterVcf (P)</div><div class="line">VariantFiltration</div><div class="line">VariantRecalibrator</div></pre></td></tr></table></figure>
+<h6 id="Variant-Manipulation"><a href="#Variant-Manipulation" class="headerlink" title="Variant Manipulation:"></a>Variant Manipulation:</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">FixVcfHeader (P)</div><div class="line">GatherVcfs (P)</div><div class="line">GatherVcfsCloud</div><div class="line">LiftoverVcf (P)</div><div class="line">MakeSitesOnlyVcf (P)</div><div class="line">MergeVcfs (P)</div><div class="line">PrintVariantsSpark</div><div class="line">RemoveNearbyIndels</div><div class="line">RenameSampleInVcf (P)</div><div class="line">SelectVariants</div><div class="line">SortVcf (P)</div><div class="line">SplitVcfs (P)</div><div class="line">UpdateVCFSequenceDictionary</div><div class="line">UpdateVcfSequenceDictionary (P)</div><div class="line">VariantAnnotator</div><div class="line">VcfFormatConverter (P)</div><div class="line">VcfToIntervalList (P)</div></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/payzhi.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/paywei.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -220,374 +347,113 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/01/20160401bash/" class="archive-article-date">
-  	<time datetime="2016-04-01T02:07:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/01/20160401bash/">Bash编程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/02/07/20160207bedrooms/" class="archive-article-date">
-  	<time datetime="2016-02-07T13:33:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/07/20160207bedrooms/">梵高的卧室(Van Gogh&#39;s Bedrooms)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">人文与艺术</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/01/20/20160120ahr/" class="archive-article-date">
-  	<time datetime="2016-01-20T07:18:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-01-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/20/20160120ahr/">AhR分子机制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">环境与基因</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/11/20151111psiblast/" class="archive-article-date">
-  	<time datetime="2015-11-11T13:56:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/11/20151111psiblast/">PSI-BLAST寻找同源蛋白</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/05/10/20180510gatk/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/10/20151110proteinsignature/" class="archive-article-date">
-  	<time datetime="2015-11-09T18:12:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-10</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/10/20151110proteinsignature/">蛋白质聚类和特征提取</a>
-    </h1>
+    <a href="/2018/06/01/20180601mutationsig/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          基因突变的寻找和功能评估
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/03/20180303mlingenome/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深度学习在基因组学中的应用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/10/12/20151012pah/" class="archive-article-date">
-  	<time datetime="2015-10-12T15:49:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/12/20151012pah/">环境因素:PAH和HAH</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">环境与基因</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/10/12/20151012nano/" class="archive-article-date">
-  	<time datetime="2015-10-12T13:58:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-10-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/12/20151012nano/">环境因素:Nanomaterial</a>
-    </h1>
-  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">环境与基因</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/09/20/20150920ppi/" class="archive-article-date">
-  	<time datetime="2015-09-20T06:17:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/09/20/20150920ppi/">蛋白质-DNA互作和蛋白质-蛋白质互作实验方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">分子生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/08/20150808gnuplot/" class="archive-article-date">
-  	<time datetime="2015-08-08T11:35:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/08/20150808gnuplot/">Gnuplot:一行命令迅速可视化数据</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/4/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/page/6/">6</a><a class="page-number" href="/archives/page/7/">7</a><a class="extend next" rel="next" href="/archives/page/6/">Next &raquo;</a>
-    </nav>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -611,8 +477,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
