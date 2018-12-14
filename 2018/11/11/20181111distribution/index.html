@@ -6,14 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Yang&#39;s Garden</title>
+  <title>PyMC3可用的概率分布 | Yang&#39;s Garden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Yang&#39;s Garden">
-<meta property="og:url" content="http://yoursite.com/page/4/index.html">
+  <meta name="description" content="本文总结了PyMC3里可用的分布，包括连续型分布和离散型分布。给出了它们的概率密度公式、统计指标和分布图，以方便选择合适的先验分布。资料来源于https://docs.pymc.io/api/distributions.html。">
+<meta name="keywords" content="计算生物学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyMC3可用的概率分布">
+<meta property="og:url" content="http://yoursite.com/2018/11/11/20181111distribution/index.html">
 <meta property="og:site_name" content="Yang&#39;s Garden">
+<meta property="og:description" content="本文总结了PyMC3里可用的分布，包括连续型分布和离散型分布。给出了它们的概率密度公式、统计指标和分布图，以方便选择合适的先验分布。资料来源于https://docs.pymc.io/api/distributions.html。">
+<meta property="og:image" content="http://yoursite.com/2018/11/11/20181111distribution/distribution.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/11/20181111distribution/Name-1.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/11/11/20181111distribution/Name-2.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/11/11/20181111distribution/Name-3.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/11/11/20181111distribution/Name-4.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/11/11/20181111distribution/Name-5.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/11/11/20181111distribution/Name-6.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/11/11/20181111distribution/Name-7.jpg">
+<meta property="og:updated_time" content="2018-12-14T07:30:23.895Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yang&#39;s Garden">
+<meta name="twitter:title" content="PyMC3可用的概率分布">
+<meta name="twitter:description" content="本文总结了PyMC3里可用的分布，包括连续型分布和离散型分布。给出了它们的概率密度公式、统计指标和分布图，以方便选择合适的先验分布。资料来源于https://docs.pymc.io/api/distributions.html。">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/11/20181111distribution/distribution.png">
   
     <link rel="alternative" href="/atom.xml" title="Yang&#39;s Garden" type="application/atom+xml">
   
@@ -179,95 +193,61 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-20160812moleculeprotein" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-20181111distribution" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/12/20160812moleculeprotein/">研究小分子与生物大分子的相互作用</a>
+    <h1 class="article-title" itemprop="name">
+      PyMC3可用的概率分布
     </h1>
   
 
         
-        <a href="/2016/08/12/20160812moleculeprotein/" class="archive-article-date">
-  	<time datetime="2016-08-11T17:20:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-12</time>
+        <a href="/2018/11/11/20181111distribution/" class="archive-article-date">
+  	<time datetime="2018-11-11T07:22:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>研究小分子(药物小分子和环境污染物)与生物大分子(蛋白质和DNA)之间的直接相互作用，有助于理解它们进入机体后的作用靶点、如何干扰生物大分子与其它小分子正常的相互作用、以及作为始发信号如何引发下游的分子生物学变化，这应该是各种生物学机制研究的根本。<br><img src="/2016/08/12/20160812moleculeprotein/moleculeprotein.png" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2016/08/12/20160812moleculeprotein/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">环境与基因</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        <p>本文总结了PyMC3里可用的分布，包括连续型分布和离散型分布。给出了它们的概率密度公式、统计指标和分布图，以方便选择合适的先验分布。资料来源于<a href="https://docs.pymc.io/api/distributions.html。" target="_blank" rel="external">https://docs.pymc.io/api/distributions.html。</a><br><img src="/2018/11/11/20181111distribution/distribution.png" alt=""><br><a id="more"></a><br><img src="/2018/11/11/20181111distribution/Name-1.jpg" alt=""><br><img src="/2018/11/11/20181111distribution/Name-2.jpg" alt=""><br><img src="/2018/11/11/20181111distribution/Name-3.jpg" alt=""><br><img src="/2018/11/11/20181111distribution/Name-4.jpg" alt=""><br><img src="/2018/11/11/20181111distribution/Name-5.jpg" alt=""><br><img src="/2018/11/11/20181111distribution/Name-6.jpg" alt=""><br><img src="/2018/11/11/20181111distribution/Name-7.jpg" alt=""></p>
 
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/08/12/20160812moleculeprotein/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20160712drawpeak" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/12/20160712drawpeak/">MATLAB画peaks(滤波器法)</a>
-    </h1>
-  
-
-        
-        <a href="/2016/07/12/20160712drawpeak/" class="archive-article-date">
-  	<time datetime="2016-07-12T03:44:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>以前试图用三维地形图可视化二维空间中任意点的取值，演示用。如同MATLAB中peak函数产生一个二维矩阵，用surf或者mesh可视化。但peak函数不能指定”峰”在什么位置，而手工设定某点为任意值时，该点与周围没有平滑的过度，特别是设置了任意多个点的值，计算很麻烦。今天突然想到了类似Photoshop高斯模糊的方法可能行。恰好MATLAB中有fspecial(设置滤波器)和imfilter(应用滤波器)函数，果然可以。<br><img src="/2016/07/12/20160712drawpeak/first.png" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2016/07/12/20160712drawpeak/#more">more >></a>
-        
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/payzhi.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/paywei.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -287,504 +267,74 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/07/12/20160712drawpeak/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/11/11/20181111distribution/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-20160711chipseqpeak" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/11/20160711chipseqpeak/">ChIP-seq中peak的形状</a>
-    </h1>
   
-
-        
-        <a href="/2016/07/11/20160711chipseqpeak/" class="archive-article-date">
-  	<time datetime="2016-07-11T12:54:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>ChIP-seq数据分析时，可产生各种各样的Peak。四个例子:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">CTCF: 			    sharp binding sites</div><div class="line">RNA polymerase II:	a mixture of shapes</div><div class="line">H3K36me3: 		    medium size broad peaks</div><div class="line">H3K27me3.		     large domains</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2016/07/11/20160711chipseqpeak/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/07/11/20160711chipseqpeak/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
+    <a href="/2018/11/10/20181110pymc3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">概率编程(Probabilistic programming)的PyMC3实现</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
-    <article id="post-20160708dbsnp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/08/20160708dbsnp/">NCBI dbSNP vcf文件整理并建库</a>
-    </h1>
-  
-
-        
-        <a href="/2016/07/08/20160708dbsnp/" class="archive-article-date">
-  	<time datetime="2016-07-08T11:19:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>从NCBI上下载了dbSNP150 common的数据，vcf格式，解压后共8G。我只需要chr、start、end、rs id、ref、alt、type、frequency信息，并整理成bed格式。chr、start、end、rs id、ref、alt各自为一个字段，并通过tab隔开，而其它各种信息合并为一个字段，以;分隔。数据量小时，联合使用notepad++替换字符串和Excel处理格式，即可生成各种生信格式。但数据量太大(若是all版本，有20多G)，笔记本上不能打开，即便打开操作很卡。<br><img src="/2016/07/08/20160708dbsnp/awk.jpg" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2016/07/08/20160708dbsnp/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/07/08/20160708dbsnp/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20160707mymajor" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/07/20160707mymajor/">经历过的专业：Public health, Toxicology, Molecular biology, Bioinformatics</a>
-    </h1>
-  
-
-        
-        <a href="/2016/07/07/20160707mymajor/" class="archive-article-date">
-  	<time datetime="2016-07-07T12:06:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本科毕业时报研究生专业，选择了Toxicology。初衷是Public Health各专业里，只有Toxicology才用到各种分子生物学和细胞生物学实验技术。那时还没接触科研，私以为Toxicology是一门“高大上”的专业，当时以为如此。<br><img src="/2016/07/07/20160707mymajor/toxicology.png" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2016/07/07/20160707mymajor/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">游历与随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/07/07/20160707mymajor/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20160815seqfeature" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/18/20160815seqfeature/">(命令行方式)基因组Sequence和Feature(Range)的操作和转换</a>
-    </h1>
-  
-
-        
-        <a href="/2016/06/18/20160815seqfeature/" class="archive-article-date">
-  	<time datetime="2016-06-18T15:53:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我们研究基因组时，在生物学上的研究对象是<strong>sequence</strong>，即ATGC序列。与sequence不同，<strong>genomic feature</strong>(在Bioconductor中对应GRange/IRange对象)不显示ATGC内容，而着重强调各种feature (如gene, transcript, UTR, promoter, exon, intron, SNV, INDEL等功能元件)在(特定版本)基因组上的位置，包括染色体、正负链、起止位置等。因此，feature是sequence的数字化表示；一个特定的feature与一段sequence是一一对应的。这样可以把一个自然现象加以数学化，便于统计分析。<br><img src="/2016/06/18/20160815seqfeature/logo.png" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2016/06/18/20160815seqfeature/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/06/18/20160815seqfeature/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20160610parallel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/15/20160610parallel/">HPC:并行计算(Parallel Computing)</a>
-    </h1>
-  
-
-        
-        <a href="/2016/06/15/20160610parallel/" class="archive-article-date">
-  	<time datetime="2016-06-15T13:52:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>计算生物学</strong>是重要的科研工具。在大数据时代，计算常辅以<strong>并行计算</strong>技术以加快计算速度。我一直认为数据处理最重要的步骤不在分析阶段，而在预分析，也就是数据探索阶段。掌握了并行计算方法，可以更自由地探索大数据。比如，在我们医学领域里，进行探索研究时会不断地形成各种假设，也会突然冒出新的想法，需要一一去探索。<strong>没有高效率的计算能力，繁琐的运算会让大部分人中途而止，研究得不到尽兴。</strong>数据越大，这种瓶颈越明显。<br><img src="/2016/06/15/20160610parallel/parallel.jpg" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2016/06/15/20160610parallel/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/06/15/20160610parallel/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20160606website" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/06/20160606website/">域名解析时的名词</a>
-    </h1>
-  
-
-        
-        <a href="/2016/06/06/20160606website/" class="archive-article-date">
-  	<time datetime="2016-06-06T10:39:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>域名服务器(提供域名的服务商)和内容服务器(搭建www或mail等的服务商)可以分离(通常如阿里既是域名服务商又提供搭建www和mail的服务)<br></p>
-        
-          <a class="article-more-a" href="/2016/06/06/20160606website/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/06/06/20160606website/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20160515annotation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/15/20160515annotation/">基因注释数据库和突变注释</a>
-    </h1>
-  
-
-        
-        <a href="/2016/05/15/20160515annotation/" class="archive-article-date">
-  	<time datetime="2016-05-14T17:57:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-基因注释数据库-Gene-Annotation-Database"><a href="#1-基因注释数据库-Gene-Annotation-Database" class="headerlink" title="1.基因注释数据库(Gene Annotation Database)"></a>1.基因注释数据库(Gene Annotation Database)</h4><p>基因注释数据库是描述基因组上gene、transcript、exon、intron等结构的染色体序号、正负链、起止位置、标准名称等信息的数据库。有三大注释库: <strong>RefSeq</strong>(refGene), <strong>UCSC</strong>(knownGene), <strong>Ensembl</strong>(ensGene)。另外，常用的<strong>GENCODE</strong> Annotation结合了Havana manual gene annotation和Ensembl automated gene annotation。Ensembl浏览器显示即是GENCODE Annotation，二者等同)。<br><img src="/2016/05/15/20160515annotation/an.jpg" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2016/05/15/20160515annotation/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/05/15/20160515annotation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-20160510snpld" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/10/20160510snpld/">SNP连锁不平衡度量和单倍型构建</a>
-    </h1>
-  
-
-        
-        <a href="/2016/05/10/20160510snpld/" class="archive-article-date">
-  	<time datetime="2016-05-10T12:50:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="1-连锁不平衡-Linkage-disequilibrium-度量"><a href="#1-连锁不平衡-Linkage-disequilibrium-度量" class="headerlink" title="1. 连锁不平衡(Linkage disequilibrium)度量"></a>1. 连锁不平衡(Linkage disequilibrium)度量</h4><p><img src="/2016/05/10/20160510snpld/ld.jpg" alt=""><br></p>
-        
-          <a class="article-more-a" href="/2016/05/10/20160510snpld/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算生物学</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/05/10/20160510snpld/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+</nav>
 
 
 
@@ -792,9 +342,26 @@
 
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
 
@@ -817,8 +384,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
