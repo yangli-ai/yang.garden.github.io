@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Gromacs参考 | Yang&#39;s Garden</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Gromacs常用命令参考!&amp;lt;–more–&amp;gt;123gmx pdb2gmx  -f x.pdb  -p x.top    -o x.gro   -ignh    -inter		interactive selection, instead of charged 		-ter -asp -glu -lys -arg -his -gln -ss 是否质子化|电荷，二硫键 1234567891">
+  <meta name="description" content="Gromacs常用命令参考">
 <meta name="keywords" content="计算生物学">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gromacs参考">
 <meta property="og:url" content="http://yoursite.com/2017/09/01/20170901gmxprep/index.html">
 <meta property="og:site_name" content="Yang&#39;s Garden">
-<meta property="og:description" content="Gromacs常用命令参考!&amp;lt;–more–&amp;gt;123gmx pdb2gmx  -f x.pdb  -p x.top    -o x.gro   -ignh    -inter		interactive selection, instead of charged 		-ter -asp -glu -lys -arg -his -gln -ss 是否质子化|电荷，二硫键 1234567891">
-<meta property="og:updated_time" content="2018-12-13T06:51:21.188Z">
+<meta property="og:description" content="Gromacs常用命令参考">
+<meta property="og:updated_time" content="2018-12-22T16:11:36.608Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gromacs参考">
-<meta name="twitter:description" content="Gromacs常用命令参考!&amp;lt;–more–&amp;gt;123gmx pdb2gmx  -f x.pdb  -p x.top    -o x.gro   -ignh    -inter		interactive selection, instead of charged 		-ter -asp -glu -lys -arg -his -gln -ss 是否质子化|电荷，二硫键 1234567891">
+<meta name="twitter:description" content="Gromacs常用命令参考">
   
     <link rel="alternative" href="/atom.xml" title="Yang&#39;s Garden" type="application/atom+xml">
   
@@ -204,7 +204,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Gromacs常用命令参考<br>!&lt;–more–&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gmx pdb2gmx  -f x.pdb  -p x.top    -o x.gro   -ignh</div><div class="line">    -inter		interactive selection, instead of charged</div><div class="line"> 		-ter -asp -glu -lys -arg -his -gln -ss 是否质子化|电荷，二硫键</div></pre></td></tr></table></figure></p>
+        <p>Gromacs常用命令参考</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gmx pdb2gmx  -f x.pdb  -p x.top    -o x.gro   -ignh</div><div class="line">    -inter		interactive selection, instead of charged</div><div class="line"> 		-ter -asp -glu -lys -arg -his -gln -ss 是否质子化|电荷，二硫键</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">gmx editconf -f x.gro -o x-PBC.gro  -d -box &amp; -center</div><div class="line">    # -o gmx file with box</div><div class="line">    tip: [通过editconf -f -o 可以将文件格式gro和pdb的转换]</div><div class="line">    -bt box type</div><div class="line">    -d minimum distance between box and mol, unit is nm</div><div class="line">    -c center</div><div class="line">    # 格式转换、box大小(-d; -box|angle配合)   蛋白质中心的位置(-center,默认为0 0 0)，</div><div class="line">    # 蛋白主轴方向(-princ&lt;否平行于x轴&gt;|align&lt;&gt;|aligncenter&lt;对准特定的向量&gt;)</div><div class="line">    # 平移(-translate)    旋转(-rotate)     缩放(-scale)，拆分(用index文件)，肽链加标记(-label,针对pdb)</div><div class="line">gmx editconf -f x.gro -o pdb</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gmx genconf -f -o -nbox a b c -dist x y z -rot</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gmx editconf -f gro|pdb -o gro|pdb  #也可以输入和输出pdb! 对分或者指定的部分任何几何操作!</div></pre></td></tr></table></figure>
